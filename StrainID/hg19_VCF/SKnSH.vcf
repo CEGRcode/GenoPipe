@@ -1,0 +1,342 @@
+##fileformat=VCFv4.2
+##contig=<ID=chr1,length=249250621>
+##contig=<ID=chr2,length=243199373>
+##contig=<ID=chr3,length=198022430>
+##contig=<ID=chr4,length=191154276>
+##contig=<ID=chr5,length=180915260>
+##contig=<ID=chr6,length=171115067>
+##contig=<ID=chr7,length=159138663>
+##contig=<ID=chrX,length=155270560>
+##contig=<ID=chr8,length=146364022>
+##contig=<ID=chr9,length=141213431>
+##contig=<ID=chr10,length=135534747>
+##contig=<ID=chr11,length=135006516>
+##contig=<ID=chr12,length=133851895>
+##contig=<ID=chr13,length=115169878>
+##contig=<ID=chr14,length=107349540>
+##contig=<ID=chr15,length=102531392>
+##contig=<ID=chr16,length=90354753>
+##contig=<ID=chr17,length=81195210>
+##contig=<ID=chr18,length=78077248>
+##contig=<ID=chr20,length=63025520>
+##contig=<ID=chrY,length=59373566>
+##contig=<ID=chr19,length=59128983>
+##contig=<ID=chr22,length=51304566>
+##contig=<ID=chr21,length=48129895>
+##contig=<ID=chr6_ssto_hap7,length=4928567>
+##contig=<ID=chr6_mcf_hap5,length=4833398>
+##contig=<ID=chr6_cox_hap2,length=4795371>
+##contig=<ID=chr6_mann_hap4,length=4683263>
+##contig=<ID=chr6_apd_hap1,length=4622290>
+##contig=<ID=chr6_qbl_hap6,length=4611984>
+##contig=<ID=chr6_dbb_hap3,length=4610396>
+##contig=<ID=chr17_ctg5_hap1,length=1680828>
+##contig=<ID=chr4_ctg9_hap1,length=590426>
+##contig=<ID=chr1_gl000192_random,length=547496>
+##contig=<ID=chrUn_gl000225,length=211173>
+##contig=<ID=chr4_gl000194_random,length=191469>
+##contig=<ID=chr4_gl000193_random,length=189789>
+##contig=<ID=chr9_gl000200_random,length=187035>
+##contig=<ID=chrUn_gl000222,length=186861>
+##contig=<ID=chrUn_gl000212,length=186858>
+##contig=<ID=chr7_gl000195_random,length=182896>
+##contig=<ID=chrUn_gl000223,length=180455>
+##contig=<ID=chrUn_gl000224,length=179693>
+##contig=<ID=chrUn_gl000219,length=179198>
+##contig=<ID=chr17_gl000205_random,length=174588>
+##contig=<ID=chrUn_gl000215,length=172545>
+##contig=<ID=chrUn_gl000216,length=172294>
+##contig=<ID=chrUn_gl000217,length=172149>
+##contig=<ID=chr9_gl000199_random,length=169874>
+##contig=<ID=chrUn_gl000211,length=166566>
+##contig=<ID=chrUn_gl000213,length=164239>
+##contig=<ID=chrUn_gl000220,length=161802>
+##contig=<ID=chrUn_gl000218,length=161147>
+##contig=<ID=chr19_gl000209_random,length=159169>
+##contig=<ID=chrUn_gl000221,length=155397>
+##contig=<ID=chrUn_gl000214,length=137718>
+##contig=<ID=chrUn_gl000228,length=129120>
+##contig=<ID=chrUn_gl000227,length=128374>
+##contig=<ID=chr1_gl000191_random,length=106433>
+##contig=<ID=chr19_gl000208_random,length=92689>
+##contig=<ID=chr9_gl000198_random,length=90085>
+##contig=<ID=chr17_gl000204_random,length=81310>
+##contig=<ID=chrUn_gl000233,length=45941>
+##contig=<ID=chrUn_gl000237,length=45867>
+##contig=<ID=chrUn_gl000230,length=43691>
+##contig=<ID=chrUn_gl000242,length=43523>
+##contig=<ID=chrUn_gl000243,length=43341>
+##contig=<ID=chrUn_gl000241,length=42152>
+##contig=<ID=chrUn_gl000236,length=41934>
+##contig=<ID=chrUn_gl000240,length=41933>
+##contig=<ID=chr17_gl000206_random,length=41001>
+##contig=<ID=chrUn_gl000232,length=40652>
+##contig=<ID=chrUn_gl000234,length=40531>
+##contig=<ID=chr11_gl000202_random,length=40103>
+##contig=<ID=chrUn_gl000238,length=39939>
+##contig=<ID=chrUn_gl000244,length=39929>
+##contig=<ID=chrUn_gl000248,length=39786>
+##contig=<ID=chr8_gl000196_random,length=38914>
+##contig=<ID=chrUn_gl000249,length=38502>
+##contig=<ID=chrUn_gl000246,length=38154>
+##contig=<ID=chr17_gl000203_random,length=37498>
+##contig=<ID=chr8_gl000197_random,length=37175>
+##contig=<ID=chrUn_gl000245,length=36651>
+##contig=<ID=chrUn_gl000247,length=36422>
+##contig=<ID=chr9_gl000201_random,length=36148>
+##contig=<ID=chrUn_gl000235,length=34474>
+##contig=<ID=chrUn_gl000239,length=33824>
+##contig=<ID=chr21_gl000210_random,length=27682>
+##contig=<ID=chrUn_gl000231,length=27386>
+##contig=<ID=chrUn_gl000229,length=19913>
+##contig=<ID=chrM,length=16571>
+##contig=<ID=chrUn_gl000226,length=15008>
+##contig=<ID=chr18_gl000207_random,length=4262>
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr1	115256530	.	G	T	0	PASS	.
+chr2	29443695	.	G	T	0	PASS	.
+chr19	11134251	.	C	T	0	PASS	.
+chr9	125486897	.	C	A	0	PASS	.
+chr19	9724727	.	-	A	0	PASS	.
+chr1	989314	.	G	A	0	PASS	.
+chr1	7887389	.	C	T	0	PASS	.
+chr1	17422422	.	C	A	0	PASS	.
+chr1	25780773	.	G	A	0	PASS	.
+chr1	35940458	.	C	A	0	PASS	.
+chr1	43805147	.	G	C	0	PASS	.
+chr1	152681740	.	C	G	0	PASS	.
+chr1	158517288	.	A	G	0	PASS	.
+chr1	160465934	.	T	G	0	PASS	.
+chr1	171086529	.	A	G	0	PASS	.
+chr1	197145746	.	T	C	0	PASS	.
+chr1	211307273	.	C	G	0	PASS	.
+chr1	212860274	.	G	A	0	PASS	.
+chr1	248569357	.	C	A	0	PASS	.
+chr10	1421344	.	T	A	0	PASS	.
+chr10	17146498	.	G	C	0	PASS	.
+chr10	102743246	.	G	A	0	PASS	.
+chr10	129231661	.	G	A	0	PASS	.
+chr11	212685	.	G	A	0	PASS	.
+chr11	47354131	.	G	A	0	PASS	.
+chr11	60886423	.	C	A	0	PASS	.
+chr11	64055872	.	G	A	0	PASS	.
+chr11	64815031	.	A	T	0	PASS	.
+chr11	70803590	.	C	T	0	PASS	.
+chr11	116640888	.	T	C	0	PASS	.
+chr11	117303124	.	G	A	0	PASS	.
+chr11	118221340	.	C	T	0	PASS	.
+chr11	129784671	.	G	A	0	PASS	.
+chr12	9244002	.	C	T	0	PASS	.
+chr12	56847453	.	G	A	0	PASS	.
+chr12	96389632	.	G	A	0	PASS	.
+chr12	96617430	.	A	T	0	PASS	.
+chr12	107371625	.	C	G	0	PASS	.
+chr12	124419905	.	C	T	0	PASS	.
+chr12	133385033	.	T	A	0	PASS	.
+chr13	23914237	.	G	A	0	PASS	.
+chr13	31803350	.	G	A	0	PASS	.
+chr13	40261722	.	G	A	0	PASS	.
+chr13	67800619	.	G	T	0	PASS	.
+chr15	45713352	.	G	A	0	PASS	.
+chr15	48633763	.	C	T	0	PASS	.
+chr15	52668672	.	G	T	0	PASS	.
+chr15	52901832	.	T	C	0	PASS	.
+chr15	62211565	.	T	G	0	PASS	.
+chr15	101523754	.	G	A	0	PASS	.
+chr16	338231	.	A	G	0	PASS	.
+chr16	1719013	.	C	T	0	PASS	.
+chr16	48234308	.	A	G	0	PASS	.
+chr17	4692389	.	T	C	0	PASS	.
+chr17	4837642	.	G	A	0	PASS	.
+chr17	7684375	.	A	G	0	PASS	.
+chr17	10231368	.	G	C	0	PASS	.
+chr17	18137335	.	A	G	0	PASS	.
+chr17	18149622	.	C	T	0	PASS	.
+chr17	40927430	.	C	T	0	PASS	.
+chr17	58952032	.	C	T	0	PASS	.
+chr17	73658807	.	G	A	0	PASS	.
+chr17	78319791	.	G	A	0	PASS	.
+chr17	80763869	.	G	A	0	PASS	.
+chr18	19088505	.	A	G	0	PASS	.
+chr18	22806439	.	G	A	0	PASS	.
+chr18	23731941	.	A	C	0	PASS	.
+chr18	72173158	.	C	T	0	PASS	.
+chr18	72998643	.	G	A	0	PASS	.
+chr19	808733	.	C	T	0	PASS	.
+chr19	9056330	.	A	T	0	PASS	.
+chr19	9449975	.	A	G	0	PASS	.
+chr19	15789193	.	C	T	0	PASS	.
+chr19	18391488	.	G	C	0	PASS	.
+chr19	34180263	.	G	A	0	PASS	.
+chr19	47646785	.	A	G	0	PASS	.
+chr19	51015644	.	A	C	0	PASS	.
+chr19	57641997	.	A	C	0	PASS	.
+chr19	58198769	.	T	G	0	PASS	.
+chr2	3391462	.	C	T	0	PASS	.
+chr2	68358512	.	A	G	0	PASS	.
+chr2	86831013	.	G	A	0	PASS	.
+chr2	97626143	.	T	G	0	PASS	.
+chr2	101604727	.	A	G	0	PASS	.
+chr2	120221747	.	G	A	0	PASS	.
+chr2	218669279	.	G	T	0	PASS	.
+chr2	231861067	.	C	G	0	PASS	.
+chr2	231861094	.	C	G	0	PASS	.
+chr2	238672680	.	C	T	0	PASS	.
+chr20	5294953	.	G	A	0	PASS	.
+chr20	23066132	.	G	A	0	PASS	.
+chr20	39802411	.	T	A	0	PASS	.
+chr20	50238685	.	C	T	0	PASS	.
+chr20	50292732	.	A	C	0	PASS	.
+chr22	24717890	.	G	A	0	PASS	.
+chr22	45574234	.	C	T	0	PASS	.
+chr3	41795882	.	A	G	0	PASS	.
+chr3	42956450	.	A	G	0	PASS	.
+chr3	45942364	.	C	T	0	PASS	.
+chr3	57431981	.	G	A	0	PASS	.
+chr3	97669703	.	A	G	0	PASS	.
+chr3	166960295	.	C	A	0	PASS	.
+chr4	3424664	.	G	A	0	PASS	.
+chr4	48993484	.	C	T	0	PASS	.
+chr4	108953513	.	G	A	0	PASS	.
+chr4	122250575	.	T	A	0	PASS	.
+chr4	122250576	.	C	A	0	PASS	.
+chr4	151773288	.	G	T	0	PASS	.
+chr4	177142426	.	G	C	0	PASS	.
+chr5	7802453	.	C	T	0	PASS	.
+chr5	140720357	.	C	T	0	PASS	.
+chr5	150275203	.	T	C	0	PASS	.
+chr5	159830394	.	A	G	0	PASS	.
+chr5	174151978	.	T	C	0	PASS	.
+chr6	26156840	.	G	A	0	PASS	.
+chr6	29643780	.	A	T	0	PASS	.
+chr6	30954056	.	C	A	0	PASS	.
+chr6	38750903	.	C	T	0	PASS	.
+chr6	42579963	.	A	G	0	PASS	.
+chr6	43748475	.	A	G	0	PASS	.
+chr6	49754704	.	C	T	0	PASS	.
+chr6	123825044	.	G	A	0	PASS	.
+chr6	170052094	.	G	A	0	PASS	.
+chr7	47979838	.	T	C	0	PASS	.
+chr7	100696353	.	C	A	0	PASS	.
+chr7	105187731	.	T	C	0	PASS	.
+chr7	107600231	.	T	C	0	PASS	.
+chr7	141365023	.	T	C	0	PASS	.
+chr7	141836391	.	T	C	0	PASS	.
+chr7	141836392	.	G	T	0	PASS	.
+chr7	151876961	.	G	C	0	PASS	.
+chr8	27320629	.	G	C	0	PASS	.
+chr8	30954305	.	C	T	0	PASS	.
+chr8	67485696	.	G	A	0	PASS	.
+chr8	94740486	.	C	G	0	PASS	.
+chr8	110424530	.	G	T	0	PASS	.
+chr8	134108587	.	C	T	0	PASS	.
+chr9	6254466	.	C	T	0	PASS	.
+chr9	34500737	.	G	A	0	PASS	.
+chr9	125562683	.	G	A	0	PASS	.
+chr9	133495787	.	C	G	0	PASS	.
+chr9	138660705	.	G	A	0	PASS	.
+chrX	2836254	.	C	A	0	PASS	.
+chrX	16847761	.	C	A	0	PASS	.
+chrX	24761396	.	G	A	0	PASS	.
+chrX	47039373	.	C	T	0	PASS	.
+chrX	135047316	.	G	T	0	PASS	.
+chr1	29605623	.	C	T	0	PASS	.
+chr1	55248003	.	C	A	0	PASS	.
+chr1	109792762	.	T	C	0	PASS	.
+chr1	248084699	.	C	A	0	PASS	.
+chr2	202072871	.	C	T	0	PASS	.
+chr4	1346968	.	A	G	0	PASS	.
+chr4	96123932	.	C	A	0	PASS	.
+chr5	15928180	.	C	A	0	PASS	.
+chr5	68710083	.	C	T	0	PASS	.
+chr5	135170584	.	T	G	0	PASS	.
+chr5	161281164	.	C	T	0	PASS	.
+chr7	72984977	.	T	G	0	PASS	.
+chr7	131895883	.	C	A	0	PASS	.
+chr7	150835383	.	C	A	0	PASS	.
+chr8	132052284	.	C	T	0	PASS	.
+chr8	144652415	.	G	T	0	PASS	.
+chr8	144920920	.	C	A	0	PASS	.
+chr9	37753846	.	T	G	0	PASS	.
+chr9	39078685	.	A	C	0	PASS	.
+chr9	107568692	.	C	A	0	PASS	.
+chr10	26506826	.	G	C	0	PASS	.
+chr10	104181577	.	C	A	0	PASS	.
+chr11	372895	.	G	T	0	PASS	.
+chr11	4592720	.	G	A	0	PASS	.
+chr11	57505486	.	A	T	0	PASS	.
+chr12	49393027	.	C	A	0	PASS	.
+chr12	123351834	.	C	A	0	PASS	.
+chr12	132414514	.	G	T	0	PASS	.
+chr14	23994151	.	C	A	0	PASS	.
+chr15	63414196	.	G	C	0	PASS	.
+chr15	76136147	.	A	C	0	PASS	.
+chr16	2230283	.	G	C	0	PASS	.
+chr16	2349422	.	T	G	0	PASS	.
+chr16	30722403	.	C	A	0	PASS	.
+chr16	87743081	.	A	C	0	PASS	.
+chr16	88792826	.	C	A	0	PASS	.
+chr16	88877985	.	G	T	0	PASS	.
+chr17	1961826	.	C	A	0	PASS	.
+chr17	7534658	.	C	A	0	PASS	.
+chr17	72861873	.	G	T	0	PASS	.
+chr19	1067464	.	C	A	0	PASS	.
+chr19	3019416	.	T	G	0	PASS	.
+chr19	14583450	.	C	A	0	PASS	.
+chr19	17393686	.	C	A	0	PASS	.
+chr19	41306863	.	C	A	0	PASS	.
+chr20	20491910	.	T	G	0	PASS	.
+chr20	35443799	.	C	A	0	PASS	.
+chr22	50899713	.	C	A	0	PASS	.
+chrX	11016	.	G	A	0	PASS	.
+chr1	35658261	.	C	A	0	PASS	.
+chr1	36564791	.	G	A	0	PASS	.
+chr1	149783282	.	G	A	0	PASS	.
+chr1	210008495	.	C	T	0	PASS	.
+chr2	176988052	.	T	A	0	PASS	.
+chr3	113750544	.	C	T	0	PASS	.
+chr4	25235980	.	C	T	0	PASS	.
+chr6	17661981	.	G	A	0	PASS	.
+chr7	129950691	.	G	A	0	PASS	.
+chr10	22022502	.	C	T	0	PASS	.
+chr10	58119235	.	A	G	0	PASS	.
+chr11	102650044	.	G	A	0	PASS	.
+chr12	2787005	.	C	T	0	PASS	.
+chr16	2827120	.	G	A	0	PASS	.
+chr16	53352248	.	G	T	0	PASS	.
+chr21	45879911	.	C	G	0	PASS	.
+chr10	55700728	.	G	A	0	PASS	.
+chr10	14976416	.	-	A	0	PASS	.
+chr5	157161660	.	CCCCTTCTGTAT	-	0	PASS	.
+chr1	155057646	.	GGGGTGGGCCCC	-	0	PASS	.
+chr2	132249917	.	C	-	0	PASS	.
+chr2	196661362	.	C	-	0	PASS	.
+chr4	41748048	.	-	G	0	PASS	.
+chr7	107564431	.	-	TA	0	PASS	.
+chr11	63078479	.	A	-	0	PASS	.
+chr11	102662062	.	ACCTCC	-	0	PASS	.
+chr15	87531320	.	-	T	0	PASS	.
+chr17	36485795	.	AG	-	0	PASS	.
+chr19	4491632	.	GAG	-	0	PASS	.
+chr1	33960331	.	-	CCT	0	PASS	.
+chr1	33960333	.	GGA	-	0	PASS	.
+chr1	144915624	.	G	-	0	PASS	.
+chr2	31572683	.	-	T	0	PASS	.
+chr3	196089422	.	-	A	0	PASS	.
+chr4	96256768	.	-	A	0	PASS	.
+chr5	38950625	.	-	T	0	PASS	.
+chr5	72743299	.	-	GC	0	PASS	.
+chr6	76423532	.	-	T	0	PASS	.
+chr6	152673182	.	-	T	0	PASS	.
+chr7	138968105	.	-	A	0	PASS	.
+chr8	25364263	.	-	A	0	PASS	.
+chr8	82583189	.	-	A	0	PASS	.
+chr12	7173238	.	-	A	0	PASS	.
+chr12	101413904	.	-	A	0	PASS	.
+chr12	112036767	.	-	TGCTGCTGCTGCTGCTGT	0	PASS	.
+chr12	123806250	.	-	T	0	PASS	.
+chr17	42744329	.	-	A	0	PASS	.
+chr17	62854962	.	-	T	0	PASS	.
+chr18	54385263	.	-	A	0	PASS	.
+chr21	30303518	.	-	T	0	PASS	.
+chr22	29091857	.	G	-	0	PASS	.
