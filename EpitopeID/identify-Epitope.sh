@@ -51,15 +51,15 @@ echo "Databse folder = ${DATABASE}"
 echo "Threads = ${THREAD}"
 
 # Check if ALL_TAG.fa bwa index exists, creates if it doesn't
-if [ ! -f $DATABASE/tag_FASTA/ALL_TAG.fa.amb ] || [ ! -f $DATABASE/tag_FASTA/ALL_TAG.fa.ann ] || [ ! -f $DATABASE/tag_FASTA/ALL_TAG.fa.bwt ] || [ ! -f $DATABASE/tag_FASTA/ALL_TAG.fa.pac ] || [ ! -f $DATABASE/tag_FASTA/ALL_TAG.fa.sa ]; then
+if [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.amb ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.ann ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.bwt ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.pac ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.sa ]; then
         echo "Building TAG index..."
-        bwa index $DATABASE/tag_FASTA/ALL_TAG.fa
+        bwa index $DATABASE/FASTA_tag/ALL_TAG.fa
 fi
 
-# Check if gene.fasta bwa index exists, creates if it doesn't
-if [ ! -f $DATABASE/gene_FASTA/gene.fasta.amb ] || [ ! -f $DATABASE/gene_FASTA/gene.fasta.ann ] || [ ! -f $DATABASE/gene_FASTA/gene.fasta.bwt ] || [ ! -f $DATABASE/gene_FASTA/gene.fasta.pac ] || [ ! -f $DATABASE/gene_FASTA/gene.fasta.sa ]; then
+# Check if genome.fa bwa index exists, creates if it doesn't
+if [ ! -f $DATABASE/FASTA_genome/genome.fa.amb ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.ann ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.bwt ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.pac ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.sa ]; then
         echo "Building ORF index..."
-        bwa index $DATABASE/gene_FASTA/gene.fasta
+        bwa index $DATABASE/FASTA_genome/genome.fa
 fi
 
 cd $INPUT
@@ -80,12 +80,12 @@ do
 	fi
 	
 	# Align sequence reads to all tag database
-	bwa mem -t $THREAD $DATABASE/tag_FASTA/ALL_TAG.fa $READ1 | samtools view -h -F 4 -S - > $OUTPUT/$SAMPLE/align1.sam
+	bwa mem -t $THREAD $DATABASE/FASTA_tag/ALL_TAG.fa $READ1 | samtools view -h -F 4 -S - > $OUTPUT/$SAMPLE/align1.sam
 	# Determine which epitope sequences had reads aligned to them
         grep -v "^@" $OUTPUT/$SAMPLE/align1.sam | cut -f1,3 > $OUTPUT/$SAMPLE/epitope-se.out
 	
 	if [ -f $READ2 ]; then
-		bwa mem -t $THREAD $DATABASE/tag_FASTA/ALL_TAG.fa $READ2 | samtools view -h -F 4 -S - > $OUTPUT/$SAMPLE/align2.sam
+		bwa mem -t $THREAD $DATABASE/FASTA_tag/ALL_TAG.fa $READ2 | samtools view -h -F 4 -S - > $OUTPUT/$SAMPLE/align2.sam
 
 		# Determine which epitope sequences had reads aligned to them
                 grep -v "^@" $OUTPUT/$SAMPLE/align2.sam | cut -f1,3 >> $OUTPUT/$SAMPLE/epitope-se.out
@@ -109,15 +109,21 @@ do
                 perl $DATABASE/epiScripts/uniq_PE_FASTQ.pl $OUTPUT/$SAMPLE/read1.fa $OUTPUT/$SAMPLE/read2.fa >> $OUTPUT/$SAMPLE/tag-reads.fa
 	
 		# Align TAG-aligned mates to ORF sequences
-		bwa mem -t $THREAD $DATABASE/gene_FASTA/gene.fasta $OUTPUT/$SAMPLE/tag-reads.fa | samtools view -h -F 4 -S - > $OUTPUT/$SAMPLE/orf.sam
+		bwa mem -t $THREAD $DATABASE/FASTA_genome/genome.fa $OUTPUT/$SAMPLE/tag-reads.fa | samtools view -F 4 -Shb - > $OUTPUT/$SAMPLE/orf.bam
+
 		# Blacklist filter out artefactual or unwanted gene alignments
-		samtools view -Shb $OUTPUT/$SAMPLE/orf.sam > $OUTPUT/$SAMPLE/orf.bam
-		bedtools intersect -v -abam $OUTPUT/$SAMPLE/orf.bam -b $DATABASE/blacklist_filter/blacklist.bed | samtools view -h - > $OUTPUT/$SAMPLE/orf.sam
-		
-		# Determine which epitope sequences had reads aligned to them
-		grep -v "^@" $OUTPUT/$SAMPLE/align1.sam | cut -f1,3 > $OUTPUT/$SAMPLE/epitope-pe.out
-		grep -v "^@" $OUTPUT/$SAMPLE/align2.sam | cut -f1,3 >> $OUTPUT/$SAMPLE/epitope-pe.out
+		bedtools intersect -v -abam $OUTPUT/$SAMPLE/orf.bam -b $DATABASE/blacklist_filter/blacklist.bed | samtools view -Shb - > $OUTPUT/$SAMPLE/orf_filter.bam
+		# Intersect genomic reads with matched epitope reads with genomic annotation
+                bedtools intersect -wb -abam $OUTPUT/$SAMPLE/orf_filter.bam -b $DATABASE/annotation/genome_annotation.gff.gz -bed > $OUTPUT/$SAMPLE/align-pe.out
+                # Compress BAM file read length to 1 bp to prevent multi-counting across BIN junctures
+                perl $DATABASE/epiScripts/filter_intersect_by_FivePrime.pl $OUTPUT/$SAMPLE/align-pe.out $OUTPUT/$SAMPLE/align-pe_filter.out
+
 	fi
+
+	#echo "Calculating significance..."
+	#READCOUNT="$(expr $(gunzip -c $READ1 | wc -l) / 4)"
+	#samtools view -H orf.bam 	
+	#echo $READCOUNT
 
         # Parse single-end epitope alignments to final table
         PARSE=$DATABASE/epiScripts/count_raw_epitope.pl
@@ -125,8 +131,8 @@ do
 
 	if [ -f $READ2 ]; then
 		# Parse paired-end epitope alignments to final table
-		PARSE=$DATABASE/epiScripts/count_tagAlign.pl
-		perl $PARSE $OUTPUT/$SAMPLE/epitope-pe.out $OUTPUT/$SAMPLE/orf.sam $OUTPUT/$SAMPLE\-TAG-ID.out
+		perl $DATABASE/epiScripts/sum_PE_epitope-alignment.pl $OUTPUT/$SAMPLE/epitope-se.out $OUTPUT/$SAMPLE/align-pe_filter.out $OUTPUT/$SAMPLE\-TAG-ID.out
+
 	fi
 
 	# Clean up temporary files
