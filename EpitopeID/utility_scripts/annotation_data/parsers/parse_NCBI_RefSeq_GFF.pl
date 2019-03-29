@@ -1,7 +1,7 @@
 #! /usr/bin/perl
 
-die "GFF_File\tOutput_GFF\n" unless $#ARGV == 1;
-my($input, $output) = @ARGV;
+die "GFF_File\tGene_Border_Pad(bp)\tOutput_GFF\n" unless $#ARGV == 2;
+my($input, $PAD, $output) = @ARGV;
 open(IN, "<$input") or die "Can't open $input for reading!\n";
 open(OUT, ">$output") or die "Can't open $output for writing!\n";
 
@@ -73,13 +73,31 @@ while($line = <IN>) {
 				$NAME = 1;
 			}
 		}
-		if($NAME == 0) {
-			$array[8] = "ERROR";
-#			@NAME = split(/\=/, $ATTR[1]);
-#			$array[8] = $NAME[1] . "|" . $COORD;
-		}
+		if($NAME == 0) { $array[8] = "ERROR"; }
 
 		print OUT join("\t", @array),"\n";
+
+                # Print out border region of gene given user-specified padding region
+                $array[2] = "geneBorder";
+                @geneBorder = split(/\|/, $array[8]);
+
+                $LOC = "-Promoter";
+                if($array[6] eq "-") { $LOC = "-Cterm"; }
+                # Create upstream coordinate
+                $UP = $array[3] - $PAD;
+                $array[8] = $geneBorder[0] . $LOC . "|" . $array[0] . ":" . $UP . "-" . $array[3];
+                print OUT "$array[0]\t$array[1]\t$array[2]\t$UP\t$array[3]";
+                for($x = 5; $x <= $#array; $x++) { print OUT "\t$array[$x]"; }
+                print OUT "\n";
+
+                $LOC = "-Cterm";
+                if($array[6] eq "-") { $LOC = "-Promoter"; }
+                # Create downstream coordinate
+                $DOWN = $array[4] + $PAD;
+                $array[8] = $geneBorder[0] . $LOC . "|" . $array[0] . ":" . $array[4] . "-" . $DOWN;
+                print OUT "$array[0]\t$array[1]\t$array[2]\t$array[4]\t$DOWN";
+                for($x = 5; $x <= $#array; $x++) { print OUT "\t$array[$x]"; }
+                print OUT "\n";
 
 	}
 }
