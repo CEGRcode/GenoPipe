@@ -5,6 +5,7 @@
 # samtools v1.7+
 # bedtools v2.26+
 # perl5
+# python v2.15 with scipy
 # GNU grep (BSD grep on MacOSX is >10X slower)
 
 usage()
@@ -108,8 +109,8 @@ do
                 sed -i -e 's/^@/>/g ; /\--/d' $OUTPUT/$SAMPLE/read2.fa $OUTPUT/$SAMPLE/read1.fa
                 perl $DATABASE/epiScripts/uniq_PE_FASTQ.pl $OUTPUT/$SAMPLE/read1.fa $OUTPUT/$SAMPLE/read2.fa >> $OUTPUT/$SAMPLE/tag-reads.fa
 	
-		# Align TAG-aligned mates to ORF sequences
-		bwa mem -t $THREAD $DATABASE/FASTA_genome/genome.fa $OUTPUT/$SAMPLE/tag-reads.fa | samtools view -F 4 -Shb - > $OUTPUT/$SAMPLE/orf.bam
+		# Align TAG-aligned mates to genome, requiring mapping quality score of at least 5
+		bwa mem -t $THREAD $DATABASE/FASTA_genome/genome.fa $OUTPUT/$SAMPLE/tag-reads.fa | samtools view -F 4 -q 5 -Shb - > $OUTPUT/$SAMPLE/orf.bam
 
 		# Blacklist filter out artefactual or unwanted gene alignments
 		bedtools intersect -v -abam $OUTPUT/$SAMPLE/orf.bam -b $DATABASE/blacklist_filter/blacklist.bed | samtools view -Shb - > $OUTPUT/$SAMPLE/orf_filter.bam
@@ -120,19 +121,23 @@ do
 
 	fi
 
-	#echo "Calculating significance..."
-	#READCOUNT="$(expr $(gunzip -c $READ1 | wc -l) / 4)"
-	#samtools view -H orf.bam 	
-	#echo $READCOUNT
-
         # Parse single-end epitope alignments to final table
-        PARSE=$DATABASE/epiScripts/count_raw_epitope.pl
-        perl $PARSE $OUTPUT/$SAMPLE/epitope-se.out $OUTPUT/$SAMPLE\-TAG-ID.out
+        perl $DATABASE/epiScripts/count_raw_epitope.pl $OUTPUT/$SAMPLE/epitope-se.out $OUTPUT/$SAMPLE/SE_table.out
 
 	if [ -f $READ2 ]; then
 		# Parse paired-end epitope alignments to final table
-		perl $DATABASE/epiScripts/sum_PE_epitope-alignment.pl $OUTPUT/$SAMPLE/epitope-se.out $OUTPUT/$SAMPLE/align-pe_filter.out $OUTPUT/$SAMPLE\-TAG-ID.out
+		perl $DATABASE/epiScripts/sum_PE_epitope-alignment.pl $OUTPUT/$SAMPLE/epitope-se.out $OUTPUT/$SAMPLE/align-pe_filter.out $OUTPUT/$SAMPLE/PE_table.out
 
+	        echo "Calculating significance..."
+	        read EPICOUNT ID <<< $(wc -l $OUTPUT/$SAMPLE/epitope-se.out)
+	        samtools view -H $OUTPUT/$SAMPLE/orf.bam > sam-header.txt
+	        GENOMESIZE="$(perl $DATABASE/epiScripts/sum_GenomeSize.pl sam-header.txt)"
+
+		PVALUE=0.05
+		python2 $DATABASE/epiScripts/calculate_EpitopeSignificance.py -t $OUTPUT/$SAMPLE/PE_table.out -p $PVALUE -c $EPICOUNT -s $GENOMESIZE -o $OUTPUT/$SAMPLE/PE_sig.out
+		cat $OUTPUT/$SAMPLE/SE_table.out $OUTPUT/$SAMPLE/PE_sig.out > $OUTPUT/$SAMPLE\-ID.tab
+	else
+		cat $OUTPUT/$SAMPLE/SE_table.out > $OUTPUT/$SAMPLE\-ID.tab
 	fi
 
 	# Clean up temporary files

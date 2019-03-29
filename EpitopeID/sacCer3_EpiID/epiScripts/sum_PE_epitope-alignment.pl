@@ -42,7 +42,7 @@ while($line = <PE>) {
 	if($array[5] eq "+" && $array[18] eq "-") { $LOC = "N-term"; }
 	elsif($array[5] eq "-" && $array[18] eq "+") { $LOC = "N-term"; }
 	# Ignore predicted terminus if aligned to a BIN
-	if ($array[14] eq "BIN") { $LOC = "N/A"; }
+	if($array[14] eq "BIN" || $array[14] eq "geneBorder") { $LOC = "N/A"; }
 
 	$COUNT = $array[20] . "~" . $READ_TAG{$array[3]} . "~" . $LOC;
 	if(exists $READCOUNT{$COUNT} ) { $READCOUNT{$COUNT} = $READCOUNT{$COUNT} + 1; }
@@ -54,11 +54,10 @@ close SAM;
 foreach $key (keys %READCOUNT) { push(@ARRAY, {count => $READCOUNT{$key}, id => $key}); }
 @SORT = sort { $$b{'count'} <=> $$a{'count'} } @ARRAY;
 
-open(OUT, ">>$output") or die "Can't open $output for writing!\n";
+open(OUT, ">$output") or die "Can't open $output for writing!\n";
 if($#SORT == -1) {
-        print OUT "\nNo epitope detected at genes\n";
+        print OUT "\nEpitope could not be detected genomically\n";
 } else {
-	print OUT "\nGeneID\tEpitopeID\tEpitopeLocation\tEpitopeCount\n";
 	for($x = 0; $x <= $#SORT; $x++) {
 		@temparray = split(/\~/, $SORT[$x]{'id'});
 		for($y = 0; $y <= $#temparray; $y++) { print OUT "$temparray[$y]\t" }
