@@ -113,7 +113,7 @@ do
 		bwa mem -t $THREAD $DATABASE/FASTA_genome/genome.fa $OUTPUT/$SAMPLE/tag-reads.fa | samtools view -F 4 -q 5 -Shb - > $OUTPUT/$SAMPLE/orf.bam
 
 		# Blacklist filter out artefactual or unwanted gene alignments
-		bedtools intersect -v -abam $OUTPUT/$SAMPLE/orf.bam -b $DATABASE/blacklist_filter/blacklist.bed | samtools view -Shb - > $OUTPUT/$SAMPLE/orf_filter.bam
+                bedtools intersect -v -abam $OUTPUT/$SAMPLE/orf.bam -b $DATABASE/blacklist_filter/blacklist.bed > $OUTPUT/$SAMPLE/orf_filter.bam
 		# Intersect genomic reads with matched epitope reads with genomic annotation
                 bedtools intersect -wb -abam $OUTPUT/$SAMPLE/orf_filter.bam -b $DATABASE/annotation/genome_annotation.gff.gz -bed > $OUTPUT/$SAMPLE/align-pe.out
                 # Compress BAM file read length to 1 bp to prevent multi-counting across BIN junctures
