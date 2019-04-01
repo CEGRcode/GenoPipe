@@ -130,8 +130,8 @@ do
 
 	        echo "Calculating significance..."
 	        read EPICOUNT ID <<< $(wc -l $OUTPUT/$SAMPLE/epitope-se.out)
-	        samtools view -H $OUTPUT/$SAMPLE/orf.bam > sam-header.txt
-	        GENOMESIZE="$(perl $DATABASE/epiScripts/sum_GenomeSize.pl sam-header.txt)"
+	        samtools view -H $OUTPUT/$SAMPLE/orf.bam > $OUTPUT/$SAMPLE/sam-header.txt
+	        GENOMESIZE="$(perl $DATABASE/epiScripts/sum_GenomeSize.pl $OUTPUT/$SAMPLE/sam-header.txt)"
 
 		PVALUE=0.05
 		python2 $DATABASE/epiScripts/calculate_EpitopeSignificance.py -t $OUTPUT/$SAMPLE/PE_table.out -p $PVALUE -c $EPICOUNT -s $GENOMESIZE -o $OUTPUT/$SAMPLE/PE_sig.out
