@@ -63,6 +63,9 @@ if [ ! -f $DATABASE/FASTA_genome/genome.fa.amb ] || [ ! -f $DATABASE/FASTA_genom
         bwa index $DATABASE/FASTA_genome/genome.fa
 fi
 
+# Folder containing EpitopeID scripts must be located in the same directory as the identify-Epitope.sh shell script
+LOCAL=$(pwd)
+
 cd $INPUT
 for READ1 in *R1*.fastq.gz
 do
@@ -103,11 +106,11 @@ do
 		gunzip -c $READ1 | grep -h -A 1 -F -f $OUTPUT/$SAMPLE/uniqueread1 - > $OUTPUT/$SAMPLE/read1.fa
 		gunzip -c $READ2 | grep -h -A 1 -F -f $OUTPUT/$SAMPLE/uniqueread1 - > $OUTPUT/$SAMPLE/read2.fa
 		sed -i -e 's/^@/>/g ; /\--/d' $OUTPUT/$SAMPLE/read1.fa $OUTPUT/$SAMPLE/read2.fa
-		perl $DATABASE/epiScripts/uniq_PE_FASTQ.pl $OUTPUT/$SAMPLE/read2.fa $OUTPUT/$SAMPLE/read1.fa > $OUTPUT/$SAMPLE/tag-reads.fa
+		perl $LOCAL/epiScripts/uniq_PE_FASTQ.pl $OUTPUT/$SAMPLE/read2.fa $OUTPUT/$SAMPLE/read1.fa > $OUTPUT/$SAMPLE/tag-reads.fa
                 gunzip -c $READ2 | grep -h -A 1 -F -f $OUTPUT/$SAMPLE/uniqueread2 - > $OUTPUT/$SAMPLE/read2.fa
                 gunzip -c $READ1 | grep -h -A 1 -F -f $OUTPUT/$SAMPLE/uniqueread2 - > $OUTPUT/$SAMPLE/read1.fa
                 sed -i -e 's/^@/>/g ; /\--/d' $OUTPUT/$SAMPLE/read2.fa $OUTPUT/$SAMPLE/read1.fa
-                perl $DATABASE/epiScripts/uniq_PE_FASTQ.pl $OUTPUT/$SAMPLE/read1.fa $OUTPUT/$SAMPLE/read2.fa >> $OUTPUT/$SAMPLE/tag-reads.fa
+                perl $LOCAL/epiScripts/uniq_PE_FASTQ.pl $OUTPUT/$SAMPLE/read1.fa $OUTPUT/$SAMPLE/read2.fa >> $OUTPUT/$SAMPLE/tag-reads.fa
 	
 		# Align TAG-aligned mates to genome, requiring mapping quality score of at least 5
 		bwa mem -t $THREAD $DATABASE/FASTA_genome/genome.fa $OUTPUT/$SAMPLE/tag-reads.fa | samtools view -F 4 -q 5 -Shb - > $OUTPUT/$SAMPLE/orf.bam
@@ -117,24 +120,24 @@ do
 		# Intersect genomic reads with matched epitope reads with genomic annotation
                 bedtools intersect -wb -abam $OUTPUT/$SAMPLE/orf_filter.bam -b $DATABASE/annotation/genome_annotation.gff.gz -bed > $OUTPUT/$SAMPLE/align-pe.out
                 # Compress BAM file read length to 1 bp to prevent multi-counting across BIN junctures
-                perl $DATABASE/epiScripts/filter_intersect_by_FivePrime.pl $OUTPUT/$SAMPLE/align-pe.out $OUTPUT/$SAMPLE/align-pe_filter.out
+                perl $LOCAL/epiScripts/filter_intersect_by_FivePrime.pl $OUTPUT/$SAMPLE/align-pe.out $OUTPUT/$SAMPLE/align-pe_filter.out
 
 	fi
 
         # Parse single-end epitope alignments to final table
-        perl $DATABASE/epiScripts/count_raw_epitope.pl $OUTPUT/$SAMPLE/epitope-se.out $OUTPUT/$SAMPLE/SE_table.out
+        perl $LOCAL/epiScripts/count_raw_epitope.pl $OUTPUT/$SAMPLE/epitope-se.out $OUTPUT/$SAMPLE/SE_table.out
 
 	if [ -f $READ2 ]; then
 		# Parse paired-end epitope alignments to final table
-		perl $DATABASE/epiScripts/sum_PE_epitope-alignment.pl $OUTPUT/$SAMPLE/epitope-se.out $OUTPUT/$SAMPLE/align-pe_filter.out $OUTPUT/$SAMPLE/PE_table.out
+		perl $LOCAL/epiScripts/sum_PE_epitope-alignment.pl $OUTPUT/$SAMPLE/epitope-se.out $OUTPUT/$SAMPLE/align-pe_filter.out $OUTPUT/$SAMPLE/PE_table.out
 
 	        echo "Calculating significance..."
 	        read EPICOUNT ID <<< $(wc -l $OUTPUT/$SAMPLE/epitope-se.out)
 	        samtools view -H $OUTPUT/$SAMPLE/orf.bam > $OUTPUT/$SAMPLE/sam-header.txt
-	        GENOMESIZE="$(perl $DATABASE/epiScripts/sum_GenomeSize.pl $OUTPUT/$SAMPLE/sam-header.txt)"
+	        GENOMESIZE="$(perl $LOCAL/epiScripts/sum_GenomeSize.pl $OUTPUT/$SAMPLE/sam-header.txt)"
 
 		PVALUE=0.05
-		python2 $DATABASE/epiScripts/calculate_EpitopeSignificance.py -t $OUTPUT/$SAMPLE/PE_table.out -p $PVALUE -c $EPICOUNT -s $GENOMESIZE -o $OUTPUT/$SAMPLE/PE_sig.out
+		python2 $LOCAL/epiScripts/calculate_EpitopeSignificance.py -t $OUTPUT/$SAMPLE/PE_table.out -p $PVALUE -c $EPICOUNT -s $GENOMESIZE -o $OUTPUT/$SAMPLE/PE_sig.out
 		cat $OUTPUT/$SAMPLE/SE_table.out $OUTPUT/$SAMPLE/PE_sig.out > $OUTPUT/$SAMPLE\-ID.tab
 	else
 		cat $OUTPUT/$SAMPLE/SE_table.out > $OUTPUT/$SAMPLE\-ID.tab
