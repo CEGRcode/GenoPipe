@@ -11,7 +11,7 @@ wget -c https://downloads.yeastgenome.org/curation/chromosomal_feature/saccharom
 
 # Parse file to BED format while filtering to only be Verified ORFs
 PARSE=parsers/convert_SGD-GFF_to_BED.pl
-perl $PARSE saccharomyces_cerevisiae.gff sacCer3_VerifiedORF.bed
+perl $PARSE saccharomyces_cerevisiae.gff coord.bed
 
 # Clean up temporary files
 rm saccharomyces_cerevisiae.gff
