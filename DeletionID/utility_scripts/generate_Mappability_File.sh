@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This script calculates the mappability of a user-specified series of genomic coordinates at a specified read
-# length. The resulting mappability files should be moved into the appropriate /pwd/mappability/ folder
+# length. The resulting mappability files should be moved into the appropriate /pwd/sacCer3_Del/ folder
  
 # Required software:
 # BWA v0.7.14+
@@ -11,8 +11,8 @@
 
 usage()
 {
-    echo 'generate_sacCer3_Mappability_File.sh -f <Genomic FASTA file> -c <BED coordinate file> -t <Threads - Default 1>'
-    echo 'eg: bash generate_sacCer3_Mappability_File.sh -f sacCer3.fa -c sacCer3_ORF.bed -t 2'
+    echo 'generate_Mappability_File.sh -f <Genomic FASTA file> -c <BED coordinate file> -t <Threads - Default 1>'
+    echo 'eg: bash generate_Mappability_File.sh -f sacCer3.fa -c sacCer3_ORF.bed -t 2'
     exit
 }
 
