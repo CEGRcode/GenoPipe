@@ -1,7 +1,7 @@
 #!/bin/bash
   
 # This script retrieves the latest sacCer3 feature file from SGD and parses it into BED format for downstream
-# processing. The resulting BED files should be moved into the appropriate /pwd/genomic_coord/ folder
+# processing. The resulting BED files should be moved into the appropriate /pwd/sacCer3_Del/ folder
 
 # Required software:
 # wget
