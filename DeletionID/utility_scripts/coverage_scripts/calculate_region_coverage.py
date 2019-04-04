@@ -63,11 +63,12 @@ if __name__ == '__main__':
 
 	#python2 $COVERAGE -b ALIGN_GENOME.bam -c $COORD -o $READLENGTH\bp_Cov.out
         # get arguments
-        optlist, alist = getopt.getopt(sys.argv[1:], 'hb:c:o:')
+        optlist, alist = getopt.getopt(sys.argv[1:], 'hb:c:r:o:')
         for opt in optlist:
                 if opt[0] == "-h": sys.exit(usage)
 		elif opt[0] == "-b": BAM = opt[1]
                 elif opt[0] == "-c": BED = opt[1]
+		elif opt[0] == "-r": RES = float(opt[1])
 		elif opt[0] == "-o": OUT = opt[1]
 		else: sys.exit(usage)
 
@@ -78,6 +79,7 @@ if __name__ == '__main__':
 
 	print "BAM file: ",BAM
 	print "BED file: ",BED
+	print "Resolution: ",RES
 	print "Output file: ",OUT
 
 	# Load BED file and calculate coverage using BAM file
@@ -86,6 +88,7 @@ if __name__ == '__main__':
 	output = open(OUT, "w")
 	output.write("GeneID\t" + str(READLENGTH) + "\n")
         for id, score in SCORE:
+		score *= RES
         	output.write(id + "\t" + str(score) + "\n")
 	output.close()
 

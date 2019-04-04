@@ -52,10 +52,11 @@ echo "Threads = ${THREAD}"
 COVERAGE=coverage_scripts/calculate_genomic_coverage.sh
 MERGE=coverage_scripts/merge_Coverage_Files.sh
 
-sh $COVERAGE -f $GENOME -c $COORD -r 36 -t $THREAD
-sh $COVERAGE -f $GENOME -c $COORD -r 40 -t $THREAD
-sh $COVERAGE -f $GENOME -c $COORD -r 50 -t $THREAD
-sh $COVERAGE -f $GENOME -c $COORD -r 100 -t $THREAD
+# Hard-code test alignment of read-lengths of 36, 40, 50, and 100 at 25 bp steps
+sh $COVERAGE -f $GENOME -c $COORD -r 36 -s 25 -t $THREAD
+sh $COVERAGE -f $GENOME -c $COORD -r 40 -s 25 -t $THREAD
+sh $COVERAGE -f $GENOME -c $COORD -r 50 -s 25 -t $THREAD
+sh $COVERAGE -f $GENOME -c $COORD -r 100 -s 25 -t $THREAD
 
 sh $MERGE
 

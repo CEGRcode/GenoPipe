@@ -1,7 +1,7 @@
 #! /usr/bin/perl/
 
-die "Genome_FASTA_File\tRead_Length\tOutput_File\n" unless $#ARGV == 2;
-my($input, $LENGTH, $output) = @ARGV;
+die "Genome_FASTA_File\tRead_Length\tResolution (Step)\tOutput_File\n" unless $#ARGV == 3;
+my($input, $LENGTH, $STEP, $output) = @ARGV;
 open(IN, "<$input") or die "Can't open $input for reading!\n";
 open(OUT, ">$output") or die "Can't open $output for reading!\n";
 
@@ -11,7 +11,7 @@ $currentBP = 0;
 while($line = <IN>) {
 	chomp($line);
 	if($line =~ ">") {
-		for($x = 0; $x < length($currentLine) - $LENGTH; $x++) {
+		for($x = 0; $x < length($currentLine) - $LENGTH; $x+=$STEP) {
 			$READ = substr $currentLine, $x, $LENGTH;
 			print OUT ">$currentChrom\:$x\n",$READ,"\n";
 #			print ">$currentChrom\:$x\n",$READ,"\n";
@@ -22,7 +22,7 @@ while($line = <IN>) {
 }
 close IN;
 
-for($x = 0; $x < length($currentLine) - $LENGTH; $x++) {
+for($x = 0; $x < length($currentLine) - $LENGTH; $x+=$STEP) {
 	$READ = substr $currentLine, $x, $LENGTH;
 	print OUT ">$currentChrom\:$x\n",$READ,"\n";
 #        print ">$currentChrom\:$x\n",$READ,"\n";
