@@ -5,6 +5,7 @@
  
 # Required software:
 # BWA v0.7.14+
+# bedtools v2.26+
 # samtools v1.7+
 # python 2.7.14
 # pysam
@@ -53,11 +54,18 @@ echo "Read length = ${READLENGTH}"
 echo "Threads = ${THREAD}"
 
 # Hard-coded relative paths
+BORDER=coverage_scripts/expand_BED_by_Border.pl
 TILE=coverage_scripts/tile_genome.pl 
 COVERAGE=coverage_scripts/calculate_region_coverage.py
 
+# Add pads to coordinates under consideration
+perl $BORDER $COORD $READLENGTH temp.bed
+
+# Get genomic FASTA sequence for padded coordinates
+bedtools getfasta -fi $GENOME -bed temp.bed -fo temp.fa
+
 # Tile genome at user-specified read length
-perl $TILE $GENOME $READLENGTH TILE_GENOME.fa
+perl $TILE temp.fa $READLENGTH TILE_GENOME.fa
 
 # Align to reference genome, filtering for unique reads
 bwa mem -t $THREAD $GENOME TILE_GENOME.fa | samtools view -Shb -q 5 - | samtools sort -o ALIGN_GENOME.bam -
@@ -67,4 +75,4 @@ samtools index ALIGN_GENOME.bam
 python2 $COVERAGE -b ALIGN_GENOME.bam -c $COORD -o $READLENGTH\bp_Cov.out
 
 # Clean up intermediary files
-rm TILE_GENOME.fa ALIGN_GENOME.bam* 
+rm TILE_GENOME.fa ALIGN_GENOME.bam* temp.bed temp.fa 

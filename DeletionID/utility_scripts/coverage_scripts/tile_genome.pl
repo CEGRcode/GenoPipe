@@ -27,5 +27,5 @@ for($x = 0; $x < length($currentLine) - $LENGTH; $x++) {
 	print OUT ">$currentChrom\:$x\n",$READ,"\n";
 #        print ">$currentChrom\:$x\n",$READ,"\n";
 }
-#close OUT;
+close OUT;
 
