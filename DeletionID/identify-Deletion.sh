@@ -47,6 +47,6 @@ do
 
 	SAMPLE=$(echo $BAM | awk -F"." '{print $1}')
 	echo $SAMPLE
-	python2 $LOCAL/delScripts/detect_deletion_BAM.py -b $BAM -c $DATABASE/genomic_coord/coord.bed -m $DATABASE/mappability/mappability.tab -o $OUTPUT/$SAMPLE\_deletion.tab -l -2 -M 0.25
+	python $LOCAL/delScripts/detect_deletion_BAM.py -b $BAM -c $DATABASE/genomic_coord/coord.bed -m $DATABASE/mappability/mappability.tab -o $OUTPUT/$SAMPLE\_deletion.tab -l -2 -M 0.25
 
 done

@@ -137,7 +137,7 @@ do
 	        GENOMESIZE="$(perl $LOCAL/epiScripts/sum_GenomeSize.pl $OUTPUT/$SAMPLE/sam-header.txt)"
 
 		PVALUE=0.05
-		python2 $LOCAL/epiScripts/calculate_EpitopeSignificance.py -t $OUTPUT/$SAMPLE/PE_table.out -p $PVALUE -c $EPICOUNT -s $GENOMESIZE -o $OUTPUT/$SAMPLE/PE_sig.out
+		python $LOCAL/epiScripts/calculate_EpitopeSignificance.py -t $OUTPUT/$SAMPLE/PE_table.out -p $PVALUE -c $EPICOUNT -s $GENOMESIZE -o $OUTPUT/$SAMPLE/PE_sig.out
 		cat $OUTPUT/$SAMPLE/SE_table.out $OUTPUT/$SAMPLE/PE_sig.out > $OUTPUT/$SAMPLE\-ID.tab
 	else
 		cat $OUTPUT/$SAMPLE/SE_table.out > $OUTPUT/$SAMPLE\-ID.tab

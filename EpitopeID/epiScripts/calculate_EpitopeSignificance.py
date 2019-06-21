@@ -11,32 +11,31 @@ Example: python2 calculate_EpitopeSignificance.py -t PE_table.out -p 0.05 -c 100
 
 # Main program which takes in input parameters
 if __name__ == '__main__':
-        if len(sys.argv) < 2 or not sys.argv[1].startswith("-"): sys.exit(usage)
-
+	if len(sys.argv) < 2 or not sys.argv[1].startswith("-"): sys.exit(usage)
 	TABLE = PVAL = COUNT = SIZE = OUT = ""
 
 	# get arguments
-        optlist, alist = getopt.getopt(sys.argv[1:], 'ht:p:c:s:o:')
-        for opt in optlist:
-                if opt[0] == "-h": sys.exit(usage)
+	optlist, alist = getopt.getopt(sys.argv[1:], 'ht:p:c:s:o:')
+	for opt in optlist:
+		if opt[0] == "-h": sys.exit(usage)
 		elif opt[0] == "-t": TABLE = opt[1]
 		elif opt[0] == "-p": PVAL = float(opt[1])
-                elif opt[0] == "-c": COUNT = float(opt[1])
-                elif opt[0] == "-s": SIZE = float(opt[1])
+		elif opt[0] == "-c": COUNT = float(opt[1])
+		elif opt[0] == "-s": SIZE = float(opt[1])
 		elif opt[0] == "-o": OUT = opt[1]
 		else: sys.exit(usage)
 
 	if TABLE == "":
-		print "No PE_table detected!!!"
+		print("No PE_table detected!!!")
 		sys.exit(usage)
 	elif PVAL == "":
-		print "No Pvalue input!!!"
+		print("No Pvalue input!!!")
 		sys.exit(usage)
-        elif COUNT == "":
-                print "No Single-end epitope counts input!!!"
+	elif COUNT == "":
+                print("No Single-end epitope counts input!!!")
                 sys.exit(usage)
-        elif SIZE == "":
-                print "No Genome-size input!!!"
+	elif SIZE == "":
+                print("No Genome-size input!!!")
                 sys.exit(usage)
 	if OUT == "":
                 OUT = os.path.splitext(os.path.basename(BAM))[0] + ".tab"
@@ -45,7 +44,7 @@ if __name__ == '__main__':
 	MINFOLD = 2;
 
 	# Open output file for writing
-        output = open(OUT, "w")
+	output = open(OUT, "w")
        	# open PE_table
 	file = open(TABLE, "r")
 

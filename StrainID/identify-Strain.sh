@@ -51,6 +51,6 @@ do
 
 	SAMPLE=$(echo $BAM | awk -F"." '{print $1}')
 	echo $SAMPLE
-	python2 $LOCAL/strainScripts/detect_strain_BAM.py -b $BAM -g $GENOME -v $VCF -o $OUTPUT/$SAMPLE\_strain.tab
+	python $LOCAL/strainScripts/detect_strain_BAM.py -b $BAM -g $GENOME -v $VCF -o $OUTPUT/$SAMPLE\_strain.tab
 
 done
