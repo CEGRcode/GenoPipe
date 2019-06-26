@@ -53,8 +53,8 @@ if __name__ == '__main__':
 	header = ""
 	for line in file:
 		if "detected" in line:
-			output.write(line + "\n")
-			file.close()
+			output.write("\nGeneID\tEpitopeID\tEpitopeLocation\tEpitopeCount\tpVal\n" + line.rstrip() + "\n")
+			break
 		elif header == "":
 			header = "\nGeneID\tEpitopeID\tEpitopeLocation\tEpitopeCount\tpVal\n";
 			output.write(header)

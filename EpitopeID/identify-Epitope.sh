@@ -98,7 +98,7 @@ do
 	# Align sequence reads to all tag database
 	bwa mem -t $THREAD $DATABASE/FASTA_tag/ALL_TAG.fa $READ1 | samtools view -h -F 4 -S - > $OUTPUT/$SAMPLE/align1.sam
 	# Determine which epitope sequences had reads aligned to them
-        grep -v "^@" $OUTPUT/$SAMPLE/align1.sam | cut -f1,3 > $OUTPUT/$SAMPLE/epitope-se.out
+	grep -v "^@" $OUTPUT/$SAMPLE/align1.sam | cut -f1,3 > $OUTPUT/$SAMPLE/epitope-se.out
 	
 	if [ -f $READ2 ]; then
 		bwa mem -t $THREAD $DATABASE/FASTA_tag/ALL_TAG.fa $READ2 | samtools view -h -F 4 -S - > $OUTPUT/$SAMPLE/align2.sam

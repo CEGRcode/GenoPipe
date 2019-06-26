@@ -56,7 +56,7 @@ foreach $key (keys %READCOUNT) { push(@ARRAY, {count => $READCOUNT{$key}, id => 
 
 open(OUT, ">$output") or die "Can't open $output for writing!\n";
 if($#SORT == -1) {
-        print OUT "\nEpitope could not be detected genomically\n";
+        print OUT "Epitope could not be detected genomically\n";
 } else {
 	for($x = 0; $x <= $#SORT; $x++) {
 		@temparray = split(/\~/, $SORT[$x]{'id'});
