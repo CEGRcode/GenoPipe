@@ -51,6 +51,18 @@ echo "Output folder = ${OUTPUT}"
 echo "Databse folder = ${DATABASE}"
 echo "Threads = ${THREAD}"
 
+# Check if ALL_TAG.fa exists, exit otherwise
+if [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa ]; then
+	echo "Epitope FASTA sequences not found: $DATABASE/FASTA_tag/ALL_TAG.fa"
+	exit
+fi
+
+# Check if GENOME FASTA exists, exit otherwise
+if [ ! -f $DATABASE/FASTA_genome/genome.fa ]; then
+        echo "Genome FASTA sequence not found: $DATABASE/FASTA_genome/genome.fa"
+        exit
+fi
+
 # Check if ALL_TAG.fa bwa index exists, creates if it doesn't
 if [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.amb ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.ann ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.bwt ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.pac ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.sa ]; then
         echo "Building TAG index..."
@@ -111,7 +123,7 @@ do
                 gunzip -c $READ1 | grep -h -A 1 -F -f $OUTPUT/$SAMPLE/uniqueread2 - > $OUTPUT/$SAMPLE/read1.fa
                 sed -i -e 's/^@/>/g ; /\--/d' $OUTPUT/$SAMPLE/read2.fa $OUTPUT/$SAMPLE/read1.fa
                 perl $LOCAL/epiScripts/uniq_PE_FASTQ.pl $OUTPUT/$SAMPLE/read1.fa $OUTPUT/$SAMPLE/read2.fa >> $OUTPUT/$SAMPLE/tag-reads.fa
-	
+
 		# Align TAG-aligned mates to genome, requiring mapping quality score of at least 5
 		bwa mem -t $THREAD $DATABASE/FASTA_genome/genome.fa $OUTPUT/$SAMPLE/tag-reads.fa | samtools view -F 4 -q 5 -Shb - > $OUTPUT/$SAMPLE/orf.bam
 
