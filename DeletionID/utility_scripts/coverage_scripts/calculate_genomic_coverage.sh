@@ -13,7 +13,7 @@
 usage()
 {
     echo 'calculate_genomic_coverage.sh -f <Genomic FASTA file> -c <BED coordinate file> -r <Read Length> -s <Step resolution for tiling> -t <Threads - Default 1>'
-    echo 'eg: bash calculate_genomic_coverage.sh -f sacCer3.fa -c sacCer3_ORF.bed -r 50 -t 2'
+    echo 'eg: bash calculate_genomic_coverage.sh -f sacCer3.fa -c sacCer3_ORF.bed -r 50 -s 25 -t 2'
     exit
 }
 
