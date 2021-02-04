@@ -15,11 +15,11 @@
 
 WRK=`pwd`
 
-# Generate random FASTA tag
-echo "Create RandomSequence (RTAG)"
-RANDTAG=scripts/generate_random_FASTA_sequence.pl
-RTAG=input/RANDOM_SEQ.fa
-[ -f $RTAG ] || perl $RANDTAG 500 0 $RTAG
+## Generate random FASTA tag
+#echo "Create RandomSequence (RTAG)"
+#RANDTAG=scripts/generate_random_FASTA_sequence.pl
+#RTAG=input/RANDOM_SEQ.fa
+#[ -f $RTAG ] || perl $RANDTAG 500 0 $RTAG
 
 # Download Yeast Genome (sacCer3)
 YGENOME=input/sacCer3.fa
@@ -49,8 +49,12 @@ if ! command -v twoBitToFa; then
 fi
 chmod 777 twoBitToFa
 echo "Converting 2bit to fa..."
-./twoBitToFa hg19.2bit $HGENOME
+./twoBitToFa hg19.2bit $HGENOME.raw
+echo "Complete"
+echo "Strip haplotypes..."
+python scripts/parse_hg19_Genome_FASTA.py $HGENOME.raw > $HGENOME
+echo "Complete"
 echo "BWA Indexing genome..."
 bwa index $HGENOME
 echo "Complete"
-rm twoBitToFa hg19.2bit
+rm twoBitToFa hg19.2bit $HGENOME.raw
