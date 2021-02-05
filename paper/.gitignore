@@ -1,6 +1,7 @@
 input/hg19.fa*
 input/sacCer3.fa*
 SyntheticEpitope/synthetic_genome/
+SyntheticDeletion/synthetic_genome/
 SyntheticEpitope/results/sacCer3_Reb1-Cterm_100K
 SyntheticDeletion/logs/*.err-*
 SyntheticDeletion/logs/*.out-*
