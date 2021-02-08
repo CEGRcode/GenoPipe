@@ -3,8 +3,8 @@
 #PBS -l pmem=16gb
 #PBS -l walltime=00:02:00
 #PBS -A open
-#PBS -o logs/depth.Reb1.100K.log.out
-#PBS -e logs/depth.Reb1.100K.log.err
+#PBS -o logs/depth.Reb1.1M.log.out
+#PBS -e logs/depth.Reb1.1M.log.err
 #PBS -t 1-1000
 
 # FIRST CHANGE PATH TO EXECUTE
@@ -15,8 +15,8 @@ module load bedtools/2.27.1
 module load bwa/0.7.15
 module load python/2.7.14-anaconda5.0.1
 
-BASE=1000
-DEPTH=100K
+BASE=2000
+DEPTH=1M
 LOCUS=sacCer3_Reb1-Cterm
 
 GENOME=synthetic_genome/$LOCUS\_R500.fa
