@@ -23,38 +23,84 @@ WRK=`pwd`
 
 # Download Yeast Genome (sacCer3)
 YGENOME=input/sacCer3.fa
-wget -N https://downloads.yeastgenome.org/sequence/S288C_reference/genome_releases/S288C_reference_genome_R64-1-1_20110203.tgz
-tar -xvzf S288C_reference_genome_R64-1-1_20110203.tgz
-echo "Parsing genome..."
-YPARSER=../EpitopeID/utility_scripts/genome_data/parsers/parse_sacCer3_Genome_FASTA.pl
-perl $YPARSER S288C_reference_genome_R64-1-1_20110203/S288C_reference_sequence_R64-1-1_20110203.fsa $YGENOME
-echo "Complete"
-echo "BWA Indexing genome..."
-bwa index $YGENOME
-echo "Complete"
-rm S288C_reference_genome_R64-1-1_20110203.tgz
-rm -r S288C_reference_genome_R64-1-1_20110203/
+if [[ ! -f $YGENOME ]]; then
+	echo "**Yeast genome not found, downloading to $YGENOME..."
+	wget -N https://downloads.yeastgenome.org/sequence/S288C_reference/genome_releases/S288C_reference_genome_R64-1-1_20110203.tgz
+	tar -xvzf S288C_reference_genome_R64-1-1_20110203.tgz
+	echo "Parsing genome..."
+	YPARSER=../EpitopeID/utility_scripts/genome_data/parsers/parse_sacCer3_Genome_FASTA.pl
+	perl $YPARSER S288C_reference_genome_R64-1-1_20110203/S288C_reference_sequence_R64-1-1_20110203.fsa $YGENOME
+	echo "Complete"
+	echo "BWA Indexing genome..."
+	bwa index $YGENOME
+	echo "Complete"
+	rm S288C_reference_genome_R64-1-1_20110203.tgz
+	rm -r S288C_reference_genome_R64-1-1_20110203/
+fi
 
 # Download Human Genome (hg19)
 HGENOME=input/hg19.fa
-wget -N http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/hg19.2bit
-# Check for the existence of twoBitToFa, download if not present and make globally executable
-if ! command -v twoBitToFa; then
-	unameOUT="$(uname -s)"
-	if [ $unameOUT == "Darwin" ]; then
-		wget -N http://hgdownload.soe.ucsc.edu/admin/exe/macOSX.x86_64/twoBitToFa
-	else
-		wget -N http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64.v369/twoBitToFa
+if [[ ! -f $HGENOME ]]; then
+	echo "**Human genome not found, downloading to $HGENOME..."
+	wget -N http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/hg19.2bit
+	# Check for the existence of twoBitToFa, download if not present and make globally executable
+	if ! command -v twoBitToFa; then
+		unameOUT="$(uname -s)"
+		if [ $unameOUT == "Darwin" ]; then
+			wget -N http://hgdownload.soe.ucsc.edu/admin/exe/macOSX.x86_64/twoBitToFa
+		else
+			wget -N http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64.v369/twoBitToFa
+		fi
 	fi
+	chmod 777 twoBitToFa
+	echo "Converting 2bit to fa..."
+	./twoBitToFa hg19.2bit $HGENOME.raw
+	echo "Complete"
+	echo "Strip haplotypes..."
+	python scripts/parse_hg19_Genome_FASTA.py $HGENOME.raw > $HGENOME
+	echo "Complete"
+	echo "BWA Indexing genome..."
+	bwa index $HGENOME
+	echo "Complete"
+	rm twoBitToFa hg19.2bit $HGENOME.raw
 fi
-chmod 777 twoBitToFa
-echo "Converting 2bit to fa..."
-./twoBitToFa hg19.2bit $HGENOME.raw
+
+# Build Yeast EpiID with R500
+YEPIDB=db/sacCer3_EpiID
+[ -d $YEPIDB ] || cp -r ../EpitopeID/sacCer3_EpiID/ $YEPIDB
+if [ ! -f $YEPIDB/FASTA_genome/genome.fa ]; then
+	echo "**Setup Yeast EpiID genome..."
+	cp input/sacCer3.fa $YEPIDB/FASTA_genome/genome.fa
+	echo "BWA Indexing genome..."
+	bwa index $YEPIDB/FASTA_genome/genome.fa
+	echo "Complete"
+fi
+echo "Setup Random Epitope for Yeast EpiID..."
+cp input/RAND_500.fa $YEPIDB/FASTA_tag/Tag_DB/
+rm $YEPIDB/FASTA_tag/ALL_TAG.fa*
+cd $YEPIDB/FASTA_tag/Tag_DB
+cat *.fa *.fna *.ffn *.fasta > ALL_TAG.fa
+bwa index ALL_TAG.fa
+mv ALL_TAG.fa* ../
 echo "Complete"
-echo "Strip haplotypes..."
-python scripts/parse_hg19_Genome_FASTA.py $HGENOME.raw > $HGENOME
+cd $WRK
+
+# Build Human EpiID with R500
+HEPIDB=db/hg19_EpiID
+[ -d $HEPIDB ] || cp -r ../EpitopeID/hg19_EpiID/ $HEPIDB
+if [ ! -f $HEPIDB/FASTA_genome/genome.fa ]; then
+	echo "**Setup Human EpiID genome..."
+	cp input/hg19.fa $HEPIDB/FASTA_genome/genome.fa
+	echo "BWA Indexing genome..."
+	bwa index $HEPIDB/FASTA_genome/genome.fa
+	echo "Complete"
+fi
+echo "Setup Random Epitope for Human EpiID..."
+cp input/RAND_500.fa $HEPIDB/FASTA_tag/Tag_DB/
+rm $HEPIDB/FASTA_tag/ALL_TAG.fa*
+cd $HEPIDB/FASTA_tag/Tag_DB
+cat *.fa *.fna *.ffn *.fasta > ALL_TAG.fa
+bwa index ALL_TAG.fa
+mv ALL_TAG.fa* ../
 echo "Complete"
-echo "BWA Indexing genome..."
-bwa index $HGENOME
-echo "Complete"
-rm twoBitToFa hg19.2bit $HGENOME.raw
+cd $WRK
