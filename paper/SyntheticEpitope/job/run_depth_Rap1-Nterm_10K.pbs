@@ -1,0 +1,30 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l pmem=16gb
+#PBS -l walltime=00:01:00
+#PBS -A open
+#PBS -o logs/depth.Rap1.10K.log.out
+#PBS -e logs/depth.Rap1.10K.log.err
+#PBS -t 1-1000
+
+# FIRST CHANGE PATH TO EXECUTE
+WRK=/path/to/GenoPipe/paper/SyntheticEpitope
+cd $WRK
+
+module load bedtools/2.27.1
+module load bwa/0.7.15
+module load python/2.7.14-anaconda5.0.1
+
+BASE=4000
+DEPTH=10K
+LOCUS=sacCer3_Rap1-Nterm
+
+GENOME=synthetic_genome/$LOCUS\_R500.fa
+OUTPUT=results/$LOCUS\_$DEPTH
+SEED=$(($BASE+$PBS_ARRAYID))
+
+start=`date +%s`
+bash ../scripts/simulate.sh -i $PBS_ARRAYID -d $DEPTH -s $SEED -g $GENOME -o $OUTPUT -t 4 
+end=`date +%s`
+runtime=$((end-start))
+echo "${LOCUS} ${DEPTH} simulate in ${runtime}"
