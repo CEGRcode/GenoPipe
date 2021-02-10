@@ -1,7 +1,7 @@
 #!/bin/bash
 #PBS -l nodes=1:ppn=4
 #PBS -l pmem=16gb
-#PBS -l walltime=01:00:00
+#PBS -l walltime=00:05:00
 #PBS -A open
 #PBS -o logs/mix.yeast.100K.log.out
 #PBS -e logs/mix.yeast.100K.log.err
@@ -14,14 +14,14 @@
 WRK=/path/to/GenoPipe/paper/SyntheticEpitope
 cd $WRK
 
-DEPTH=10M
-A_STRAIN=hg19_CTCF-Nterm
-B_STRAIN=hg19_POLR2H-Nterm
+DEPTH=100K
+A_STRAIN=sacCer3_Reb1-Cterm
+B_STRAIN=sacCer3_Rap1-Nterm
 
 AFACTOR=`echo $A_STRAIN | awk -F'-' '{print $1}' | awk -F'_' '{print $2}'`
 BFACTOR=`echo $B_STRAIN | awk -F'-' '{print $1}' | awk -F'_' '{print $2}'`
 
-OUTPUT=results/mix_human_$DEPTH
+OUTPUT=results/mix_yeast_$DEPTH
 [ -d $OUTPUT ] || mkdir $OUTPUT
 
 MIX=../scripts/mix_fastq.sh
