@@ -4,6 +4,7 @@ db/
 SyntheticEpitope/synthetic_genome/
 SyntheticDeletion/synthetic_genome/
 SyntheticEpitope/results/sacCer3*
+SyntheticEpitope/results/hg19*
 SyntheticEpitope/results/mix_*
 SyntheticDeletion/logs/*.err-*
 SyntheticDeletion/logs/*.out-*
