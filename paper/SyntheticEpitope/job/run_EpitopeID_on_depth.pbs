@@ -13,6 +13,7 @@
 
 #6hour walltime for yeast 10M depth (t=4,8)
 #less time needed for lower read counts
+#1hour walltime for yeast 100K depth (t=2,6)
 
 WRK=/path/to/GenoPipe/paper/SyntheticEpitope
 cd $WRK
@@ -20,10 +21,13 @@ cd $WRK
 module load bedtools/2.27.1
 module load bwa/0.7.15
 module load python/2.7.14-anaconda5.0.1
+module load samtools/1.5
 
 INFO=`sed "${PBS_ARRAYID}q;d" depth_simulations.txt`
 LOCUS=`awk '{print $1}'  <(echo $INFO)`
 DEPTH=`awk '{print $2}'  <(echo $INFO)`
+
+REF=`echo $LOCUS | awk -F'_' '{print $1}'`
 
 OUTPUT=$WRK/results/$LOCUS\_$DEPTH
 [ -d $OUTPUT/ID ] || mkdir $OUTPUT/ID
@@ -41,7 +45,7 @@ cd $GENOPIPE/EpitopeID
 ## Execute Mass EpitopeID and record time
 echo "**Begin executing EpitopeID for ${LOCUS}_${DEPTH}..."
 start=`date +%s`
-bash identify-Epitope.sh -i $OUTPUT/FASTQ -o $OUTPUT/ID -d $GENOPIPE/paper/db/sacCer3_EpiID -t 4
+bash identify-Epitope.sh -i $OUTPUT/FASTQ -o $OUTPUT/ID -d $GENOPIPE/paper/db/$REF\_EpiID -t 4
 end=`date +%s`
 runtime=$((end-start))
 MESSAGE="...mass EpitopeID for ${LOCUS} finished in ${runtime}"
