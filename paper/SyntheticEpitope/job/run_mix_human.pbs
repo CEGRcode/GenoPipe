@@ -1,0 +1,43 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l pmem=16gb
+#PBS -l walltime=02:00:00
+#PBS -A open
+#PBS -o logs/mix.human.10M.log.out
+#PBS -e logs/mix.human.10M.log.err
+#PBS -t 1-1000
+
+# Required Software
+#install seqtk
+#install gzip
+
+WRK=/path/to/GenoPipe/paper/SyntheticEpitope
+cd $WRK
+
+DEPTH=10M
+A_STRAIN=hg19_CTCF-Nterm
+B_STRAIN=hg19_POLR2H-Nterm
+
+AFACTOR=`echo $A_STRAIN | awk -F'-' '{print $1}' | awk -F'_' '{print $2}'`
+BFACTOR=`echo $B_STRAIN | awk -F'-' '{print $1}' | awk -F'_' '{print $2}'`
+
+OUTPUT=results/mix_human_$DEPTH
+[ -d $OUTPUT ] || mkdir $OUTPUT
+
+MIX=../scripts/mix_fastq.sh
+ABASE=results/$A_STRAIN\_$DEPTH/FASTQ/Simulation_$PBS_ARRAYID
+BBASE=results/$B_STRAIN\_$DEPTH/FASTQ/Simulation_$PBS_ARRAYID
+
+start=`date +%s`
+# Titrate out various ratios
+for PER in 90 80 70 60 50 40 30 20 10
+do
+	ODIR=$OUTPUT/$PER\_$AFACTOR\_$BFACTOR/FASTQ
+	OBASE=$ODIR/Simulation_$PBS_ARRAYID
+	[ -d $ODIR ] || mkdir -p $ODIR
+	bash $MIX -p $PER -a $ABASE -b $BBASE -o $OBASE
+done
+end=`date +%s`
+runtime=$((end-start))
+echo "Mix ${A_STRAIN} and ${B_STRAIN} from depth at ${DEPTH} simulated in ${runtime}"
+
