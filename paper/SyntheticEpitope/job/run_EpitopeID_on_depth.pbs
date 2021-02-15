@@ -1,0 +1,61 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l pmem=16gb
+#PBS -l walltime=06:00:00
+#PBS -A open
+#PBS -o logs/depth.eid.log.out
+#PBS -e logs/depth.eid.log.err
+#PBS -t 1-16
+
+# Each index of the job array t:[1,16] represents a different set of depth simulations. This script will execute EpitopeID against all all simulated datasets and use the perl script to calculate the detection statistics. Each index corresponds to a different row of depth_simulations.txt which describes the parameters under which each set of simulated data was generated.
+
+# This script will check that 2000 FASTQ files have been generated before executing EpitopeID.
+
+#6hour walltime for yeast 10M depth (t=4,8)
+#less time needed for lower read counts
+#1hour walltime for yeast 100K depth (t=2,6)
+
+WRK=/path/to/GenoPipe/paper/SyntheticEpitope
+cd $WRK
+
+module load bedtools/2.27.1
+module load bwa/0.7.15
+module load python/2.7.14-anaconda5.0.1
+module load samtools/1.5
+
+INFO=`sed "${PBS_ARRAYID}q;d" depth_simulations.txt`
+LOCUS=`awk '{print $1}'  <(echo $INFO)`
+DEPTH=`awk '{print $2}'  <(echo $INFO)`
+
+REF=`echo $LOCUS | awk -F'_' '{print $1}'`
+
+OUTPUT=$WRK/results/$LOCUS\_$DEPTH
+[ -d $OUTPUT/ID ] || mkdir $OUTPUT/ID
+
+#Check that all FASTQ files were genertaed first
+if [ $(ls $OUTPUT/FASTQ/*.fastq.gz |wc -l ) -lt 2000 ];
+then
+	NFASTQ=`ls $OUTPUT/FASTQ/*.fastq.gz |wc -l`
+	echo "Insufficient simulations for ${LOCUS}_${DEPTH}. Only have $NFASTQ FASTQ files, make sure you generate all 1000 before running EpitopeID"
+	exit
+fi
+
+GENOPIPE=$WRK/../..
+cd $GENOPIPE/EpitopeID
+## Execute Mass EpitopeID and record time
+echo "**Begin executing EpitopeID for ${LOCUS}_${DEPTH}..."
+start=`date +%s`
+bash identify-Epitope.sh -i $OUTPUT/FASTQ -o $OUTPUT/ID -d $GENOPIPE/paper/db/$REF\_EpiID -t 4
+end=`date +%s`
+runtime=$((end-start))
+MESSAGE="...mass EpitopeID for ${LOCUS} finished in ${runtime}"
+echo $MESSAGE
+cd $WRK
+
+## Calculate detection
+CALCULATE=scripts/calculate_detection_Stats.pl
+GENE=`echo $LOCUS | awk -F'-' '{print $1}' | awk -F'_' '{print $2}'`
+echo "**Calculate detection of $GENE..."
+head -n 9999 $OUTPUT/ID/*-ID.tab | perl $CALCULATE - $GENE $OUTPUT/$GENE\_$DEPTH\_detectionStats.txt
+echo $MESSAGE >> $OUTPUT/$GENE\_$DEPTH\_detectionStats.txt
+echo "Calculated"

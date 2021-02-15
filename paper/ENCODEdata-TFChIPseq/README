@@ -1,0 +1,8 @@
+# Run StrainID on ENCODE data and evaluate StrainID's performance
+
+# Download ENCODE TF-ChIPseq data and run through StrainID
+Use the files.txt with ENCODE accessions to download the data to the data directory.
+Then run the data through StrainID.
+
+# Compare the results to the metadata information
+Evaluate the accuracy of StrainID on real data.

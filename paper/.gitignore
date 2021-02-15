@@ -1,0 +1,15 @@
+input/hg19.fa*
+input/sacCer3.fa*
+db/
+SyntheticEpitope/synthetic_genome/
+SyntheticDeletion/synthetic_genome/
+SyntheticEpitope/results/sacCer3*
+SyntheticEpitope/results/hg19*
+SyntheticEpitope/results/mix_*
+SyntheticDeletion/logs/*.err-*
+SyntheticDeletion/logs/*.out-*
+SyntheticEpitope/logs/*.err-*
+SyntheticEpitope/logs/*.out-*
+SyntheticStrain/logs/*.err-*
+SyntheticStrain/logs/*.out-*
+

@@ -1,0 +1,16 @@
+sacCer3_Reb1-Cterm	10K	0
+sacCer3_Reb1-Cterm	100K	1000
+sacCer3_Reb1-Cterm	1M	2000
+sacCer3_Reb1-Cterm	10M	3000
+sacCer3_Rap1-Nterm	10K	4000
+sacCer3_Rap1-Nterm	100K	5000
+sacCer3_Rap1-Nterm	1M	6000
+sacCer3_Rap1-Nterm	10M	7000
+hg19_CTCF-Nterm	100K	8000
+hg19_CTCF-Nterm	1M	9000
+hg19_CTCF-Nterm	10M	10000
+hg19_CTCF-Nterm	50M	11000
+hg19_POLR2H-Nterm	100K	12000
+hg19_POLR2H-Nterm	1M	13000
+hg19_POLR2H-Nterm	10M	14000
+hg19_POLR2H-Nterm	50M	15000

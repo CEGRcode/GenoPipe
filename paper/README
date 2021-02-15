@@ -1,0 +1,42 @@
+
+
+# This directory contains all the scripts used to generate the figures for validating and benchmarking performance for GenoPipe as a tool
+
+# Directory Structure overview
+
+paper
+|--scripts
+|--setup.sh
+|--SyntheticEpitope
+|--SyntheticStrain
+|--SyntheticDeletion
+|--ENCODEdata-eGFP
+|--ENCODEdata-TFChIPseq
+
+
+## setup.sh
+runs the scripts to download and format the yeast and human genomes and other reference files for aligning the data
+also indexes the genomes for BWA
+
+## scripts
+contains the general scripts for setting up the simulations like downloading and parsing the reference genomes
+also contains the general scripts that several of the higher directory scripts call
+
+## input
+where setup.sh puts the reference genome and the aligner indexes
+
+## SyntheticEpitope
+contains the scripts and houses the results of simulations testing EpitopeID
+
+## SyntheticStrain
+contains the scripts and houses the results of simulations testing StrainID
+
+## SyntheticDeletion
+contains the scripts and houses the results of simulations testing DeletionID
+
+## ENCODEdata-eGFP
+contains the scripts and information for downloading ENCODE eGFP data to test EpitopeID
+
+## ENCODEdata-TFChIPseq
+contains the scripts and information for downloading ENCODE transcription factor ChIP-seq data to test StrainID
+
