@@ -79,7 +79,7 @@ fi
 LOCAL=$(pwd)
 
 cd $INPUT
-for READ1 in *R1*.fastq.gz
+for READ1 in *_R1*.fastq.gz
 do
 
 	SAMPLE=$(echo $READ1 | awk -F"." '{print $1}')
