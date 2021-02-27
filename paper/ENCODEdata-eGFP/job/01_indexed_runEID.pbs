@@ -1,0 +1,67 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l pmem=16gb
+#PBS -l walltime=03:30:00
+#PBS -l feature=rhel7
+#PBS -A open
+#PBS -o logs/eid.log.out
+#PBS -e logs/eid.log.err
+#PBS -t 1-3443
+
+module load gcc/8.3.1
+module load bedtools/2.27.1
+module load bwa/0.7.15
+#module load python/3.6.8
+module load samtools/1.5
+module load anaconda3
+source activate genopipe
+# genopipe env includes Python=3.9.0 and scipy
+
+WRK=/path/to/GenoPipe/paper/ENCODE-eGFP
+cd $WRK
+
+# Store directory paths
+DATABASE=$WRK/../db/hg19_EpiID
+GENOPIPE=$WRK/../../
+FASTQ=$WRK/results/FASTQ
+ID=$WRK/results/ID
+
+[ -d logs ] || mkdir logs
+[ -d $ID ] || mkdir -p $ID
+
+# Parse metadata
+METADATA=210227_sample_metadata.txt
+INFO=`sed "${PBS_ARRAYID}q;d" $METADATA`
+ENCFF=`echo $INFO | awk '{print $1}'`
+R1=$ENCFF\_R1.fastq.gz
+R2=$ENCFF\_R2.fastq.gz
+#echo $INFO
+
+# Skip Read2 or if ID file already generaetd
+if [[ `echo $INFO | awk '{print $2}'` =~ 2 ]]; then
+	echo "Skip Read2 entries..."
+	exit
+fi
+if [[ -f $ID/$ENCFF\_R1-ID.tab ]]; then
+	echo "ID already generated ($ENCFF). Exiting.."
+	exit
+fi
+
+# Set-up Temp directory
+TEMP=$WRK/temp$PBS_ARRAYID
+[ -d $TEMP ] || mkdir $TEMP
+cd $TEMP
+ln -s $FASTQ/$R1
+[ -f $FASTQ/$R2 ] && ln -s $FASTQ/$R2
+
+## Execute Single EpitopeID and record time
+cd $GENOPIPE/EpitopeID
+echo "(2) Begin executing EpitopeID for $R1..."
+start=`date +%s`
+bash identify-Epitope.sh -i $TEMP -o $ID -d $DATABASE -t 6
+end=`date +%s`
+runtime=$((end-start))
+echo "...single EpitopeID for ($PBS_ARRAYID) $R1 finished in ${runtime}"
+
+# Clean-up
+rm -r $TEMP
