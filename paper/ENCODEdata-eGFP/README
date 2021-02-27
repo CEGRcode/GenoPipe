@@ -10,7 +10,7 @@ filter that they are associated with Libraries that come from one of these Biosa
 accesions are identified and saved with all relevant metadata collected along the
 way to the `210221_sample_metadata.txt` file.
 
-Command used: python scripts/get_metadata.py > 210221_sample_metadata.txt
+Command used: python scripts/get_metadata.py > 210227_sample_metadata.txt
 
 # Download ENCODE eGFP data and run through EpitopeID
 Use the files.txt with ENCODE accessions to download the data to the data directory.
