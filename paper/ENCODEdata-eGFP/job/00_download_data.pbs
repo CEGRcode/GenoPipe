@@ -1,0 +1,43 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l pmem=16gb
+#PBS -l walltime=00:05:00
+#PBS -l feature=rhel7
+#PBS -A open
+#PBS -o logs/download.data.log.out
+#PBS -e logs/download.data.log.err
+#PBS -t 1-3443
+
+WRK=/path/to/GenoPipe/paper/ENCODE-eGFP
+cd $WRK
+
+[ -d logs ] || mkdir logs
+[ -d results/FASTQ ] || mkdir -p results/FASTQ
+
+METADATA=210227_sample_metadata.txt
+INFO=`sed "${PBS_ARRAYID}q;d" $METADATA`
+ENCFF=`echo $INFO | awk '{print $1}'`
+#echo $INFO
+
+FASTQ=$ENCFF\_R1.fastq.gz
+if [[ `echo $INFO | awk '{print $2}'` =~ 2 ]]; then
+	FASTQ=`echo $INFO | awk '{print $3}' | awk -F"/" '{print $3}'`_R2.fastq.gz
+fi
+
+# ENCODE data download
+cd results/FASTQ
+if [[ ! -f $FASTQ ]]; then
+	echo "Fetching from https://www.encodeproject.org/files/$ENCFF/@@download/$ENCFF.fastq.gz"
+	wget https://www.encodeproject.org/files/$ENCFF/@@download/$ENCFF.fastq.gz
+	mv $ENCFF.fastq.gz $FASTQ
+else
+	echo "$FASTQ already downloaded..."
+fi
+
+# Checksum of resulting FASTQ
+MD5SUM=`echo $INFO | awk '{print $5}'`
+if [[ `md5sum $FASTQ` =~ $MD5SUM ]]; then
+	echo "($PBS_ARRAYID) $FASTQ passed."
+else
+	echo "($PBS_ARRAYID) $FASTQ md5checksum failed!"
+fi

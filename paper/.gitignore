@@ -12,4 +12,6 @@ SyntheticEpitope/logs/*.err-*
 SyntheticEpitope/logs/*.out-*
 SyntheticStrain/logs/*.err-*
 SyntheticStrain/logs/*.out-*
-
+ENCODEdata-eGFP/logs/*.out-*
+ENCODEdata-eGFP/logs/*.err-*
+ENCODEdata-eGFP/results/FASTQ
