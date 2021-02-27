@@ -12,7 +12,7 @@ def search_url(url):
 	return(search_results)
 
 if __name__=="__main__":
-	
+	'''Retrieve metadata from ENCODE for testing EpitopeID'''
 	# Get Map for Biosample Types to Cell Line name
 	sys.stderr.write("URL retrieve Biosample Types to create a map to string...")
 	bst_url = "https://www.encodeproject.org/search/?type=BiosampleType&frame=object&format=json&limit=all"
@@ -82,6 +82,7 @@ if __name__=="__main__":
 		bid = biosample["@id"]
 		ontology = biosample.get("biosample_ontology","-")
 		term_name = bst2info.get(ontology,"-")
+		# Save relevant info on Biosamples of interest
 		if bid in bs_list:
 			bs2info.update({bid:"\t".join([ontology,term_name])})
 	
@@ -102,12 +103,9 @@ if __name__=="__main__":
 		accession = library["accession"]
 		bid = library.get("biosample","no_biosample")
 		
-		if( bid not in bs_list ):
-			#print(accession," ",bid)
-			continue
-		
-		#print(json.dumps(library, indent=4))
-		lb2bs.update({lid:bid})
+		# Save Library objects associated with our Biosamples of interest
+		if( bid in bs_list ):
+			lb2bs.update({lid:bid})
 	
 	lb_list = lb2bs.keys()
 	
@@ -121,24 +119,33 @@ if __name__=="__main__":
 		#print(json.dumps(fastq, indent=4))
 		accession = fastq["accession"]
 		
+		# Skip Files not related to the Libraries of interest
 		lid = fastq.get("library","-")
 		if( lid not in lb_list ):
 			#print(accession," ",lid)
 			continue
 		
+		# Collect File object info and store to a string (skip HiC assays)
 		paired_end = fastq.get("paired_end","-")
 		paired_with = fastq.get("paired_with","-")
 		md5sum = fastq.get("md5sum","-")
+		assay_term_name = fastq.get("assay_term_name")
 		date_created = fastq.get("date_created","-")
 		read_count = str(fastq.get("read_count","-"))
 		read_length = str(fastq.get("read_length","-"))
 		status = fastq.get("status","no_status")
 		date_created = fastq.get("date_created","-")
-		ff_info = "\t".join([paired_end,paired_with,lid,md5sum,date_created,read_count,read_length,status])
 		
+		if(assay_term_name=="HiC"):
+			continue
+		
+		ff_info = "\t".join([paired_end,paired_with,lid,md5sum,assay_term_name,date_created,read_count,read_length,status])
+		
+		# Get accessions and info mappings for this file
 		bid = lb2bs[lid]
 		mid = bs2gm[bid]
 		bs_info = bs2info[bid]
 		gm_info = gm2info[mid]
 		
+		# Write info and accessions to a metdata data entry line
 		sys.stdout.write( "\t".join([accession,ff_info,bid,mid,bs_info,gm_info]) + "\n" )
