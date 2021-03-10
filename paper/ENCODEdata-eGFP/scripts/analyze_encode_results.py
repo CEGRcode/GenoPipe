@@ -24,7 +24,8 @@ if __name__ == "__main__":
 	dbtag2mtag = {'LAP-tag':'eGFP'}
 
 	# Initialize tracking variables
-	total_se_pe = [0,0]
+	num_se = 0
+	num_pe = 0
 	se_epitope_found_count = 0
 	pe_epitope_found_count = 0
 	pe_correct_target_count = 0
@@ -41,9 +42,18 @@ if __name__ == "__main__":
 		target = mtokens[14].split('/')[2].split("-")[0].upper()
 		tags = mtokens[18].split('|')
 		
+		if(mtokens[1]=='-'):
+			mtokens[1] = "SE"
+		elif(mtokens[1]=="1"):
+			mtokens[1] = "PE"
+		
 		# Only report eGFP
-		if("eGFP" not in tags):
-			continue
+		#if("eGFP"!=mtokens[18]):
+		#	continue
+		
+		# Only report released
+		#if("released"!=mtokens[9]):
+		#	continue
 		
 		# Check file exists
 		id_file = join(args.input_dir,"%s_R1-ID.tab" % encff)
@@ -53,17 +63,21 @@ if __name__ == "__main__":
 		
 		# Initialize id file variables to save
 		id_read_counts = []
-		target_found = 0
+		target_rank = 0
 		matched_target_strings = []
+		mtag2count = {}
+		# Set-up default counts of all expected tags to zero
+		for t in tags:
+			mtag2count.setdefault(t,0)
 		
 		# Parse id file for target info & epitope read count
 		id_reader = open(id_file,'r')
 		line = id_reader.readline()
 		while( line!="" ):
+			# Parse number of mapped reads for each epitope tag sequence in EpiDB
 			if( line.find("EpitopeID\tEpitopeCount")==0 ):
 				line = id_reader.readline()
 				tokens = line.strip().split('\t')
-				mtag2count = {}
 				# Add count values parsed from ID results file
 				while( len(tokens)==2 ):
 					mtag = dbtag2mtag.get(tokens[0],tokens[0])
@@ -72,51 +86,61 @@ if __name__ == "__main__":
 					# Iterate to next line
 					line = id_reader.readline()
 					tokens = line.strip().split('\t')
-				# Set-up default counts of all expected tags to zero
-				for t in tags:
-					mtag2count.setdefault(t,0)
-				# Turn tagcountinfo into an ordered list of strings
-				for t in sorted(mtag2count,key=mtag2count.get):
-					id_read_counts.append("%s:%i" % (t,mtag2count[t]))
-				# dictionaries preserve insertion order in Python 3.7+
-				# recreate dictionary on order of value size
-				#{k: v for k, v in sorted(mtag2count.items(), key=lambda item: item[1])}
-			
+			# Parse localization readouts with sig pvals for target info
 			if( line.find("GeneID\tEpitopeID\tEpitopeLocation")==0 ):
 				line = id_reader.readline()
 				tokens = line.strip().split('\t')
 				rank = 1
 				while( len(tokens)==5 ):
+					# Collect all hits into a  list for reporting
+					matched_target_strings.append(tokens[0].split("|")[0])
+					# Check for expected target and save its rank in report
 					if( tokens[0].upper().find(target)==0 ):
-						if( target_found==0 ):
-							target_found = rank
-						matched_target_strings.append(tokens[0].split("|")[0])
-					elif( tokens[0]!="GeneID" ):
+						if( target_rank==0 ):
+							target_rank = rank
+					# Report unexpected targets
+					else:
 						sys.stderr.write('%s:missed_target=%s, target=%s\n' % (encff,tokens[0], target) )
 					line = id_reader.readline()
 					tokens = line.strip().split('\t')
-					rank += 1
+					rank += 1	
 			line = id_reader.readline()
 		id_reader.close()
+		
+		# Turn tagcountinfo into an ordered list of strings
+		id_read_counts = []
+		for t in sorted(mtag2count,key=mtag2count.get):
+			id_read_counts.append("%s:%i" % (t,mtag2count[t]))
+		
+		# Update summary counts
+		presence = "fail"
+		localization = "NA"
+		counts = [mtag2count[t] for t in tags]
+		if( all(c>0 for c in counts) ):
+			presence = "pass"
+
+		if( mtokens[1]=='SE' ):
+			target_rank = '-'
+			num_se += 1
+			if( presence=="pass" ):
+				se_epitope_found_count += 1
+		elif( mtokens[1]=='PE' ):
+			num_pe += 1
+			localization = "fail"
+			if( presence=="pass" ):
+				pe_epitope_found_count += 1
+			if( target_rank>0 ):
+				localization = "pass"
+				pe_correct_target_count += 1
+		else:
+			sys.stderr.write("(!) SE/PE column token not recognized\n")
+		
 		# Output: EID\t[SE|PE]\tEpitopeReadCount\t[Target\tTargetsFound
 		sys.stderr.write("|".join(matched_target_strings))
-		sys.stdout.write( "\t".join([encff,mtokens[1],target,str(target_found),"|".join(id_read_counts),"\t".join(mtokens[3:])]) + "\n")
-#		sys.stdout.write('%s\t%s\t%i\t%s\t%i\n' % ( eid,mtokens[1],id_read_count,target,target_found  ) )
-		# Update summary counts
-#		if( mtokens[1]=='-' ):
-#			total_se_pe[0] += 1
-#			if( id_read_count>0 ):
-#				se_epitope_found_count += 1
-#		if( mtokens[1]=='1' ):
-#			total_se_pe[1] += 1
-#			if( id_read_count>0 ):
-#				pe_epitope_found_count += 1
-#			if( target_found==1 ):
-#				pe_correct_target_count += 1
-		id_reader.close()
+		sys.stdout.write( "\t".join([ encff, mtokens[1], presence, localization, mtokens[18], str(target_rank), "|".join(id_read_counts), mtokens[14], "|".join(matched_target_strings), "\t".join(mtokens[2:]) ]) + "\n")
 	reader.close()
 	# Output Summary
-#	sys.stdout.write('\nOutput Summary:\n')
-#	sys.stdout.write('%i of %i SE datasets found epitope\n' % (se_epitope_found_count,total_se_pe[0]))
-#	sys.stdout.write('%i of %i PE datasets found epitope\n' % (pe_epitope_found_count,total_se_pe[1]))
-#	sys.stdout.write('%i of %i PE datasets identified correct locus\n' % (pe_correct_target_count,total_se_pe[1]))
+	sys.stderr.write('\nOutput Summary:\n')
+	sys.stderr.write('%i of %i SE datasets found epitope\n' % (se_epitope_found_count,num_se))
+	sys.stderr.write('%i of %i PE datasets found epitope\n' % (pe_epitope_found_count,num_pe))
+	sys.stderr.write('%i of %i PE datasets identified correct locus\n' % (pe_correct_target_count,num_pe))
