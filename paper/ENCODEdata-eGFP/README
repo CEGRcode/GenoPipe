@@ -2,13 +2,13 @@
 
 
 # Reference files
-ENCODE metadata was pulled on February 21, 2021 using the `scripts/get_metadata.py`
+ENCODE metadata was pulled on February 27, 2021 using the `scripts/get_metadata.py`
 script that pulls all Genetic Modification accessions with category=insertion and 
 purpose=tagging. These are used to pull Biosample accessions with the organism=
 human constraint. The File accessions with type=FASTQ are finally pulled with the 
 filter that they are associated with Libraries that come from one of these Biosample
-accesions are identified and saved with all relevant metadata collected along the
-way to the `210221_sample_metadata.txt` file.
+accessions and their assay=[ChIPseq|DNAseq]. They are saved with all relevant 
+metadata to the `210227_sample_metadata.txt` file.
 
 Command used: python scripts/get_metadata.py > 210227_sample_metadata.txt
 
