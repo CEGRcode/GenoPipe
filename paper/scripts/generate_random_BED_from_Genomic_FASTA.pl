@@ -12,7 +12,7 @@ if( $seed ne '-' ){ srand($seed) }
 $genomeSize = 0;
 %CHR;
 $READLENGTH = 40;
-$PEINSERT = 200; # int(rand($PEINSERT)) + 100 creates random insert from 100-300 bp
+$PEINSERT = 250;
 
 # Get chr sequence lengths and genome sizes
 open(GEN, "<$genomic") or die "Can't open $genomic for reading!\n";
@@ -47,7 +47,7 @@ for($x = 0; $x < $NUM; $x++) {
 			$R1_END = ($COORD + $READLENGTH);
 			$READID = $key . ":" . $COORD . "-" . $R1_END . "," . $DIR;
 			
-			$COORD2 = $COORD + int(rand(250) + 100);     # ASK WILL: did he want to substitute 250bp with $PEINSERT variable specified above?
+			$COORD2 = $COORD + int(rand($PEINSERT) + 100);
 			$R2_END = ($COORD2 + $READLENGTH);
 			$DIR2 = "+";
 			if($DIR eq "+") { $DIR2 = "-"; }
