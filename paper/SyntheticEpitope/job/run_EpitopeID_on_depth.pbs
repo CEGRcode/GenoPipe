@@ -5,7 +5,7 @@
 #PBS -A open
 #PBS -o logs/depth.eid.log.out
 #PBS -e logs/depth.eid.log.err
-#PBS -t 1-16
+#PBS -t 1-11,13-15
 
 # Each index of the job array t:[1,16] represents a different set of depth simulations. This script will execute EpitopeID against all all simulated datasets and use the perl script to calculate the detection statistics. Each index corresponds to a different row of depth_simulations.txt which describes the parameters under which each set of simulated data was generated.
 
@@ -15,6 +15,7 @@
 #less time needed for lower read counts
 #1hour walltime for yeast 100K depth (t=2,6)
 
+# FIRST CHANGE PATH TO EXECUTE
 WRK=/path/to/GenoPipe/paper/SyntheticEpitope
 cd $WRK
 
