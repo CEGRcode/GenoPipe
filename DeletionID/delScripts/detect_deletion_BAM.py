@@ -208,7 +208,7 @@ if __name__ == '__main__':
 
 	# Output final data
 	output = open(OUT, "w")
-	FINAL = sorted(SCORE, key=lambda x:x[1], reverse=True)
+	FINAL = sorted(SCORE, key=lambda x:(x[1] if not isinstance(x[1],str) else 0), reverse=True)
 	for id,score in FINAL:
 		if str(score) == 'No Data Detected':
 			output.write(id + "\t" + str(score) + "\n")
