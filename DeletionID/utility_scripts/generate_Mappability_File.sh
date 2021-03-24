@@ -6,7 +6,7 @@
 # Required software:
 # BWA v0.7.14+
 # samtools v1.7+
-# python 2.7.14
+# python 3.8
 # pysam
 
 usage()
