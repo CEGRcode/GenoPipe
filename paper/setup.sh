@@ -104,3 +104,9 @@ bwa index ALL_TAG.fa
 mv ALL_TAG.fa* ../
 echo "Complete"
 cd $WRK
+
+
+# Add Yeast Deletion DB to paper/db
+cd $WRK/db
+ln -s ../../DeletionID/sacCer3_Del
+cd $WRK
