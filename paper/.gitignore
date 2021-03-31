@@ -13,5 +13,5 @@ SyntheticEpitope/logs/*.err-*
 SyntheticEpitope/logs/*.out-*
 SyntheticStrain/logs/*.err-*
 SyntheticStrain/logs/*.out-*
-YKOC-wgs/*.err-*
-YKOC-wgs/*.out-**
+YKOC-wgs/logs/*.err-*
+YKOC-wgs/logs/*.out-*
