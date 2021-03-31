@@ -7,7 +7,8 @@
 # wget
 
 # Retrieve latest SGD features file in GFF format
-wget -c https://downloads.yeastgenome.org/curation/chromosomal_feature/saccharomyces_cerevisiae.gff
+wget -c http://sgd-archive.yeastgenome.org/curation/chromosomal_feature/saccharomyces_cerevisiae.gff.gz
+gzip -d saccharomyces_cerevisiae.gff.gz
 
 # Parse file to BED format while filtering to only be Verified ORFs
 PARSE=parsers/convert_SGD-GFF_to_BED.pl
