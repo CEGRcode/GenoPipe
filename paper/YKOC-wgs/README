@@ -1,0 +1,28 @@
+# Run DeletionID on WGS data of the YKOC
+
+# Metadata with strain information, EBI accessions, and gene name maps.
+The `201213_STable1_del2srs.txt` file was pulled from Puddu et al, 2019 in the 
+supplementary information section and maps the ERS accessions to which background
+or which gene was knocked out in those samples. This table was downloaded on 
+December 13, 2020.
+
+The `210223_EBIaccessions_PRJEB27160.txt` file was pulled to get the run accessions
+(ERRXXXXXXX) for downloading the FASTQ files for each sample. The following url was 
+accessed on February 23, 2021 to download this metadata.
+
+https://www.ebi.ac.uk/ena/browser/view/PRJEB27160
+
+The `210316_sgd_names_and_aliases` file was pulled from YeastMine on March 16, 2021.
+
+# Download & Align YKOC data
+Use the EBI accessions to download the data to the `results/FASTQ` directory. The 
+`job/00_download_data.pbs` PBS script uses the `wget` command but for the paper, these
+files were downloaded using Globus. The FASTQ files are aligned with BWA-MEM by 
+running the `job/01_align_fastq.pbs` PBS script. 
+
+# Run YKOC through DeletionID
+The BAM files are fed to DeletionID using the `job/02_indexed_runDID.pbs` PBS script.
+
+# Compare the results to the metadata information
+Evaluate the accuracy of DeletionID on real data using the `job/03_tally_results.pbs`
+PBS script which calls the `script/analyze_ykoc_results.py` Python script.
