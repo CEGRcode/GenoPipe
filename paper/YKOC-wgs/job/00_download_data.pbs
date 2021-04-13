@@ -2,7 +2,6 @@
 #PBS -l nodes=1:ppn=4
 #PBS -l pmem=16gb
 #PBS -l walltime=00:05:00
-#PBS -l feature=rhel7
 #PBS -A open
 #PBS -o logs/download.data.log.out
 #PBS -e logs/download.data.log.err
@@ -15,13 +14,13 @@ cd $WRK
 [ -d results/FASTQ ] || mkdir -p results/FASTQ
 
 INDEX=$(($PBS_ARRAYID-1))
-METADATA=210223_EBIaccessions_PRJEB27160.txt
+METADATA=210403_PRJEB27160_accessions.txt
 INFO=`sed "${INDEX}q;d" $METADATA`
 ERR=`echo $INFO | awk '{print $4}'`
-URL1=`echo $INFO | awk '{print $6}' | awk -F";" '{print $1}'`
-URL2=`echo $INFO | awk '{print $6}' | awk -F";" '{print $2}'`
-MDSUM1=`echo $INFO | awk '{print $7}' | awk -F";" '{print $1}'`
-MDSUM2=`echo $INFO | awk '{print $7}' | awk -F";" '{print $2}'`
+URL1=`echo $INFO | awk '{print $12}' | awk -F";" '{print $1}'`
+URL2=`echo $INFO | awk '{print $12}' | awk -F";" '{print $2}'`
+MDSUM1=`echo $INFO | awk '{print $11}' | awk -F";" '{print $1}'`
+MDSUM2=`echo $INFO | awk '{print $11}' | awk -F";" '{print $2}'`
 #echo $INFO
 
 cd results/FASTQ
