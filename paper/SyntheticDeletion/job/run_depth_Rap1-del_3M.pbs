@@ -1,11 +1,10 @@
 #!/bin/bash
 #PBS -l nodes=1:ppn=4
 #PBS -l pmem=16gb
-#PBS -l walltime=00:03:00
-#PBS -l feature=rhel7
+#PBS -l walltime=00:30:00
 #PBS -A open
-#PBS -o logs/depth.Reb1.100K.log.out
-#PBS -e logs/depth.Reb1.100K.log.err
+#PBS -o logs/depth.Rap1.3M.log.out
+#PBS -e logs/depth.Rap1.3M.log.err
 #PBS -t 1-1000
 
 # FIRST CHANGE PATH TO EXECUTE
@@ -19,9 +18,10 @@ module load samtools/1.5
 module load anaconda3
 source activate genopipe
 
-BASE=1000
-DEPTH=100K
-LOCUS=sacCer3_Reb1
+INFO=`sed "4q;d" depth_simulations.txt`
+LOCUS=`awk '{print $1}'  <(echo $INFO)`
+DEPTH=`awk '{print $2}'  <(echo $INFO)`
+BASE=`awk '{print $3}'  <(echo $INFO)`
 
 GENOME=synthetic_genome/$LOCUS\_del.fa
 OUTPUT=results/$LOCUS\_$DEPTH
