@@ -17,6 +17,7 @@ YKOC-wgs/logs/*.err-*
 YKOC-wgs/logs/*.out-*
 YKOC-wgs/results/FASTQ
 YKOC-wgs/results/BAM
+YKOC-wgs/results/ID
 ENCODEdata-eGFP/logs/*.out-*
 ENCODEdata-eGFP/logs/*.err-*
 ENCODEdata-eGFP/results/FASTQ
