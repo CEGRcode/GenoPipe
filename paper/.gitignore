@@ -15,3 +15,7 @@ SyntheticStrain/logs/*.err-*
 SyntheticStrain/logs/*.out-*
 YKOC-wgs/logs/*.err-*
 YKOC-wgs/logs/*.out-*
+ENCODEdata-eGFP/logs/*.out-*
+ENCODEdata-eGFP/logs/*.err-*
+ENCODEdata-eGFP/results/FASTQ
+ENCODEdata-eGFP/results/ID
