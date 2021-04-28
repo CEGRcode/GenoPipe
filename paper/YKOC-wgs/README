@@ -1,10 +1,14 @@
 # Run DeletionID on WGS data of the YKOC
 
 # Metadata with strain information, EBI accessions, and gene name maps.
-The `201213_Puddu_2019_STable1_del2srs.txt` file was pulled from Supplementary 
+The `201213_Puddu_2019_STable1_del2ers.txt` file was pulled from Supplementary 
 Table 1 from Puddu et al 2019. Maps the EBI sample accessions (ERSXXXXXXX) to the 
 expected knockout strain and a sample ID used by the paper (SDXXXX). This table was 
 downloaded December 13, 2020.
+
+The `210328_Puddu_2019_STable6_verifiedKO.txt` file was pulled from Supplementary 
+Table 6 from Puddu et al 2019. This file contains the list of verified KO samples 
+keyed on their SD id and including associated scores with notes.
 
 The `210403_PRJEB27160_accessions.txt` metadata file was pulled to map EBI sample 
 accessions (ERSXXXXXXX) to the run accessions (ERRXXXXXXX). The file also contains 
