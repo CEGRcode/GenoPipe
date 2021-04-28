@@ -1,0 +1,39 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l pmem=16gb
+#PBS -l walltime=00:10:00
+#PBS -A open
+#PBS -o tally-results.out
+#PBS -e tally-results.err
+
+module load anaconda3
+source activate genopipe
+#PyLib argparse
+#PyLib matplotlib
+#PyLib matplotlib-venn
+
+# FIRST CHANGE PATH TO EXECUTE
+WRK=/path/to/GenoPipe/paper/YKOC-wgs
+cd $WRK
+
+#wget http://sgd-archive.yeastgenome.org/curation/chromosomal_feature/SGD_features.tab
+wget http://sgd-archive.yeastgenome.org/curation/chromosomal_feature/deleted_merged_features.tab
+wget http://sgd-archive.yeastgenome.org/curation/chromosomal_feature/saccharomyces_cerevisiae.gff.gz
+gzip -d saccharomyces_cerevisiae.gff.gz
+
+# Tally results to generate TableS2-ykoc-output-summary
+python scripts/analyze_ykoc_results.py -m 201213_Puddu_2019_STable1_del2ers.txt -i results/ID \
+	-e 210403_PRJEB27160_accessions.txt -t 210328_Puddu_2019_STable6_verifiedKO.txt \
+	-d deleted_merged_features.tab -n saccharomyces_cerevisiae.gff \
+	> results/ykoc_output_summary.txt \
+	2> results/ykoc_output_summary.err
+
+grep 'PASS' results/ykoc_output_summary.txt | grep $'\tVerified' > results/ConfidentPass.txt
+grep 'PASS' results/ykoc_output_summary.txt | grep 'NotVerified' > results/TentativePass.txt
+grep 'FAIL' results/ykoc_output_summary.txt | grep $'\tVerified' > results/TentativeFails.txt
+grep 'FAIL' results/ykoc_output_summary.txt | grep 'NotVerified' > results/TrueFails.txt
+
+python scripts/make_venn_diagram.py -s results/ykoc_output_summary.txt
+
+#Clean-up
+rm saccharomyces_cerevisiae.gff* deleted_merged_features.tab
