@@ -33,7 +33,7 @@ grep 'PASS' results/ykoc_output_summary.txt | grep 'NotVerified' > results/Tenta
 grep 'FAIL' results/ykoc_output_summary.txt | grep $'\tVerified' > results/TentativeFails.txt
 grep 'FAIL' results/ykoc_output_summary.txt | grep 'NotVerified' > results/TrueFails.txt
 
-python scripts/make_venn_diagram.py -s results/ykoc_output_summary.txt
+python scripts/make_venn_diagram.py -s results/ykoc_output_summary.txt -t Figure3C
 
 #Clean-up
 rm saccharomyces_cerevisiae.gff* deleted_merged_features.tab
