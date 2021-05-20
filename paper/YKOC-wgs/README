@@ -18,6 +18,14 @@ April 3, 2021 to download this metadata.
 
 https://www.ebi.ac.uk/ena/browser/view/PRJEB27160
 
+Note: Four ERS sample accessions referenced in the paper are missing from the EBI 
+metadata download:
+
+ERS1041599
+ERS969339
+ERS969700
+ERS969701
+
 # Download & Align YKOC data
 Use the EBI accessions to download the data to the `results/FASTQ` directory. The 
 `job/00_download_data.pbs` PBS script uses the `wget` command but for the paper, these
