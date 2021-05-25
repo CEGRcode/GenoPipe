@@ -11,8 +11,6 @@ SyntheticDeletion/logs/*.err-*
 SyntheticDeletion/logs/*.out-*
 SyntheticEpitope/logs/*.err-*
 SyntheticEpitope/logs/*.out-*
-SyntheticStrain/logs/*.err-*
-SyntheticStrain/logs/*.out-*
 YKOC-wgs/logs/*.err-*
 YKOC-wgs/logs/*.out-*
 YKOC-wgs/results/FASTQ
@@ -23,3 +21,6 @@ ENCODEdata-eGFP/logs/*.out-*
 ENCODEdata-eGFP/logs/*.err-*
 ENCODEdata-eGFP/results/FASTQ
 ENCODEdata-eGFP/results/ID
+SyntheticStrain/synthetic_genome/
+SyntheticStrain/logs/*.err-*
+SyntheticStrain/logs/*.out-*
