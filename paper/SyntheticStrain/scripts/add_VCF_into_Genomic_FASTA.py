@@ -48,7 +48,7 @@ def add_variants(seq, var):
 		## Substitution handled
 		elif(VCFrecord.ref.upper() in NT and VCFrecord.alts[0].upper() in NT):
 			# Check expected ref
-			if(seq[VCFrecord.start]!=VCFrecord.ref):
+			if(seq[VCFrecord.start].upper()!=VCFrecord.ref.upper()):
 				sys.stderr.write("(!) Skip reference mismatch: expected %s != found %s\n" % (VCFrecord.ref,seq[VCFrecord.start]))
 				continue
 			sys.stderr.write("(*) Process Substitution: %s\n" % (str(VCFrecord).strip()))
