@@ -25,3 +25,4 @@ SyntheticStrain/synthetic_genome/
 SyntheticStrain/logs/*.err-*
 SyntheticStrain/logs/*.out-*
 SyntheticStrain/results/sacCer3*
+SyntheticStrain/results/hg19*
