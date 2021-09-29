@@ -10,8 +10,8 @@ nucleotides with the variant nucleotides.
 
 # Sequencing-Depth Test:
 For each synthetic genome, simulate 1000 datasets for each of the various number of reads
--sacCer3 genomes sequence at 10K, 100K, 1M, and 10M reads
--hg19 genomes sequence at 100K, 1M, 10M, and 50M reads
+-sacCer3 genomes sequence at 500K, 1M, 2M, 3M, 4M, and 5M reads
+-hg19 genomes sequence at 1M, 2M, 5M, 10M, and 20M reads
 Run them through StrainID and evaluate how often StrainID correctly identifies the 
 correct strain. Time StrainID to determine how its execution speed performance.
 
