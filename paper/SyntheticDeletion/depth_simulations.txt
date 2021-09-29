@@ -1,0 +1,12 @@
+sacCer3_Rap1	500K	0
+sacCer3_Rap1	1M	1000
+sacCer3_Rap1	2M	2000
+sacCer3_Rap1	3M	3000
+sacCer3_Rap1	4M	4000
+sacCer3_Rap1	5M	5000
+sacCer3_Reb1	500K	6000
+sacCer3_Reb1	1M	7000
+sacCer3_Reb1	2M	8000
+sacCer3_Reb1	3M	9000
+sacCer3_Reb1	4M	10000
+sacCer3_Reb1	5M	11000

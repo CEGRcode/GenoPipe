@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script mMakes genomes to simulate from. Two yeast and two human genomes each with a 500bp Random epitope tag squence at the specificed loci
+# This script makes genomes to simulate from. Two yeast and two human genomes each with a 500bp Random epitope tag squence at the specificed loci
 
 INSERT=scripts/insert_FASTA_into_Genome.pl
 RTAG=../input/RAND_500.fa

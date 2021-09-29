@@ -10,11 +10,13 @@ usage()
     exit
 }
 
-if [ "$#" -ne 8 ]; then
+if [ "$#" -ne 8 && "$#" -ne 10 ]; then
     usage
 fi
 
-while getopts ":i:g:v:o:" IN; do
+SEED=""
+
+while getopts ":i:g:v:o:s:" IN; do
     case "${IN}" in
         i)
             INPUT=${OPTARG}
@@ -27,6 +29,9 @@ while getopts ":i:g:v:o:" IN; do
             ;;
 	o)
             OUTPUT=${OPTARG}
+            ;;
+	s)
+            SEED=${OPTARG}
             ;;
         *)
             usage
@@ -43,6 +48,7 @@ echo "Input folder = ${INPUT}"
 echo "Genome FASTA file = ${GENOME}"
 echo "VCF folder = ${VCF}"
 echo "Output folder = ${OUTPUT}"
+echo "Seed value = ${SEED}"
 
 LOCAL=$(pwd)
 cd $INPUT
@@ -51,6 +57,10 @@ do
 
 	SAMPLE=$(echo $BAM | awk -F"." '{print $1}')
 	echo $SAMPLE
-	python $LOCAL/strainScripts/detect_strain_BAM.py -b $BAM -g $GENOME -v $VCF -o $OUTPUT/$SAMPLE\_strain.tab
-
+	
+	if [[ $SEED -eq "" ]]; then
+		python $LOCAL/strainScripts/detect_strain_BAM.py -b $BAM -g $GENOME -v $VCF -o $OUTPUT/$SAMPLE\_strain.tab
+	else
+		python $LOCAL/strainScripts/detect_strain_BAM.py -b $BAM -g $GENOME -v $VCF -o $OUTPUT/$SAMPLE\_strain.tab -s $SEED
+	fi
 done

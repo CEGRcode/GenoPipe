@@ -1,7 +1,15 @@
 #!/bin/bash
 
-# This script simulates data and runs EpitopeID on the results. You can point to the epitope coordinates,
-# sequencing depth, starting seed, and reference genome to use.
+# This script simulates by sampling paired-end reads from a synthetic genome as BED coordinate
+# using custom scrripts and then extracting the sequence using Bedtools. Then the FASTA has 
+# quality scores added and the resulting FASTQ is compressed to fastq.gz files.
+
+# Simulation index is like a replicate index and is used in the final output filename
+# Depth specifies how many paired end reads to generate for the dataset
+# Seed can be be set for the sampling step to generate the BED files
+# Synthetic Genome FASTA file needs to be indicated (with inserted epitope, with deletion 
+#		removed, with SNPs sprinkled into genome)
+# Output FASTQ files are saved to /path/to/results/FASTQ/Simulation_X_R*.fastq.gz
 
 # Required software:
 # BWA v0.7.15
@@ -12,20 +20,32 @@
 
 usage()
 {
-	echo 'bash simulate.sh -i <simulationIndex> -d [10K|100K|1M|10M|50M] -s <seed> -g <syntheticGenomeFASTA> -o <outputDirectory> -t <numThreads>'
-	echo 'eg: bash simulate.sh -i 1 -d 100K -s 1000 -g /path/to/genomewepitope -o /path/to/results -t 4'
+	echo 'bash simulate.sh -i <simulationIndex> -d [10K|100K|1M|2M|5M|7M|10M|50M] -s <seed> -g <syntheticGenomeFASTA> -o <outputDirectory>'
+	echo 'eg: bash simulate.sh -i 1 -d 100K -s 1000 -g /path/to/syntheticgenome -o /path/to/results'
 	exit
 }
 
-if [ "$#" -ne 10 ] && [ "$#" -ne 12 ]; then
+if [ "$#" -ne 10 ]; then
 	usage
 fi
 
-THREAD=4
 declare -A GETDEPTH=( ["10K"]=10000 \
 		["100K"]=100000 \
+		["200K"]=200000 \
+		["500K"]=500000 \
+		["600K"]=600000 \
+		["700K"]=700000 \
+		["800K"]=800000 \
+		["900K"]=900000 \
 		["1M"]=1000000 \
+		["1.5M"]=1500000 \
+		["2M"]=2000000 \
+		["3M"]=3000000 \
+		["4M"]=4000000 \
+		["5M"]=5000000 \
+		["7M"]=7000000 \
 		["10M"]=10000000 \
+		["20M"]=20000000 \
 		["50M"]=50000000  )
 
 while getopts ":i:d:s:g:o:t:" IN; do
@@ -44,9 +64,6 @@ while getopts ":i:d:s:g:o:t:" IN; do
 		;;
 	o)
 		OUTDIR=${OPTARG}
-		;;
-	t)
-		THREAD=${OPTARG}
 		;;
 	*)
 		usage

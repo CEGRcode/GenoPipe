@@ -1,4 +1,10 @@
 #!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l pmem=16gb
+#PBS -l walltime=03:00:00
+#PBS -A open
+#PBS -o run.setup.out
+#PBS -e run.setup.err
 
 # This script sets up input files shared by synthetic and data studies.
 #   -generate random 500bp epitope tag used by SyntheticEpitope
@@ -13,7 +19,16 @@
 # Optional software:
 # twoBitToFa
 
-WRK=`pwd`
+WRK=/path/to/GenoPipe/paper/YKOC-wgs
+cd $WRK
+
+module load gcc
+module load bwa
+module load samtools
+
+
+[ -d $WRK/input ] || mkdir $WRK/input
+[ -d $WRK/db ] || mkdir $WRK/db
 
 ## Generate random FASTA tag
 #echo "Create RandomSequence (RTAG)"
@@ -104,3 +119,17 @@ bwa index ALL_TAG.fa
 mv ALL_TAG.fa* ../
 echo "Complete"
 cd $WRK
+
+
+# Add Yeast Deletion DB to paper/db
+cd $WRK/db
+ln -s ../../DeletionID/sacCer3_Del
+cd $WRK
+
+
+# Add Yeast & Human StrainID DB to paper/db
+cd $WRK/db
+ln -s ../../StrainID/sacCer3_VCF
+ln -s ../../StrainID/hg19_VCF
+cd $WRK
+

@@ -1,0 +1,15 @@
+DEPTH_ORDER	500K	1M	2M	3M	4M	5M
+STRAIN_COLOR	Rap1-del	darkorange
+STRAIN_COLOR	Reb1-del	purple
+RAP1_500K_runtime.txt	Rap1-del	500K
+RAP1_1M_runtime.txt	Rap1-del	1M
+RAP1_2M_runtime.txt	Rap1-del	2M
+RAP1_3M_runtime.txt	Rap1-del	3M
+RAP1_4M_runtime.txt	Rap1-del	4M
+RAP1_5M_runtime.txt	Rap1-del	5M
+REB1_500K_runtime.txt	Reb1-del	500K
+REB1_1M_runtime.txt	Reb1-del	1M
+REB1_2M_runtime.txt	Reb1-del	2M
+REB1_3M_runtime.txt	Reb1-del	3M
+REB1_4M_runtime.txt	Reb1-del	4M
+REB1_5M_runtime.txt	Reb1-del	5M

@@ -1,0 +1,71 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l pmem=16gb
+#PBS -l walltime=05:00:00
+#PBS -A open
+#PBS -o logs/make.figs.log.out
+#PBS -e logs/make.figs.log.err
+
+#1-9010
+#bfp2_h_g_sc_default
+#bfp2_j_g_bc_default
+
+module load gcc/8.3.1
+module load samtools/1.5
+module load bedtools/2.27.1
+module load anaconda3
+source activate genopipe
+
+WRK=/path/to/GenoPipe/paper/YKOC-wgs
+WRK=/storage/home/owl5022/scratch/GenotypingProject/GenoPipe/paper/YKOC-wgs
+cd $WRK
+
+[ -d logs ] || mkdir logs
+[ -d results/figs ] || mkdir results/figs
+
+for PARTITION in "TentativePass" "TrueFails" "TentativeFails" "ConfidentPass";
+do
+	BASE=results/$PARTITION
+	rm $BASE.temp
+	
+	METADATA=results/$PARTITION.txt
+	LNCT=`wc -l $METADATA | awk '{print $1}'`
+	for ((INDEX=1; INDEX<=$LNCT; INDEX++));
+	do
+		#echo $INDEX
+		ERS=`cut -d $'\t' -f10 $METADATA | sed "${INDEX}q;d"`
+		ORF=`cut -d $'\t' -f7 $METADATA | sed "${INDEX}q;d"`
+		echo "($INDEX) Parsed out ERS=$ERS and ORF=$ORF"
+		ROW=results/BedGraphs/$ERS\_$ORF\_6000bp.cdt
+		cat $ROW >> $BASE.temp
+	done
+	
+	sort -nk3,3 $BASE.temp > $BASE.cdt
+	
+	# Make Heatmap PNG
+	##ScriptManager Two-color heatmap
+	# Black, .95 threshold
+	# $BASE.cdt > $BASE.png
+
+	# Make Trace CDT
+	TRACE=scripts/make_trace.py
+	python $TRACE -c $BASE.cdt -g saccharomyces_cerevisiae.gff -w 6000 > $BASE\_trace.cdt
+
+	rm $BASE.temp	
+done
+
+# Make trace (x4 lines)
+##Script to make trace cdt
+##ScriptManager Three-color heatmap
+# diff colors, set alpha channel, threshold 0<0<.95
+
+SUBPLOTS=scripts/make_subplots.py
+
+# Figure 3E SVG image
+python $SUBPLOTS -t Figure3E -c fig3e_config.txt -g saccharomyces_cerevisiae.gff
+
+# Figure 3F SVG image
+python $SUBPLOTS -t Figure3F -c fig3f_config.txt -g saccharomyces_cerevisiae.gff
+
+
+
