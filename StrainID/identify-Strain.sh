@@ -55,9 +55,9 @@ cd $INPUT
 for BAM in *.bam
 do
 
-	SAMPLE=$(echo $BAM | awk -F"." '{print $1}')
+	SAMPLE=`basename $BAM`
 	echo $SAMPLE
-	
+
 	if [[ $SEED -eq "" ]]; then
 		python $LOCAL/strainScripts/detect_strain_BAM.py -b $BAM -g $GENOME -v $VCF -o $OUTPUT/$SAMPLE\_strain.tab
 	else

@@ -27,8 +27,6 @@ def buildBackground(bam, gen, rng):
 	else:
 		RANDREAD = list(range(samfile.mapped))
 
-	sys.stderr.write("\n".join([str(i) for i in RANDREAD]))
-
 	# Performance tests of random sampling methods--runtimes
 	#( 5 sec) a = [ random.randint(0,100000000) for _ in range(1000000)]
 	#(15 sec) a = numpy.random.choice(range(0,100000000),size=1000000,replace=True)
