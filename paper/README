@@ -5,13 +5,16 @@
 # Directory Structure overview
 
 paper
-|--scripts
 |--setup.sh
+|--scripts
+|--input
+|--db
 |--SyntheticEpitope
 |--SyntheticStrain
 |--SyntheticDeletion
 |--ENCODEdata-eGFP
-|--ENCODEdata-TFChIPseq
+|--ENCODEdata-CellLines
+|--YKOC-wgs
 
 
 ## setup.sh
@@ -24,6 +27,10 @@ also contains the general scripts that several of the higher directory scripts c
 
 ## input
 where setup.sh puts the reference genome and the aligner indexes
+also where other reference FASTA files are stored (i.e. R500.fa, 3xFLAG.fa, and the HIV genome sequence)
+
+## db
+where the input database directories are built by setup.sh with variation as appropriate for GenoPipe module, species, and epitope set
 
 ## SyntheticEpitope
 contains the scripts and houses the results of simulations testing EpitopeID
@@ -37,6 +44,8 @@ contains the scripts and houses the results of simulations testing DeletionID
 ## ENCODEdata-eGFP
 contains the scripts and information for downloading ENCODE eGFP data to test EpitopeID
 
-## ENCODEdata-TFChIPseq
+## ENCODEdata-CellLines
 contains the scripts and information for downloading ENCODE transcription factor ChIP-seq data to test StrainID
 
+## YKOC-wgs
+contains the scripts and information for downloading, processing, and running DeletionID on the Puddu et al, 2019 dataset for identifying deletions
