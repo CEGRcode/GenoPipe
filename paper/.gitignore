@@ -1,3 +1,5 @@
+run.setup.err
+run.setup.out
 input/hg19.fa*
 input/sacCer3.fa*
 db/
@@ -11,6 +13,9 @@ ENCODEdata-eGFP/logs/*.out-*
 ENCODEdata-eGFP/logs/*.err-*
 ENCODEdata-eGFP/results/FASTQ
 ENCODEdata-eGFP/results/ID
+HIV_samples/logs/*.err-*
+HIV_samples/logs/*.out-*
+HIV_samples/results/FASTQ
 SyntheticDeletion/synthetic_genome/
 SyntheticDeletion/logs/*.err-*
 SyntheticDeletion/logs/*.out-*
