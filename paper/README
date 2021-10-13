@@ -14,6 +14,7 @@ paper
 |--SyntheticDeletion
 |--ENCODEdata-eGFP
 |--ENCODEdata-CellLines
+|--HIV_samples
 |--YKOC-wgs
 
 
@@ -46,6 +47,9 @@ contains the scripts and information for downloading ENCODE eGFP data to test Ep
 
 ## ENCODEdata-CellLines
 contains the scripts and information for downloading ENCODE transcription factor ChIP-seq data to test StrainID
+
+## HIV_samples
+contains the scripts and information for downloading, processing, and running EpitopeID on the Bosque et al, 2017 dataset for localizing HIV genome insertions
 
 ## YKOC-wgs
 contains the scripts and information for downloading, processing, and running DeletionID on the Puddu et al, 2019 dataset for identifying deletions
