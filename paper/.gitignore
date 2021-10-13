@@ -16,6 +16,7 @@ ENCODEdata-eGFP/results/ID
 HIV_samples/logs/*.err-*
 HIV_samples/logs/*.out-*
 HIV_samples/results/FASTQ
+HIV_samples/results/ID
 SyntheticDeletion/synthetic_genome/
 SyntheticDeletion/logs/*.err-*
 SyntheticDeletion/logs/*.out-*
