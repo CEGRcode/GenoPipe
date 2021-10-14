@@ -16,6 +16,7 @@ paper
 |--ENCODEdata-CellLines
 |--HIV_samples
 |--YKOC-wgs
+|--CENPK-chipseq
 
 
 ## setup.sh
@@ -53,3 +54,6 @@ contains the scripts and information for downloading, processing, and running Ep
 
 ## YKOC-wgs
 contains the scripts and information for downloading, processing, and running DeletionID on the Puddu et al, 2019 dataset for identifying deletions
+
+## CENPK-chipseq
+contains the scripts and information for downloading, processing, and running StrainID on the 
