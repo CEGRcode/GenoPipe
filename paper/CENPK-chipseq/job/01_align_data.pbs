@@ -1,0 +1,34 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=8
+#PBS -l pmem=32gb
+#PBS -l walltime=06:00:00
+#PBS -A open
+#PBS -o logs/align.data.log.out
+#PBS -e logs/align.data.log.err
+
+# FIRST CHANGE PATH TO EXECUTE
+WRK=/path/to/GenoPipe/paper/CENPK-chipseq
+cd $WRK
+
+module load gcc
+module load samtools
+module load bwa
+module load anaconda3
+source activate ~/work/myconda/genopipe/
+
+[ -d logs ] || mkdir logs
+[ -d results/BAM ] || mkdir -p results/BAM
+
+YGENOME=$WRK/../input/sacCer3.fa
+
+for SRR in "SRR518875" "SRR518876" "SRR518877" "SRR518878";
+do
+	FQ=$WRK/results/FASTQ/$SRR
+	BAM=$WRK/results/BAM/$SRR
+	# align
+	bwa mem $YGENOME $FQ\_1.fastq.gz -t 8 \
+		| samtools sort \
+		> $BAM.bam
+	# index
+	samtools index $BAM.bam
+done

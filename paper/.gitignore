@@ -35,6 +35,7 @@ SyntheticStrain/results/hg19*
 ENCODE_CellLines/results/BAM
 ENCODE_CellLines/results/BAM-nospike
 ENCODE_CellLines/results/ID
-CENPK-chipseq/logs/*.out-*
-CENPK-chipseq/logs/*.err-*
+CENPK-chipseq/logs/*.out
+CENPK-chipseq/logs/*.err
 CENPK-chipseq/results/FASTQ
+CENPK-chipseq/results/BAM
