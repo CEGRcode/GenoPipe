@@ -39,3 +39,4 @@ CENPK-chipseq/logs/*.out
 CENPK-chipseq/logs/*.err
 CENPK-chipseq/results/FASTQ
 CENPK-chipseq/results/BAM
+CENPK-chipseq/results/ID
