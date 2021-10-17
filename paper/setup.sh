@@ -15,17 +15,16 @@
 # wget
 # Perl 5.18+
 # bwa v0.7.14+
-# 
+#
 # Optional software:
 # twoBitToFa
 
-WRK=/path/to/GenoPipe/paper/YKOC-wgs
+WRK=/path/to/GenoPipe/paper
 cd $WRK
 
 module load gcc
 module load bwa
 module load samtools
-
 
 [ -d $WRK/input ] || mkdir $WRK/input
 [ -d $WRK/db ] || mkdir $WRK/db
@@ -120,16 +119,33 @@ mv ALL_TAG.fa* ../
 echo "Complete"
 cd $WRK
 
+# Build Human EpiID with HIV genome
+HHIVDB=db/hiv_EpiID
+[ -d $HHIVDB ] || cp -r ../EpitopeID/hg19_EpiID/ $HHIVDB
+if [ ! -f $HHIVDB/FASTA_genome/genome.fa ]; then
+        echo "**Setup Human EpiID genome..."
+        cp input/hg19.fa $HHIVDB/FASTA_genome/genome.fa
+        echo "BWA Indexing genome..."
+        bwa index $HHIVDB/FASTA_genome/genome.fa
+        echo "Complete"
+fi
+echo "Setup HIV genome for Human EpiID..."
+cp input/AF324493.2_HIV-1_vector_pNL4-3.fa $HHIVDB/FASTA_tag/Tag_DB/
+rm $HHIVDB/FASTA_tag/ALL_TAG.fa*
+cd $HHIVDB/FASTA_tag/Tag_DB
+cat *.fa *.fna *.ffn *.fasta > ALL_TAG.fa
+bwa index ALL_TAG.fa
+mv ALL_TAG.fa* ../
+echo "Complete"
+cd $WRK
 
 # Add Yeast Deletion DB to paper/db
 cd $WRK/db
 ln -s ../../DeletionID/sacCer3_Del
 cd $WRK
 
-
 # Add Yeast & Human StrainID DB to paper/db
 cd $WRK/db
 ln -s ../../StrainID/sacCer3_VCF
 ln -s ../../StrainID/hg19_VCF
 cd $WRK
-

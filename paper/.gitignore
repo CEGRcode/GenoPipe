@@ -1,3 +1,5 @@
+run.setup.err
+run.setup.out
 input/hg19.fa*
 input/sacCer3.fa*
 db/
@@ -11,6 +13,10 @@ ENCODEdata-eGFP/logs/*.out-*
 ENCODEdata-eGFP/logs/*.err-*
 ENCODEdata-eGFP/results/FASTQ
 ENCODEdata-eGFP/results/ID
+HIV_samples/logs/*.err-*
+HIV_samples/logs/*.out-*
+HIV_samples/results/FASTQ
+HIV_samples/results/ID
 SyntheticDeletion/synthetic_genome/
 SyntheticDeletion/logs/*.err-*
 SyntheticDeletion/logs/*.out-*
@@ -29,3 +35,8 @@ SyntheticStrain/results/hg19*
 ENCODE_CellLines/results/BAM
 ENCODE_CellLines/results/BAM-nospike
 ENCODE_CellLines/results/ID
+CENPK-chipseq/logs/*.out
+CENPK-chipseq/logs/*.err
+CENPK-chipseq/results/FASTQ
+CENPK-chipseq/results/BAM
+CENPK-chipseq/results/ID

@@ -1,0 +1,26 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l pmem=16gb
+#PBS -l walltime=03:00:00
+#PBS -A open
+#PBS -o logs/eid.hiv.log.out
+#PBS -e logs/eid.hiv.log.err
+
+module load gcc
+module load samtools
+module load bwa
+module load bedtools
+module load anaconda3
+source activate genopipe
+
+WRK=/path/to/GenoPipe/paper/HIV_samples
+cd $WRK
+
+[ -d logs ] || mkdir logs
+[ -d results/ID ] || mkdir -p results/ID
+
+DB=$WRK/../db/hiv_EpiDB
+
+EPITOPEID=$WRK/../../EpitopeID
+cd $EPITOPEID
+bash identify-Epitope.sh -i $WRK/results/FASTQ/ -o $WRK/results/ID/ -d $DB -t 4

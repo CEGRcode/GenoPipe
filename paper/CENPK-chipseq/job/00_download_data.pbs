@@ -1,0 +1,22 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=8
+#PBS -l pmem=32gb
+#PBS -l walltime=06:00:00
+#PBS -A open
+#PBS -o logs/download.data.log.out
+#PBS -e logs/download.data.log.err
+
+# FIRST CHANGE PATH TO EXECUTE
+WRK=/path/to/GenoPipe/paper/CENPK-chipseq
+cd $WRK
+
+module load anaconda3
+source activate ~/work/myconda/genopipe/
+
+[ -d logs ] || mkdir logs
+[ -d results/FASTQ ] || mkdir -p results/FASTQ
+
+parallel-fastq-dump --gzip --split-files -t 8 -O results/FASTQ -s SRR518875
+parallel-fastq-dump --gzip --split-files -t 8 -O results/FASTQ -s SRR518876
+parallel-fastq-dump --gzip --split-files -t 8 -O results/FASTQ -s SRR518877
+parallel-fastq-dump --gzip --split-files -t 8 -O results/FASTQ -s SRR518878
