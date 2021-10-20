@@ -1,0 +1,68 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=6
+#PBS -l pmem=24gb
+#PBS -l walltime=00:05:00
+#PBS -A open
+#PBS -o logs/depth.sid.CENPK.50K.log.out
+#PBS -e logs/depth.sid.CENPK.50K.log.err
+#PBS -t 1-1000
+
+module load gcc/8.3.1
+module load bedtools/2.27.1
+module load bwa/0.7.15
+module load samtools/1.5
+module load anaconda3
+source activate genopipe
+
+# FIRST CHANGE PATH TO EXECUTE
+WRK=/path/to/GenoPipe/paper/SyntheticStrain
+cd $WRK
+
+INFO=`sed "2q;d" depth_simulations.txt`
+LOCUS=`awk '{print $1}'  <(echo $INFO)`
+DEPTH=`awk '{print $2}'  <(echo $INFO)`
+BASE=`awk '{print $3}'  <(echo $INFO)`
+
+REF=`echo $LOCUS | awk -F'_' '{print $1}'`
+SEED=$(($BASE+$PBS_ARRAYID))
+
+OUTPUT=$WRK/results/$LOCUS\_$DEPTH
+BAM=$WRK/results/$LOCUS\_$DEPTH/BAM/Simulation_$PBS_ARRAYID.bam
+TEMP=$WRK/temp2-$PBS_ARRAYID
+
+[ -d $OUTPUT/ID ] || mkdir $OUTPUT/ID
+[ -d logs ] || mkdir logs
+[ -d $TEMP ] || mkdir $TEMP
+
+#Check that BAM file was generated first
+if [ ! -f $BAM ];
+then
+	echo "BAM input for ${LOCUS}_${DEPTH}_${PBS_ARRAYID} does not exist. Exiting."
+	exit
+fi
+#Check that BAM Index file exists
+if [ ! -f $BAM.bai ];
+then
+	echo "BAI missing for for ${LOCUS}_${DEPTH}_${PBS_ARRAYID}. Exiting."
+	exit
+fi
+
+# Set-up Temp directory
+cd $TEMP
+echo $BAM
+ln -s $BAM
+ln -s $BAM.bai
+
+GENOME=$WRK/../input/$REF.fa
+DATABASE=$WRK/../db/$REF\_VCF
+GENOPIPE=$WRK/../..
+
+## Execute Single StrainID and record time
+cd $GENOPIPE/StrainID
+echo "**Begin executing StrainID for ${LOCUS}_${DEPTH}..."
+{ time bash identify-Strain.sh -i $TEMP -g $GENOME -v $DATABASE -o $OUTPUT/ID -s $SEED > $OUTPUT/ID/Simulation_$PBS_ARRAYID.std ; } 2> $OUTPUT/ID/Simulation_$PBS_ARRAYID.time
+echo "...single StrainID for ${LOCUS} ${DEPTH} finished."
+cd $WRK
+
+## Clean-up
+rm -r $TEMP
