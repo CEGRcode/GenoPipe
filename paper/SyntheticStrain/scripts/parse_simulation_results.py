@@ -3,12 +3,11 @@ from os.path import isfile, join
 import sys
 import argparse
 
-# Python 3 needed for encoding feature for UTF-8
-# (ENCODE uses some capital delta chars in summary descriptions of GeneticModifications)
+# Python 3
 
 def getParams():
 	'''Parse parameters from the command line'''
-	parser = argparse.ArgumentParser(description='Parse metadata file and GenoPipe output to check detection rates of the GenoPipe tool.')
+	parser = argparse.ArgumentParser(description='Parse StrainID results from simulated data to collect all StrainID scores for each experiment.')
 	parser.add_argument('-i','--input-dir', metavar='input_dir', required=True, help='the directory where all the StrainID output files were saved (*strain.tab)')
 	parser.add_argument('-v','--vcf-dir', metavar='vcf_dir', required=True, help='the directory where all the StrainID VCF db files are housed (for header formatting purposes)')
 	args = parser.parse_args()
@@ -36,11 +35,11 @@ def parse_file(var_file):
 			continue
 		dict[tokens[0].split(".")[0]] = tokens[1]
 	reader.close()
+	# Return dict of Strain -> score
 	return(dict)
 
-
 if __name__ == "__main__":
-	'''Collect metadata and StrainID results to get detection stats on the cell line ENCODE data'''
+	'''Collect StrainID results to get detection stats on simulations'''
 	args = getParams()
 
 	# Parse strains to track
