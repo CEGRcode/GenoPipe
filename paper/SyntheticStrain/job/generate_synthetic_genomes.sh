@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# This script makes genomes to simulate from. Two yeast and two human genomes each with variants from VCF incorporated into sequence
+# This script makes genomes to simulate from. Two yeast and two human genomes each with a different variant profile based on their respective full sized VCF files
 
 ADDSNPS=scripts/add_VCF_into_Genomic_FASTA.py
-SVCF=../db/sacCer3_VCF
+SVCF=../db/sacCer3_VCF/full_VCF
 HVCF=../db/hg19_VCF
 [ -d synthetic_genome ] || mkdir synthetic_genome
 

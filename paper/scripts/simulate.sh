@@ -20,7 +20,7 @@
 
 usage()
 {
-	echo 'bash simulate.sh -i <simulationIndex> -d [10K|100K|1M|2M|5M|7M|10M|50M] -s <seed> -g <syntheticGenomeFASTA> -o <outputDirectory>'
+	echo 'bash simulate.sh -i <simulationIndex> -d [10K|50K|100K|200K|500K|1M|2M|5M|7M|10M|50M] -s <seed> -g <syntheticGenomeFASTA> -o <outputDirectory>'
 	echo 'eg: bash simulate.sh -i 1 -d 100K -s 1000 -g /path/to/syntheticgenome -o /path/to/results'
 	exit
 }
@@ -29,7 +29,9 @@ if [ "$#" -ne 10 ]; then
 	usage
 fi
 
-declare -A GETDEPTH=( ["10K"]=10000 \
+declare -A GETDEPTH=( 
+		["10K"]=10000 \
+		["50K"]=50000 \
 		["100K"]=100000 \
 		["200K"]=200000 \
 		["500K"]=500000 \

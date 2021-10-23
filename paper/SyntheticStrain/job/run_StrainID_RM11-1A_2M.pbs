@@ -1,10 +1,10 @@
 #!/bin/bash
-#PBS -l nodes=1:ppn=4
-#PBS -l pmem=16gb
-#PBS -l walltime=00:10:00
+#PBS -l nodes=1:ppn=6
+#PBS -l pmem=24gb
+#PBS -l walltime=00:05:00
 #PBS -A open
-#PBS -o logs/depth.sid.HELA.1M.log.out
-#PBS -e logs/depth.sid.HELA.1M.log.err
+#PBS -o logs/depth.sid.RM11-1A.2M.log.out
+#PBS -e logs/depth.sid.RM11-1A.2M.log.err
 #PBS -t 1-1000
 
 module load gcc/8.3.1
@@ -18,7 +18,7 @@ source activate genopipe
 WRK=/path/to/GenoPipe/paper/SyntheticStrain
 cd $WRK
 
-INFO=`sed "18q;d" depth_simulations.txt`
+INFO=`sed "12q;d" depth_simulations.txt`
 LOCUS=`awk '{print $1}'  <(echo $INFO)`
 DEPTH=`awk '{print $2}'  <(echo $INFO)`
 BASE=`awk '{print $3}'  <(echo $INFO)`
@@ -28,7 +28,7 @@ SEED=$(($BASE+$PBS_ARRAYID))
 
 OUTPUT=$WRK/results/$LOCUS\_$DEPTH
 BAM=$WRK/results/$LOCUS\_$DEPTH/BAM/Simulation_$PBS_ARRAYID.bam
-TEMP=$WRK/temp18-$PBS_ARRAYID
+TEMP=$WRK/temp12-$PBS_ARRAYID
 
 [ -d $OUTPUT/ID ] || mkdir $OUTPUT/ID
 [ -d logs ] || mkdir logs
