@@ -1,0 +1,33 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=6
+#PBS -l pmem=24gb
+#PBS -l walltime=03:00:00
+#PBS -A open
+#PBS -o logs/download.data.log.out
+#PBS -e logs/download.data.log.err
+#PBS -t 1-10
+
+# Requires
+# parallel fastq dump v2.8.0
+
+# FIRST CHANGE PATH TO EXECUTE
+WRK=/path/to/GenoPipe/paper/BY4742-chipseq
+cd $WRK
+
+module load anaconda3
+source activate ~/work/myconda/genopipe/
+
+[ -d logs ] || mkdir logs
+[ -d results/FASTQ ] || mkdir -p results/FASTQ
+
+INDEX=$(($PBS_ARRAYID+1))
+
+METADATA=SraRunInfo.csv
+INFO=`sed "${INDEX}q;d" $METADATA`
+SRR=`echo $INFO | cut -d"," -f1`
+#echo $INFO
+
+# FASTQ-DUMP
+echo "($INDEX) Begin downloading $SRR FASTQ..."
+parallel-fastq-dump --gzip --split-files -t 8 -O results/FASTQ -s $SRR
+echo "Complete"
