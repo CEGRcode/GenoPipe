@@ -36,3 +36,8 @@ do
 		python $RUNTIME -i <(grep 'real' $DIR/ID/*.time) > $DIR\_runtimes.txt
 	done
 done
+
+# Make figs
+JITTER=scripts/make_jitter.py
+python $JITTER -i <(awk '{print "results/"$1"_"$2"_scores.txt"}' depth_simulations.txt |grep 'sacCer3') -t Fig4B
+python $JITTER -i <(awk '{print "results/"$1"_"$2"_scores.txt"}' depth_simulations.txt |grep 'hg19') -t Fig4C
