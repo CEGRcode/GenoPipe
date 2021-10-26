@@ -38,6 +38,7 @@ ENCODE_CellLines/results/ID
 BY4742-chipseq/logs/*.out
 BY4742-chipseq/logs/*.err
 BY4742-chipseq/results/FASTQ
+BY4742-chipseq/results/BAM
 CENPK-chipseq/logs/*.out
 CENPK-chipseq/logs/*.err
 CENPK-chipseq/results/FASTQ

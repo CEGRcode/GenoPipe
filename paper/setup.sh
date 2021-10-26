@@ -13,8 +13,10 @@
 
 # Required software:
 # wget
+# Python 3
 # Perl 5.18+
 # bwa v0.7.14+
+# bowtie v1.2.3
 #
 # Optional software:
 # twoBitToFa
@@ -149,3 +151,8 @@ cd $WRK/db
 ln -s ../../StrainID/sacCer3_VCF
 ln -s ../../StrainID/hg19_VCF
 cd $WRK
+
+# Setup color-space index for yeast genome
+# (used by BY4742-chipseq)
+bowtie-build -C input/sacCer3.fa input/sacCer3_index
+
