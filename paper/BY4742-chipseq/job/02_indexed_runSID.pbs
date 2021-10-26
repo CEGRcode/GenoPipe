@@ -1,0 +1,52 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=6
+#PBS -l pmem=24gb
+#PBS -l walltime=03:00:00
+#PBS -A open
+#PBS -o logs/sid.log.out
+#PBS -e logs/sid.log.err
+#PBS -t 1-10
+
+module load anaconda3
+source activate genopipe
+
+# FIRST CHANGE PATH TO EXECUTE
+WRK=/path/to/GenoPipe/paper/BY4742-chipseq
+cd $WRK
+
+[ -d logs ] || mkdir logs
+[ -d results/ID ] || mkdir -p results/ID
+
+INDEX=$(($PBS_ARRAYID+1))
+
+METADATA=SraRunInfo.csv
+INFO=`sed "${INDEX}q;d" $METADATA`
+SAMPLE=`echo $INFO | cut -d"," -f12`
+#echo $INFO
+
+# Store directory paths
+DATABASE=$WRK/../db/sacCer3_VCF
+GENOME=$WRK/../input/sacCer3.fa
+SEED=$PBS_ARRAYID
+GENOPIPE=$WRK/../..
+
+BAM=$WRK/results/BAM/$SAMPLE
+#BAM=$WRK/results/uniq-BAM/$SAMPLE
+ID=$WRK/results/ID/
+
+# Set-up Temp directory
+TEMP=$WRK/temp-$PBS_ARRAYID
+[ -d $TEMP ] || mkdir $TEMP
+cd $TEMP
+ln -s $BAM.bam
+ln -s $BAM.bam.bai
+
+## Execute Single StrainID and record time
+cd $GENOPIPE/StrainID
+echo "**Begin executing StrainID for ${SAMPLE}..."
+{ time bash identify-Strain.sh -i $TEMP -g $GENOME -v $DATABASE -s $SEED -o $ID > $ID/$SAMPLE.std ; } 2> $ID/$SAMPLE.time
+echo "...single StrainID for ($PBS_ARRAYID) ${SAMPLE} finished."
+
+## Clean-up
+rm -r $TEMP
+
