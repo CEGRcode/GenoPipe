@@ -39,6 +39,7 @@ BY4742-chipseq/logs/*.out
 BY4742-chipseq/logs/*.err
 BY4742-chipseq/results/FASTQ
 BY4742-chipseq/results/BAM
+BY4742-chipseq/results/ID
 CENPK-chipseq/logs/*.out
 CENPK-chipseq/logs/*.err
 CENPK-chipseq/results/FASTQ
