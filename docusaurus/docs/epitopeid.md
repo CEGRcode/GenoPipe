@@ -209,25 +209,38 @@ bash identify_Epitope.sh -i ../samples/ -o ../output/ -d sacCer3_EpiID -t 4
 
 ## Threading (`-t`)
 
-This optional input is used to specify the number of threads to used for the alignment commands.
+This optional input is used to specify the number of threads to used for the BWA alignment commands.
 
 
 
 ## Output Report (`-o`)
 
+The output report is saved to the user-provided output directory in a file named based on the input FASTQ files (`/path/to/output/samplename_R1-ID.tab`). Below is a sample report based on the results from running EpitopeID on the ENCODE ENCFF415CJF sample.
 
+```
+EpitopeID	EpitopeCount
+LAP-tag	435
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+NR4A1|chr12:52416616-52453291	LAP-tag	C-term	9	3.580493355965414e-24
+```
+
+The first part of the report shows which epitopes in `Tag_DB` were identified in the sample (**EpitopeID column**) and how many reads mapped to this epitope (**EpitopeCount**) to help quantify the coverage of the epitopes which relates to the confidence of the call.
+
+The second part of the report shows which epitopes localized to which regions/tiles of the genome significantly (sorted by pvalue if multiple hits). The columns specify the cooridinate interval (**GeneID**), which epitope maps to this locus (**EpitopeID**), if this occurs on the N or C-terminus (**EpitopeLocation**), the number of reads mapping to this tile (**EpitopeCount**), and the poisson-calculated associated p-value to indicate confidence of the site (**pVal**).
 
 
 
 ## FAQs
 
 * Q: I added my own custom tag sequences to the `TagDB` directory but when I run EpitopeID, none of my samples are getting significant hits to the new tags.
-* A: There are a few things you should check before concluding that the epitope is not present in your sample:
+  * There are a few things you should check before concluding that the epitope is not present in your sample:
   * Did you recreate the `ALL_TAG.fa` file? Open it up to make sure your sequences are there. If they aren't there, follow the commands in the "How to add your own epitope tag sequences" section above.
   * Did you recreate the BWA index files for `ALL_TAG.fa`? Remove at least one of the BWA index files (e.g. `ALL_TAG.fa.ann`) and run EpitopeID. EpitopeID automatically recreates the index if any files are missing but it does not check that the index files match the FASTA sequence. If you modify the `ALL_TAG.fa` without recreating the BWA index files, EpitopeID will run on the old set of tag sequences.
 * Q: What does the N-term or C-term mean in the output?
+  * For each gene, three bins are created for (1) the ORF interval, (2) a bin upstream of the start codon, (3) a bin downstream of the stop codon, each of which correspond to the gene, N-terminus, or C-terminus of the peptide chain gene product. If EpitopeID is mapping more strongly to the N or C-terminus, it is likely that the epitope is tagged to that side of the endogenous peptide chain.
 * Q: I tried running EpitopeID on my samples using `sacCer3_EpiID`/`hg19_EpiID` and it is telling me that I am missing the `genomic.fa` file. Where can I find it?
-* A: Due to storage reasons, we do not include the genomic reference in the Github download for GenoPipe. However, we do provide scripts that will help you to download and format the reference genomes that we used. See above for directions on how to use them by looking at the section titled "Downloading the sacCer3/hg19 genome".
+  * Due to storage reasons, we do not include the genomic reference in the Github download for GenoPipe. However, we do provide scripts that will help you to download and format the reference genomes that we used. See above for directions on how to use them by looking at the section titled "Downloading the sacCer3/hg19 genome". Otherwise you can use your own genomic sequence. If you do, then remember to rename it to `genome.fa` and move it to the appropriate directory. Also make sure that the annotations you use are based on the same reference build.
 
 
 [gzip-man]:https://www.gnu.org/software/gzip/manual/gzip.html
