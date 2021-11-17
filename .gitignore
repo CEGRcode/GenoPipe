@@ -5,6 +5,11 @@ EpitopeID/sacCer3_EpiID/FASTA_genome/genome.fa.ann
 EpitopeID/sacCer3_EpiID/FASTA_genome/genome.fa.bwt
 EpitopeID/sacCer3_EpiID/FASTA_genome/genome.fa.pac
 EpitopeID/sacCer3_EpiID/FASTA_genome/genome.fa.sa
+EpitopeID/ecoli_EpiID/FASTA_genome/genome.fa.amb
+EpitopeID/ecoli_EpiID/FASTA_genome/genome.fa.ann
+EpitopeID/ecoli_EpiID/FASTA_genome/genome.fa.bwt
+EpitopeID/ecoli_EpiID/FASTA_genome/genome.fa.pac
+EpitopeID/ecoli_EpiID/FASTA_genome/genome.fa.sa
 EpitopeID/hg19_EpiID/FASTA_genome/genome.fa
 EpitopeID/hg19_EpiID/FASTA_genome/genome.fa.amb
 EpitopeID/hg19_EpiID/FASTA_genome/genome.fa.ann
