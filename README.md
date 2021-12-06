@@ -43,16 +43,15 @@ There are 3 primary modules for genotype identification:
 | -------------- | ----------- |
 | BY4741         | A549        |
 | BY4742         | HCT116      |
-| CEN.PK2-1Ca    | HEKTE       |
-| D273-10B       | HELA        |
-| FL100          | HepG2       |
-| JK9-3d         | K562        |
-| RM11-1A        | LnCap       |
-| RedStar        | MCF7        |
-| SEY6210        | SKnSH       |
+| CEN.PK2-1Ca    | HELA       |
+| D273-10B       | HepG2        |
+| FL100          | K562       |
+| JK9-3d         | LnCap        |
+| RM11-1A        | MCF7       |
+| RedStar        | SKnSH        |
+| SEY6210        |  |
 | Sigma1278b-10560-6B |  |
 | W303           |  |
-| X2180-1A       |  |
 | Y55            |  |
 
 
