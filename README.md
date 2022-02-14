@@ -87,7 +87,7 @@ You will need the following software to run all GenoPipe modules:
 conda install:
 
 ```
-conda create -n <myenv> -c conda-forge -c bioconda python=3.6 perl=5 bwa=0.7.15 bedtools=2.27 samtools=1.5 pysam=0.16 scipy=1.5.4 wget=1.14
+conda create -n genopipe -c conda-forge -c bioconda python perl bwa bedtools samtools pysam scipy wget
 ```
 
 ### Download
@@ -95,7 +95,7 @@ conda create -n <myenv> -c conda-forge -c bioconda python=3.6 perl=5 bwa=0.7.15 
 To download GenoPipe, you can clone the repostitory. No builds needed.
 
 ```
-git clone GenoPipe
+git clone https://github.com/CEGRcode/GenoPipe
 cd GenoPipe
 ```
 
@@ -130,15 +130,17 @@ The following instructions are for setting up the database of reference files us
 For downloading yeast genome...
 
 ```
-cd utility_scripts/
+cd EpitopeID/utility_scripts/genome_data/
 bash download_sacCer3_Genome.sh
+mv genome.fa* ../../sacCer3_EpiID/FASTA_genome/
 ```
 
 For downloading human genome...
 
 ```
-cd utility_scripts/
+cd EpitopeID/utility_scripts/genome_data/
 bash download_hg19_Genome.sh
+mv genome.fa* ../../hg19_EpiID/FASTA_genome/
 ```
 
 
