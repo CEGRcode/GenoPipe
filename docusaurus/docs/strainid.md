@@ -15,7 +15,6 @@ A report is generated that scores each input BAM with a value for each given VCF
 ## Usage
 ```bash
 identify-Strain.sh -i /path/to/BAM -g /path/to/genome/fASTA -v /path/to/VCF/files -o /path/to/output
-eg: bash identify-Strain.sh -i /input -g /sacCer3.fa -v /sacCer3_VCF -o /output
 ```
 
 ## Input(`-i`)
@@ -45,15 +44,14 @@ Below describes the yeast and human VCF databases and lists which strain files c
 |:-----------:|:-------- :|
 | BY4741      | A549     |
 | BY4742      | HCT116   |
-| CEN.PK2-1Ca | HEKTE    |
-| D273-10B    | HELA     |
-| JK9-3d      | HepG2    |
-| RedStar     | K562     |
-| RM11-1A     | LnCap    |
-| SEY6210     | MCF7     |
-| Sigma1278b-10560-6B | SKnSH |
+| CEN.PK2-1Ca | HELA    |
+| D273-10B    | HepG2     |
+| JK9-3d      | K562    |
+| RedStar     | LnCap     |
+| RM11-1A     | MCF7    |
+| SEY6210     | SKnSH     |
+| Sigma1278b-10560-6B |  |
 | SK1         |   |
-| X2180-1A    |   |
 | W303        |   |
 | Y55         |   |
 
@@ -84,7 +82,6 @@ MCF7.vcf	-3.321928094887362
 SKnSH.vcf	2.415037499278844
 A549.vcf	-3.0
 ```
-
 
 :::warning
 
