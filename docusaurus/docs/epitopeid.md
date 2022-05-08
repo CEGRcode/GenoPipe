@@ -4,11 +4,11 @@ title: EpitopeID
 sidebar_label: EpitopeID
 ---
 
-<!-- ![epitopeid-icon] -->
+<!-- ![epitopeid-icon](/genopipe-img/epitopeid-icon.png)-->
 
 __EpitopeID identifies and determines the genomic location of epitopes or other inserted sequences relative to genomic loci.__
 
-![Figure1A]
+![Figure1A](/genopipe-img/figure1a.png)
 
 ## Usage
 ```bash
@@ -259,7 +259,3 @@ The second part of the report shows which epitopes localized to which regions/ti
 [Myc(3x)-ref]:www.google.com
 [tag-ref]:www.google.com
 [lap-ref]:www.google.com
-
-
-[epitopeid-icon]:../static/genopipe-img/epitopeid-icon.png
-[Figure1A]:../static/genopipe-img/figure1a.png

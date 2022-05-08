@@ -4,11 +4,11 @@ title: DeletionID
 sidebar_label: DeletionID
 ---
 
-<!-- ![deletionid-icon] -->
+<!-- [deletionid-icon]:../static/genopipe-img/deletionid-icon.png -->
 
 __DeletionID identifies significant depletions of aligned NGS tags in the genome relative to a background model. This tool is set-up to confirm gene knockouts.__
 
-![Figure1B]
+![Figure1B](/genopipe-img/figure1b.png)
 
 ## Usage
 ```bash
@@ -97,8 +97,3 @@ The first column of the report lists out the intervals (ORFs) with significantly
 
 * Q: I have data from a human/mouse deletion that I wish to identify. Do you have a reference database for genes from the mm10 or hg19 genome assemblies?
   * DeletionID does not work well with samples from human or other organisms with large genomes. Please see the caution note above for more information.
-
-
-[deletionid-icon]:../static/genopipe-img/deletionid-icon.png
-
-[Figure1B]:../static/genopipe-img/figure1b.png

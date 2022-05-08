@@ -4,10 +4,9 @@ title: Welcome
 sidebar_label: Welcome
 ---
 
+![Figure1](/genopipe-img/Figure1.svg)
+
 Welcome to the GenoPipe wiki!
-
-
-![Figure1]
 
 GenoPipe is a tool with three modules that check for different aspects of strain background in Next Generation Sequencing(NGS) datasets. Each module tests for a different aspect of strain background: epitope insertions, deletions, and cell line/variant-based background.
   - [EpitopeID][epitopeid-md] identifies and determines the genomic location of epitopes or other inserted sequences relative to genomic loci.
@@ -108,5 +107,3 @@ General notes about the defaults used for out-of-the-box usage:
 [dependency-pysam]:www.google.com
 [dependency-gnu-grep]:www.google.com
 [dependency-wget]:www.google.com
-
-[Figure1]:../static/genopipe-img/figure1.png

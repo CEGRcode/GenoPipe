@@ -4,13 +4,13 @@ title: StrainID
 sidebar_label: StrainID
 ---
 
-<!-- ![strainid-icon] -->
+<!-- [strainid-icon]:../static/genopipe-img/strainid-icon.png -->
 
 __StrainID compares a database of VCF files against an aligned BAM file to check for the presence of SNPs in order to determine a likely cell line/strain used in the experiment.__
 
 A report is generated that scores each input BAM with a value for each given VCF file such thataslkdjfal;skjdf alsdkjf
 
-![Figure1C]
+![Figure1C](/genopipe-img/figure1c.png)
 
 ## Usage
 ```bash
@@ -102,7 +102,3 @@ how some scores have lower precision---relatedness between VCFs and
 [human-vcf-ref]:www.google.com
 
 [vcf-specs]:www.google.com
-
-
-[strainid-icon]:../static/genopipe-img/strainid-icon.png
-[Figure1C]:../static/genopipe-img/figure1c.png
