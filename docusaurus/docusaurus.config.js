@@ -7,12 +7,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'GenoPipe',
-  tagline: 'Test docs',
-    url: 'https://github.com/CEGRcode',
-    baseUrl: '/GenoPipe/',
+  tagline: 'Run a background check on your NGS data',
+  url: 'https://github.com/CEGRcode',
+  baseUrl: '/GenoPipe/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'genopipe-img/logo.png',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -37,14 +37,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/CEGRcode/GenoPipe',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/CEGRcode/GenoPipe',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -59,19 +59,36 @@ const config = {
       navbar: {
         title: 'GenoPipe',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'GenoPipe Logo',
+          src: 'genopipe-img/logo.png',
         },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'welcome',
             position: 'left',
-            label: 'Tutorial',
+            label: 'General',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+	        {
+	          type: 'doc',
+	          docId: 'epitopeid',
+	          position: 'left',
+	          label: 'EpitopeID',
+	        },
+	        {
+	          type: 'doc',
+	          docId: 'deletionid',
+	          position: 'left',
+	          label: 'DeletionID',
+	        },
+	        {
+	          type: 'doc',
+	          docId: 'strainid',
+	          position: 'left',
+	          label: 'StrainID',
+	        },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/CEGRcode/GenoPipe',
             label: 'GitHub',
             position: 'right',
           },
@@ -81,11 +98,19 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Module Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'EpitopeID',
+                to: '/docs/epitopeid',
+              },
+              {
+                label: 'DeletionID',
+                to: '/docs/deletionid',
+              },
+              {
+                label: 'StrainID',
+                to: '/docs/strainid',
               },
             ],
           },
@@ -93,16 +118,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Pugh Lab Website',
+                href: 'https://pughlab.mbg.cornell.edu/',
               },
             ],
           },
@@ -110,17 +127,13 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/CEGRcode/GenoPipe',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} GenoPipe. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
