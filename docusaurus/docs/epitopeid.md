@@ -244,18 +244,18 @@ The second part of the report shows which epitopes localized to which regions/ti
 
 
 [gzip-man]:https://www.gnu.org/software/gzip/manual/gzip.html
-[AID-ref]:www.google.com
-[Extended-Tap-ref]:www.google.com
-[FRB-ref]:www.google.com
-[HA_v1-ref]:www.google.com
-[HA_v3-ref]:www.google.com
-[MNase-ref]:www.google.com
-[ProtA-ref]:www.google.com
-[CBP-ref]:www.google.com
-[FLAG-3x-ref]:www.google.com
-[GFP-ref]:www.google.com
-[HA_v2-ref]:www.google.com
-[HaloTag-ref]:www.google.com
-[Myc(3x)-ref]:www.google.com
-[tag-ref]:www.google.com
-[lap-ref]:www.google.com
+[AID-ref]:https://www.google.com
+[Extended-Tap-ref]:https://www.google.com
+[FRB-ref]:https://www.google.com
+[HA_v1-ref]:https://www.google.com
+[HA_v3-ref]:https://www.google.com
+[MNase-ref]:https://www.google.com
+[ProtA-ref]:https://www.google.com
+[CBP-ref]:https://www.google.com
+[FLAG-3x-ref]:https://www.google.com
+[GFP-ref]:https://www.google.com
+[HA_v2-ref]:https://www.google.com
+[HaloTag-ref]:https://www.google.com
+[Myc(3x)-ref]:https://www.google.com
+[tag-ref]:https://www.google.com
+[lap-ref]:https://www.google.com

@@ -98,7 +98,7 @@ how some scores have lower precision---relatedness between VCFs and
 
 
 
-[yeast-vcf-ref]:www.google.com
-[human-vcf-ref]:www.google.com
+[yeast-vcf-ref]:https://www.google.com
+[human-vcf-ref]:https://www.google.com
 
-[vcf-specs]:www.google.com
+[vcf-specs]:https://www.google.com

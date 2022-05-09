@@ -10,4 +10,4 @@ sidebar_label: Quick Start (with GenoPipe)
 * high repeat regions
 * 
 
-[paper]:www.google.com
+[paper]:https://www.google.com

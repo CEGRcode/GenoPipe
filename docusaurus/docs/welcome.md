@@ -95,15 +95,15 @@ General notes about the defaults used for out-of-the-box usage:
 
 
 [github-repo]:https://github.com/CEGRcode/GenoPipe
-[bed-specs]:www.google.com
-[vcf-specs]:www.google.com
-[dependency-bwa]:www.google.com
-[dependency-samtools]:www.google.com
-[dependency-bedtools]:www.google.com
-[dependency-perl5]:www.google.com
-[dependency-python2]:www.google.com
-[dependency-scipy]:www.google.com
-[dependency-numpy]:www.google.com
-[dependency-pysam]:www.google.com
-[dependency-gnu-grep]:www.google.com
-[dependency-wget]:www.google.com
+[bed-specs]:https://www.google.com
+[vcf-specs]:https://www.google.com
+[dependency-bwa]:https://www.google.com
+[dependency-samtools]:https://www.google.com
+[dependency-bedtools]:https://www.google.com
+[dependency-perl5]:https://www.google.com
+[dependency-python2]:https://www.google.com
+[dependency-scipy]:https://www.google.com
+[dependency-numpy]:https://www.google.com
+[dependency-pysam]:https://www.google.com
+[dependency-gnu-grep]:https://www.google.com
+[dependency-wget]:https://www.google.com
