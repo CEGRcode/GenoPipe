@@ -1,0 +1,46 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l pmem=16gb
+#PBS -l walltime=03:00:00
+#PBS -A open
+#PBS -o logs/pileup.samples.log.out
+#PBS -e logs/pileup.samples.log.err
+#PBS -t 1-9010
+
+module load gcc/8.3.1
+module load samtools/1.5
+module load bedtools/2.27.1
+module load anaconda3
+source activate genopipe
+
+WRK=/path/to/GenoPipe/paper/YKOC-wgs
+cd $WRK
+
+[ -d logs ] || mkdir logs
+[ -d results/BedGraphs ] || mkdir results/BedGraphs
+
+METADATA=results/ykoc_output_summary.txt
+INDEX=$(($PBS_ARRAYID+1))
+
+INFO=`sed "${INDEX}q;d" $METADATA`
+ERS=`cut -f10 $METADATA |sed "${INDEX}q;d"`
+BAM=results/BAM/$ERS.bam
+BG=results/BedGraphs/$ERS
+#echo $INFO
+
+# Pileup to BedGraph
+echo "($PBS_ARRAYID) Make raw bedgraph pileups for $ERS"
+bedtools genomecov -bga -scale 1.0 -ibam $BAM \
+	| sort -k1,1 -k2,2n \
+	> $BG.raw.bedgraph
+
+# Normalize BedGraph
+echo "($PBS_ARRAYID) Normalize bedgraph for $ERS"
+NORMALIZE=scripts/normalize_BedGraph.py
+python $NORMALIZE -i $BG.raw.bedgraph > $BG.bedgraph
+
+# Make CDT row centered on expected KO
+echo "($PBS_ARRAYID) Generate CDT slice for $ERS"
+ROWCDT=scripts/make_cdt_row.py
+echo $INFO
+python $ROWCDT -s <(head -n $INDEX $METADATA |tail -n 1) -i results/BedGraphs/ -g saccharomyces_cerevisiae.gff

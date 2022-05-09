@@ -1,0 +1,45 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=6
+#PBS -l pmem=24gb
+#PBS -l walltime=05:00:00
+#PBS -A open
+#PBS -o logs/download.data.log.out
+#PBS -e logs/download.data.log.err
+#PBS -t 1-14260
+
+module load gcc/9.3.1
+module load samtools
+module load anaconda3
+source activate genopipe
+
+WRK=/path/to/GenoPipe/paper/ENCODE-CellLines
+cd $WRK
+
+[ -d logs ] || mkdir logs
+[ -d results/BAM ] || mkdir -p results/BAM
+
+METADATA=210512_sample_metadata.txt
+INFO=`sed "${PBS_ARRAYID}q;d" $METADATA`
+ENCFF=`echo $INFO | awk '{print $1}'`
+#echo $INFO
+
+cd results/BAM
+BAM=$ENCFF.bam
+
+# ENCODE data download
+HREF=`echo $INFO | awk '{print $2}'`
+echo "Fetching from https://www.encodeproject.org$HREF"
+wget https://www.encodeproject.org$HREF
+
+# Checksum of resulting BAM
+MD5SUM=`echo $INFO | awk '{print $3}'`
+if [[ `md5sum $BAM` =~ $MD5SUM ]]; then
+	echo "($PBS_ARRAYID) $BAM passed."
+else
+	echo "($PBS_ARRAYID) $BAM md5checksum failed!"
+	rm $BAM
+	exit
+fi
+
+# Index BAM file
+samtools index $BAM

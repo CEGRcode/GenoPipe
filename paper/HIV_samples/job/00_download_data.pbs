@@ -1,0 +1,27 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=8
+#PBS -l pmem=32gb
+#PBS -l walltime=03:00:00
+#PBS -A open
+#PBS -o logs/download.data.log.out
+#PBS -e logs/download.data.log.err
+
+# Requires
+# parallel fastq dump v2.8.0
+
+WRK=/path/to/GenoPipe/paper/HIV_samples
+cd $WRK
+
+module load anaconda3
+source activate ~/work/myconda/genopipe/
+
+[ -d results/FASTQ ] || mkdir -p results/FASTQ
+[ -d logs ] || mkdir logs
+
+parallel-fastq-dump --gzip --split-files -t 4 -O results/FASTQ -s SRR3812124
+parallel-fastq-dump --gzip --split-files -t 4 -O results/FASTQ -s SRR3812125
+parallel-fastq-dump --gzip --split-files -t 4 -O results/FASTQ -s SRR3812126
+parallel-fastq-dump --gzip --split-files -t 4 -O results/FASTQ -s SRR3812127
+parallel-fastq-dump --gzip --split-files -t 4 -O results/FASTQ -s SRR3812128
+parallel-fastq-dump --gzip --split-files -t 4 -O results/FASTQ -s SRR3812129
+mv *.fastq.gz results/FASTQ/

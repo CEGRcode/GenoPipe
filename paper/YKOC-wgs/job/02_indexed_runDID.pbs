@@ -1,0 +1,59 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l pmem=16gb
+#PBS -l walltime=00:10:00
+#PBS -A open
+#PBS -o logs/did-picard.log.out
+#PBS -e logs/did-picard.log.err
+#PBS -t 1-9010
+
+module load gcc/8.3.1
+module load anaconda3
+source activate genopipe
+
+# Python3.9.0 env with pysam
+
+WRK=/path/to/GenoPipe/paper/YKOC-wgs
+cd $WRK
+
+METADATA=210403_PRJEB27160_accessions.txt
+INDEX=$(($PBS_ARRAYID+1))
+
+INFO=`sed "${INDEX}q;d" $METADATA`
+ERS=`echo $INFO | awk '{print $2}'`
+BAM=$WRK/results/BAM/$ERS
+ID=$WRK/results/ID
+TEMP=$WRK/temp$PBS_ARRAYID
+#echo $INFO
+
+[ -d logs ] || mkdir logs
+[ -d $ID ] || mkdir $ID
+
+# Check if ID already generated...
+#if [[ -f $ID/$ENCFF\_R1-ID.tab ]]; then
+#	echo "ID already generated ($ENCFF). Exiting.."
+#	exit
+#fi
+
+[ -d $TEMP ] || mkdir $TEMP
+[ -d $ID ] || mkdir -p $ID
+
+# Set-up Temp directory
+cd $TEMP
+ln -s $BAM.bam
+ln -s $BAM.bam.bai
+
+DATABASE=$WRK/../db/sacCer3_Del
+GENOPIPE=$WRK/../../
+
+## Execute Mass EpitopeID and record time
+cd $WRK
+cd $GENOPIPE/DeletionID
+echo "(2) Begin executing EpitopeID for $R1..."
+start=`date +%s`
+bash identify-Deletion.sh -i $TEMP -o $ID -d $DATABASE
+end=`date +%s`
+runtime=$((end-start))
+echo "...single DeletionID for ($PBS_ARRAYID) $R1 finished in ${runtime}"
+
+rm -r $TEMP

@@ -1,0 +1,67 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=6
+#PBS -l pmem=24gb
+#PBS -l walltime=01:00:00
+#PBS -A open
+#PBS -o logs/sid.log.out
+#PBS -e logs/sid.log.err
+#PBS -t 1-14260
+
+module load gcc/8.3.1
+module load bedtools/2.27.1
+module load bwa/0.7.15
+module load samtools/1.5
+module load anaconda3
+source activate genopipe
+
+WRK=/path/to/GenoPipe/paper/ENCODE-CellLines
+cd $WRK
+
+# Store directory paths
+DATABASE=$WRK/../db/hg19_VCF
+GENOME=$WRK/../input/hg19.fa
+SEED=$PBS_ARRAYID
+GENOPIPE=$WRK/../..
+BAM=$WRK/results/BAM-nospike
+ID=$WRK/results/ID
+
+[ -d logs ] || mkdir logs
+[ -d $ID ] || mkdir -p $ID
+
+# Parse metadata
+METADATA=210512_sample_metadata.txt
+INFO=`sed "${PBS_ARRAYID}q;d" $METADATA`
+ENCFF=`echo $INFO | awk '{print $1}'`
+#echo $INFO
+
+#Check that BAM file was generated first
+if [ ! -f $BAM/$ENCFF.bam ];
+then
+	echo "BAM input for $BAM/$ENCFF does not exist. Exiting."
+	exit
+fi
+
+#Check that BAM Index file exists
+if [ ! -f $BAM/$ENCFF.bam.bai ];
+then
+	echo "BAI missing for for $ENCFF. Exiting."
+	exit
+fi
+
+# Set-up Temp directory
+TEMP=$WRK/temp-$PBS_ARRAYID
+[ -d $TEMP ] || mkdir $TEMP
+cd $TEMP
+echo $BAM
+ln -s $BAM/$ENCFF.bam
+ln -s $BAM/$ENCFF.bam.bai
+
+## Execute Single StrainID and record time
+cd $GENOPIPE/StrainID
+echo "**Begin executing StrainID for ${ENCFF}..."
+{ time bash identify-Strain.sh -i $TEMP -g $GENOME -v $DATABASE -s $SEED -o $ID > $ID/$ENCFF.std ; } 2> $ID/$ENCFF.time
+echo "...single StrainID for ($PBS_ARRAYID) ${ENCFF} finished."
+cd $WRK
+
+## Clean-up
+rm -r $TEMP

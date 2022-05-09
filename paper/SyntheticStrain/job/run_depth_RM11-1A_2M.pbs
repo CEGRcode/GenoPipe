@@ -1,0 +1,36 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l pmem=16gb
+#PBS -l walltime=00:05:00
+#PBS -A open
+#PBS -o logs/depth.RM11-1A.2M.log.out
+#PBS -e logs/depth.RM11-1A.2M.log.err
+#PBS -t 1-1000
+
+# FIRST CHANGE PATH TO EXECUTE
+WRK=/path/to/GenoPipe/paper/SyntheticStrain
+cd $WRK
+
+module load gcc/8.3.1
+module load bedtools/2.27.1
+module load bwa/0.7.15
+module load samtools/1.5
+module load anaconda3
+source activate genopipe
+
+INFO=`sed "12q;d" depth_simulations.txt`
+STRAIN=`awk '{print $1}'  <(echo $INFO)`
+DEPTH=`awk '{print $2}'  <(echo $INFO)`
+BASE=`awk '{print $3}'  <(echo $INFO)`
+REF=`awk -F"_" '{print $1}' <(echo $STRAIN)`
+
+GENOME=synthetic_genome/$STRAIN.fa
+OUTPUT=results/$STRAIN\_$DEPTH
+SEED=$(($BASE+$PBS_ARRAYID))
+
+start=`date +%s`
+bash ../scripts/simulate.sh -i $PBS_ARRAYID -d $DEPTH -s $SEED -g $GENOME -o $OUTPUT
+bash ../scripts/align.sh -i $PBS_ARRAYID -g ../input/$REF.fa -o $OUTPUT -t 4
+end=`date +%s`
+runtime=$((end-start))
+echo "${STRAIN} ${DEPTH} simulate in ${runtime}"

@@ -76,7 +76,7 @@ bwa mem -t $THREAD $GENOME TILE_GENOME.fa | samtools view -Shb -q 5 - | samtools
 samtools index ALIGN_GENOME.bam
 
 # Calculate % uniquely mappable given user-specifed genomic coordinate file
-python2 $COVERAGE -b ALIGN_GENOME.bam -c $COORD -r $STEP -o $READLENGTH\bp_Cov.out
+python $COVERAGE -b ALIGN_GENOME.bam -c $COORD -r $STEP -o $READLENGTH\bp_Cov.out
 
 # Clean up intermediary files
 rm TILE_GENOME.fa ALIGN_GENOME.bam* coord-pad.*

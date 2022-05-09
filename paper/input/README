@@ -1,0 +1,3 @@
+# This directory houses shared reference files
+# setup.sh downloads sacCer3.fa and hg19.fa here
+# BWA indexes will also go here

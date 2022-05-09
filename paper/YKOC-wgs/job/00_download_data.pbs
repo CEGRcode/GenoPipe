@@ -1,0 +1,54 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l pmem=16gb
+#PBS -l walltime=00:05:00
+#PBS -A open
+#PBS -o logs/download.data.log.out
+#PBS -e logs/download.data.log.err
+#PBS -t 1-9010
+
+WRK=/path/to/GenoPipe/paper/YKOC-wgs
+cd $WRK
+
+[ -d logs ] || mkdir logs
+[ -d results/FASTQ ] || mkdir -p results/FASTQ
+
+INDEX=$(($PBS_ARRAYID-1))
+METADATA=210403_PRJEB27160_accessions.txt
+INFO=`sed "${INDEX}q;d" $METADATA`
+ERR=`echo $INFO | awk '{print $4}'`
+URL1=`echo $INFO | awk '{print $12}' | awk -F";" '{print $1}'`
+URL2=`echo $INFO | awk '{print $12}' | awk -F";" '{print $2}'`
+MDSUM1=`echo $INFO | awk '{print $11}' | awk -F";" '{print $1}'`
+MDSUM2=`echo $INFO | awk '{print $11}' | awk -F";" '{print $2}'`
+#echo $INFO
+
+cd results/FASTQ
+
+# Download files from ENA
+if [[ ! -f $ERR\_1.fastq.gz ]]; then
+	echo "(${PBS_ARRAYID}) Downloading $ERR\_1.fastq.gz..."
+	wget $URL1
+	echo "downloaded."
+else
+	echo "(${PBS_ARRAYID}) $ERR\_1.fastq.gz already downloaded..."
+fi
+if [[ ! -f $ERR\_2.fastq.gz ]]; then
+	echo "(${PBS_ARRAYID}) Downloading $ERR\_2.fastq.gz..."
+	wget $URL2
+	echo "downloaded."
+else
+	echo "(${PBS_ARRAYID}) $ERR\_2.fastq.gz already downloaded..."
+fi
+
+# Check md5 checksum
+if [[ `md5sum $ERR\_1.fastq.gz` =~ $MDSUM1 ]]; then
+	echo "($PBS_ARRAYID) $ERR\_1.fastq.gz passed."
+else
+	echo "($PBS_ARRAYID) $ERR\_1.fastq.gz md5checksum failed!"
+fi
+if [[ `md5sum $ERR\_2.fastq.gz` =~ $MDSUM2 ]]; then
+	echo "($PBS_ARRAYID) $ERR\_2.fastq.gz passed."
+else
+	echo "($PBS_ARRAYID) $ERR\_2.fastq.gz md5checksum failed!"
+fi
