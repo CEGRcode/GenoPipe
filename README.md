@@ -151,7 +151,7 @@ When providing path locations, it is important that you provide **absolute paths
 For yeast (sacCer3) samples...
 ```
 cd GenoPipe/EpitopeID
-bash identify-Epitope.sh -i /path/to/FASTQ -o /path/to/output -d /path/to/GenoPipe/EpitopeID/hg19_EpiID
+bash identify-Epitope.sh -i /path/to/FASTQ -o /path/to/output -d /path/to/GenoPipe/EpitopeID/sacCer3_EpiID
 ```
 
 For human (hg19) samples...
