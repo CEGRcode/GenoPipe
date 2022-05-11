@@ -1,5 +1,6 @@
 # GenoPipe
 
+Expanded Documentation at https://pughlab.mbg.cornell.edu/GenoPipe/
 
 ## Toolkit for characterizing the genotype of NGS datasets
 
