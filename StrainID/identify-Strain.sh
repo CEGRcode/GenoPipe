@@ -5,8 +5,8 @@
 
 usage()
 {
-    echo 'identify-Strain.sh -i /path/to/BAM -g /path/to/genome/fASTA -v /path/to/VCF/files -o /path/to/output'
-    echo 'eg: bash identify-Strain.sh -i /input -g /sacCer3.fa -v /sacCer3_VCF -o /output'
+    echo 'identify-Strain.sh -i /path/to/BAM -g /path/to/genome/fASTA -v /path/to/VCF/files -o /path/to/output [ -s intSeed (default=None) ]'
+    echo 'eg: bash identify-Strain.sh -i /input -g /sacCer3.fa -v /sacCer3_VCF -o /output -s 5'
     exit
 }
 
