@@ -121,13 +121,29 @@ const config = {
                 label: 'Pugh Lab Website',
                 href: 'https://pughlab.mbg.cornell.edu/',
               },
+              {
+                label: 'Lai Lab',
+                href: 'https://williamkmlai.github.io',
+              },
             ],
           },
           {
-            title: 'More',
+            title: 'Other Tools We Develop',
             items: [
               {
-                label: 'GitHub',
+                label: 'ScriptManager',
+                href: 'https://github.com/CEGRcode/scriptmanager',
+              },
+              {
+                label: 'PEGR',
+                href: 'https://github.com/seqcode/pegr',
+              },
+              {
+                label: 'STENCIL',
+                href: 'https://github.com/CEGRcode/stencil',
+              },
+              {
+                label: 'GenoPipe',
                 href: 'https://github.com/CEGRcode/GenoPipe',
               },
             ],
