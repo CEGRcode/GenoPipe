@@ -78,6 +78,7 @@ shift $((OPTIND-1))
 if [[ ! " ${!GETDEPTH[@]} " =~ " ${S_DEPTH} " ]]; then
 	usage
 fi
+
 DEPTH=${GETDEPTH[$S_DEPTH]}
 
 echo "Simulation-i = ${INDEX}"
@@ -93,12 +94,13 @@ FQ=$OUTDIR/FASTQ/Simulation_$INDEX
 [ -d $OUTDIR/BED ]   || mkdir $OUTDIR/BED
 [ -d $OUTDIR/FASTQ ] || mkdir $OUTDIR/FASTQ
 
-RAND=../scripts/generate_random_BED_from_Genomic_FASTA.pl
+RAND=../scripts/generate_random_BED_from_Genome_Size.pl
 CONVERT=../scripts/convert_FASTA_to_GZIP-FASTQ.pl
 
-perl $RAND $GENOME $DEPTH $SEED $BED
+
+perl $RAND $GENOME.fai $DEPTH $SEED $BED
 bedtools getfasta -name -s -fi $GENOME -bed $BED\_R1.bed.gz -fo $FQ\_R1.fa
 bedtools getfasta -name -s -fi $GENOME -bed $BED\_R2.bed.gz -fo $FQ\_R2.fa
 perl $CONVERT $FQ\_R1.fa $FQ\_R1.fastq.gz
 perl $CONVERT $FQ\_R2.fa $FQ\_R2.fastq.gz
-rm ${FQ}*.fa
+rm ${FQ}_*.fa
