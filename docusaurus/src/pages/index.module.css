@@ -2,6 +2,28 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
+.Customized_hero{
+background-color: black;
+padding: 150px 0px 150px 0px;
+position: relative;
+text-align: center;
+color: white;
+overflow: hidden;
+z-index: 1;
+
+}
+.background_image{
+  left: 5px;
+  margin: auto;
+  /*max-width: 1400px;*/
+  width: 200%;
+  opacity: .4;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  z-index:-10;
+}
+
 
 .heroBanner {
   padding: 4rem 0;
