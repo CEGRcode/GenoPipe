@@ -16,9 +16,14 @@ z-index: 1;
   left: 5px;
   margin: auto;
   /*max-width: 1400px;*/
-  width: 200%;
+  width: 100%;
+  background: no-repeat center center fixed;
   opacity: .4;
   position: absolute;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   right: 0;
   top: -10px;
   z-index:-10;
@@ -43,3 +48,4 @@ z-index: 1;
   align-items: center;
   justify-content: center;
 }
+
