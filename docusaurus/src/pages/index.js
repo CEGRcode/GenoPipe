@@ -11,7 +11,7 @@ function HomepageHeader() {
   return (
     <header className={clsx("Customized_hero", styles.Customized_hero)}>
       <div className={styles.background_image}>
-        <img src=""></img>
+        <img src="img/background.png"></img>
       </div>
       <div className={styles.text}>
         <h1 className="hero__title">{siteConfig.title}</h1>
