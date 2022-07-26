@@ -93,6 +93,9 @@ if [ ! -f $YEPIDB/FASTA_genome/genome.fa ]; then
 fi
 echo "Setup Random Epitope for Yeast EpiID..."
 cp input/RAND_500.fa $YEPIDB/FASTA_tag/Tag_DB/
+cp input/RAND_100.fa $YEPIDB/FASTA_tag/Tag_DB/
+cp input/RAND_50.fa $YEPIDB/FASTA_tag/Tag_DB/
+cp input/RAND_20.fa $YEPIDB/FASTA_tag/Tag_DB/
 rm $YEPIDB/FASTA_tag/ALL_TAG.fa*
 cd $YEPIDB/FASTA_tag/Tag_DB
 cat *.fa *.fna *.ffn *.fasta > ALL_TAG.fa
