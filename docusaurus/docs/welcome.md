@@ -47,6 +47,10 @@ Strain List:
 * python v2.15 with pysam
  -->
 
+You can install most of these dependencies as a [conda environment][conda-install] if you have conda setup on your machine using the following command:
+```bash
+conda create -n my-genopipe-env -c bioconda -c conda-forge bwa scipy samtools bedtools seqkit
+```
 
 
 ## Testing
@@ -95,6 +99,8 @@ General notes about the defaults used for out-of-the-box usage:
 
 
 [github-repo]:https://github.com/CEGRcode/GenoPipe
+[conda-install]:https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html
+
 [bed-specs]:https://www.google.com
 [vcf-specs]:https://www.google.com
 [dependency-bwa]:https://www.google.com
