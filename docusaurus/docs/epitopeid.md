@@ -50,14 +50,6 @@ The provided database files are missing the genomic reference file for storage r
 For EpitopeID, this is the "database" or directory with four types of reference files used by `identify-Epitope.sh`. You will notice that EpitopeID provides reference files for both yeast (`sacCer3_EpiID`) and human (`hg19_EpiID`) so you can quickly get started without building up the database from scratch. However, you are free to customize and build your own set of files (e.g. add different epitope tags to check for, use a different genome build).
 
 ### Database structure
-Below is a list of the the hardcoded filenames that EpitopeID looks for during execution and some information on the provided yeast and human defaults.
-
-* The `FASTA_tag/ALL_TAG.fa` is the FASTA formatted collection of all epitope sequences to search for. The yeast tag database includes the [AID, Extended-Tap,  FRB, HA_v1, HA_v3, MNase, ProtA, CBP, FLAG-3x, GFP, HA_v2, HaloTag, and Myc(3x)][tag-ref] sequences. The human tag database only includes the [LAP][lap-ref] tag but it is easy to customize the list to include other epitopes for EpitopeID to look for.
-* The `FASTA_genome/genome.fa` is the reference genome used for the genomic alignments that the other annotations are base on. Even if you use the provided databases from Github, the genomic reference file still needs to be downloaded and moved to `FASTA_genome/genome.fa`. (Genome was not include for data storage reasons)
-* The `annotation/genome_annotation.gff.gz` file defines the bin coordinates to use when localizing the epitope insertion in PE datasets. The yeast default uses SGD gene annotation coordinates to defines one bin for the length of each gene, 250bp bins flanking each set of gene coordinates, and 250bp bins breaking up the remaining intergenic regions. The human default similarly bins out the genome using 1000bp windows on the NCBI Refseq annotations.
-* The `blacklist_filter/blacklist.bed`
-
-
 Whether you use the provided reference files or create your own, the database should use the following directory structure both to ensure that EpitopeID can find the correct reference files and for organization, clarity, and consistency.
 ```
 /name/of/epiDB
@@ -80,6 +72,13 @@ Whether you use the provided reference files or create your own, the database sh
 |--blacklist_filter
 |  |--blacklist.bed
 ```
+
+Below is a list of the the hardcoded filenames that EpitopeID looks for during execution and some information on the provided yeast and human defaults.
+
+* The `FASTA_tag/ALL_TAG.fa` is the FASTA formatted collection of all epitope sequences to search for. The yeast tag database includes the [AID, Extended-Tap,  FRB, HA_v1, HA_v3, MNase, ProtA, CBP, FLAG-3x, GFP, HA_v2, HaloTag, and Myc(3x)][tag-ref] sequences. The human tag database only includes the [LAP][lap-ref] tag but it is easy to customize the list to include other epitopes for EpitopeID to look for.
+* The `FASTA_genome/genome.fa` is the reference genome used for the genomic alignments that the other annotations are base on. Even if you use the provided databases from Github, the genomic reference file still needs to be downloaded and moved to `FASTA_genome/genome.fa`. (Genome was not include for data storage reasons)
+* The `annotation/genome_annotation.gff.gz` file defines the bin coordinates to use when localizing the epitope insertion in PE datasets. The yeast default uses SGD gene annotation coordinates to defines one bin for the length of each gene, 250bp bins flanking each set of gene coordinates, and 250bp bins breaking up the remaining intergenic regions. The human default similarly bins out the genome using 1000bp windows on the NCBI Refseq annotations.
+* The `blacklist_filter/blacklist.bed`
 
 Below is more information on how to use the utility scripts to download and customize your reference files.
 
@@ -220,6 +219,29 @@ cd $EPITOPEID/utility_scripts
 
 ``` -->
 
+
+## Output Report (`-o`)
+
+The output report is saved to the user-provided output directory in a file named based on the input FASTQ files (`/path/to/output/XXXXX_R1-ID.tab`). Below is a sample report based on the results from running EpitopeID on the ENCODE ENCFF415CJF sample.
+
+```
+EpitopeID	EpitopeCount
+LAP-tag	435
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+NR4A1|chr12:52416616-52453291	LAP-tag	C-term	9	3.580493355965414e-24
+```
+
+The first part of the report shows which epitopes in `Tag_DB` were identified in the sample (**EpitopeID column**) and how many reads mapped to this epitope (**EpitopeCount**) to help quantify the coverage of the epitopes which relates to the confidence of the call.
+
+The second part of the report shows which epitopes localized to which regions/tiles of the genome significantly (sorted by pvalue if multiple hits). The columns specify the coordinate interval (**GeneID**), which epitope maps to this locus (**EpitopeID**), if this occurs on the N or C-terminus (**EpitopeLocation**), the number of reads mapping to this tile (**EpitopeCount**), and the poisson-calculated associated p-value to indicate confidence of the site (**pVal**).
+
+
+## Threading (`-t`)
+
+This optional input is used to specify the number of threads to used for the BWA alignment commands. Defaults to 1.
+
+
 ## Example: Set-up EpitopeID and run on yeast example
 ```bash
 git clone www.github/CEGRcode/GenoPipe
@@ -242,30 +264,6 @@ cd ../../
 mkdir ../output
 bash identify_Epitope.sh -i ../samples/ -o ../output/ -d sacCer3_EpiID -t 4
 ```
-
-
-## Threading (`-t`)
-
-This optional input is used to specify the number of threads to used for the BWA alignment commands. Defaults to 1.
-
-
-
-## Output Report (`-o`)
-
-The output report is saved to the user-provided output directory in a file named based on the input FASTQ files (`/path/to/output/XXXXX_R1-ID.tab`). Below is a sample report based on the results from running EpitopeID on the ENCODE ENCFF415CJF sample.
-
-```
-EpitopeID	EpitopeCount
-LAP-tag	435
-
-GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-NR4A1|chr12:52416616-52453291	LAP-tag	C-term	9	3.580493355965414e-24
-```
-
-The first part of the report shows which epitopes in `Tag_DB` were identified in the sample (**EpitopeID column**) and how many reads mapped to this epitope (**EpitopeCount**) to help quantify the coverage of the epitopes which relates to the confidence of the call.
-
-The second part of the report shows which epitopes localized to which regions/tiles of the genome significantly (sorted by pvalue if multiple hits). The columns specify the coordinate interval (**GeneID**), which epitope maps to this locus (**EpitopeID**), if this occurs on the N or C-terminus (**EpitopeLocation**), the number of reads mapping to this tile (**EpitopeCount**), and the poisson-calculated associated p-value to indicate confidence of the site (**pVal**).
-
 
 
 ## FAQs
