@@ -4,7 +4,7 @@ title: Welcome
 sidebar_label: Welcome
 ---
 
-![Figure1](/genopipe-img/Figure1.svg)
+<img src={require('/../static/genopipe-img/Figure1.png').default} style={{width:60+'%'}}/>
 
 Welcome to the GenoPipe wiki!
 
