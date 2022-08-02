@@ -18,7 +18,7 @@ do
 	perl $INSERT ../input/hg19.fa chr3:184079502:+ $RTAG synthetic_genome/hg19_POLR2H-Nterm_R$RLEN.fa
 done
 
-for FASTA in `ls synthetic_genome/sacCer3*.fa`;
+for FASTA in `ls synthetic_genome/*.fa`;
 do
 	samtools faidx $FASTA
 done
