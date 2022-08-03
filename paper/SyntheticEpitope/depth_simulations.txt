@@ -1,18 +1,16 @@
-sacCer3_Reb1-Cterm	10K	0
-sacCer3_Reb1-Cterm	100K	1000
-sacCer3_Reb1-Cterm	1M	2000
-sacCer3_Reb1-Cterm	10M	3000
-sacCer3_Rap1-Nterm	10K	4000
-sacCer3_Rap1-Nterm	100K	5000
-sacCer3_Rap1-Nterm	1M	6000
-sacCer3_Rap1-Nterm	10M	7000
-hg19_CTCF-Nterm	100K	8000
-hg19_CTCF-Nterm	1M	9000
-hg19_CTCF-Nterm	10M	10000
-hg19_CTCF-Nterm	50M	11000
-hg19_POLR2H-Nterm	100K	12000
-hg19_POLR2H-Nterm	1M	13000
-hg19_POLR2H-Nterm	10M	14000
-hg19_POLR2H-Nterm	50M	15000
-hg19_CTCF-Nterm	20M	16000
-hg19_POLR2H-Nterm	20M	17000
+sacCer3	Reb1	Cterm	R500	0
+sacCer3	Rap1	Nterm	R500	5000
+hg19	CTCF	Nterm	R500	10000
+hg19	POLR2H	Nterm	R500	15000
+sacCer3	Reb1	Cterm	R100	20000
+sacCer3	Rap1	Nterm	R100	25000
+hg19	CTCF	Nterm	R100	30000
+hg19	POLR2H	Nterm	R100	35000
+sacCer3	Reb1	Cterm	R50	40000
+sacCer3	Rap1	Nterm	R50	45000
+hg19	CTCF	Nterm	R50	50000
+hg19	POLR2H	Nterm	R50	55000
+sacCer3	Reb1	Cterm	R20	60000
+sacCer3	Rap1	Nterm	R20	65000
+hg19	CTCF	Nterm	R20	70000
+hg19	POLR2H	Nterm	R20	75000
