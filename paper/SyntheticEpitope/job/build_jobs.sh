@@ -2,7 +2,6 @@
 
 # FIRST CHANGE PATH TO EXECUTE
 WRK=/path/to/GenoPipe/paper/SyntheticEpitope
-WRK=/Users/olivialang/Documents/GitHub/GenoPipe/paper/SyntheticEpitope
 cd $WRK
 
 TEMPLATE=$WRK/job/depth_template.pbs
@@ -22,7 +21,6 @@ do
 	EXPERIMENTNAME=$PROTEIN-$EPITOPE
 	FILENAME=job/run_depth_$E\_$PROTEIN-$LOCUS\_$EPITOPE.pbs
 	echo $FILENAME
-	echo $TEMPLATE
 	sed "s/EXPERIMENTID/${E}/g" $TEMPLATE \
 		| sed "s/EXPERIMENTNAME/${EXPERIMENTNAME}/g" \
 		| sed "s/TIME/${TIME}/g" \

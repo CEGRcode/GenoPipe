@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # This script simulates by sampling paired-end reads from a synthetic genome as BED coordinate
-# using custom scrripts and then extracting the sequence using Bedtools. Then the FASTA has 
+# using custom scrripts and then extracting the sequence using Bedtools. Then the FASTA has
 # quality scores added and the resulting FASTQ is compressed to fastq.gz files.
 
 # Simulation index is like a replicate index and is used in the final output filename
 # Depth specifies how many paired end reads to generate for the dataset
 # Seed can be be set for the sampling step to generate the BED files
-# Synthetic Genome FASTA file needs to be indicated (with inserted epitope, with deletion 
+# Synthetic Genome FASTA file needs to be indicated (with inserted epitope, with deletion
 #		removed, with SNPs sprinkled into genome)
 # Output FASTQ files are saved to /path/to/results/FASTQ/Simulation_X_R*.fastq.gz
 
@@ -17,19 +17,23 @@
 # samtools v1.5
 # python 2.7.14
 # pysam
+# seqkit
+
+module load anaconda3
+source activate my-genopipe-env
 
 usage()
 {
-	echo 'bash simulate.sh -i <simulationIndex> -d [10K|50K|100K|200K|500K|1M|2M|5M|7M|10M|50M] -s <seed> -g <syntheticGenomeFASTA> -o <outputDirectory>'
-	echo 'eg: bash simulate.sh -i 1 -d 100K -s 1000 -g /path/to/syntheticgenome -o /path/to/results'
+	echo 'bash simulate.sh -i <simulationIndex> -d [10K|50K|100K|200K|500K|1M|2M|5M|7M|10M|50M] -s <seed> -g <syntheticGenomeFASTA> -o <outputDirectory> -t <threads>'
+	echo 'eg: bash simulate.sh -i 1 -d 100K -s 1000 -g /path/to/syntheticgenome -o /path/to/results -t 4'
 	exit
 }
 
-if [ "$#" -ne 10 ]; then
+if [ "$#" -ne 12 ]; then
 	usage
 fi
 
-declare -A GETDEPTH=( 
+declare -A GETDEPTH=(
 		["10K"]=10000 \
 		["50K"]=50000 \
 		["100K"]=100000 \
@@ -50,6 +54,8 @@ declare -A GETDEPTH=(
 		["20M"]=20000000 \
 		["50M"]=50000000  )
 
+THREAD=1
+
 while getopts ":i:d:s:g:o:t:" IN; do
 	case "${IN}" in
 	i)
@@ -66,6 +72,9 @@ while getopts ":i:d:s:g:o:t:" IN; do
 		;;
 	o)
 		OUTDIR=${OPTARG}
+		;;
+	t)
+		THREAD=${OPTARG}
 		;;
 	*)
 		usage
@@ -97,10 +106,23 @@ FQ=$OUTDIR/FASTQ/Simulation_$INDEX
 RAND=../scripts/generate_random_BED_from_Genome_Size.pl
 CONVERT=../scripts/convert_FASTA_to_GZIP-FASTQ.pl
 
-
+# Sample read pairs from genome
 perl $RAND $GENOME.fai $DEPTH $SEED $BED
-bedtools getfasta -name -s -fi $GENOME -bed $BED\_R1.bed.gz -fo $FQ\_R1.fa
-bedtools getfasta -name -s -fi $GENOME -bed $BED\_R2.bed.gz -fo $FQ\_R2.fa
+#bedtools getfasta -name -s -fi $GENOME -bed $BED\_R1.bed.gz -fo $FQ\_R1.fa
+#bedtools getfasta -name -s -fi $GENOME -bed $BED\_R2.bed.gz -fo $FQ\_R2.fa
+# Extract FASTA and fix headers
+seqkit subseq -j $THREAD $GENOME --bed $BED\_R1.bed.gz \
+  | seqkit replace -j $THREAD --pattern "^chr[0-9:_\-\+]+ " \
+  | seqkit rename -j $THREAD \
+  > $FQ\_R1_unsorted.fa
+seqkit subseq -j $THREAD $GENOME --bed $BED\_R2.bed.gz \
+  | seqkit replace -j $THREAD --pattern "^chr[0-9:_\-\+]+ " \
+  | seqkit rename -j $THREAD \
+  > $FQ\_R2_unsorted.fa
+# Sort for parallel read orders (aligner requirement)
+seqkit sort -j $THREAD --by-name $FQ\_R1_unsorted.fa > $FQ\_R1.fa
+seqkit sort -j $THREAD --by-name $FQ\_R2_unsorted.fa > $FQ\_R2.fa
+# Convert to FASTQ (adding generic quality scores)
 perl $CONVERT $FQ\_R1.fa $FQ\_R1.fastq.gz
 perl $CONVERT $FQ\_R2.fa $FQ\_R2.fastq.gz
 rm ${FQ}_*.fa
