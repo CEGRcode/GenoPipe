@@ -1,9 +1,12 @@
+# Lang et al, 202X
 
+This contains all the scripts used to generate the figures validating and benchmarking performance for GenoPipe as a tool, specifically the code for downloading data, preprocessing, and simulations.
 
-# This directory contains all the scripts used to generate the figures for validating and benchmarking performance for GenoPipe as a tool
+### This directory includes the simulation and preprocessing code used in the GenoPipe publication. If *you are a user* trying to just run GenoPipe the tool, navigate to either the EpitopID, StrainID, or DeletionID directories!
+
 
 # Directory Structure overview
-
+```
 paper
 |--setup.sh
 |--scripts
@@ -18,7 +21,7 @@ paper
 |--YKOC-wgs
 |--BY4742-chipseq
 |--CENPK-chipseq
-
+```
 
 ## setup.sh
 runs the scripts to download and format the yeast and human genomes and other reference files for aligning the data
