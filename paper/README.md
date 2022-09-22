@@ -4,8 +4,6 @@ This contains all the scripts used to generate the figures validating and benchm
 
 ### This directory includes the simulation and preprocessing code used in the GenoPipe publication. If *you are a user* trying to just run GenoPipe the tool, navigate to either the EpitopID, StrainID, or DeletionID directories!
 
-
-# Directory Structure overview
 ```
 paper
 |--setup.sh
