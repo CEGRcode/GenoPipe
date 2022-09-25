@@ -1,5 +1,24 @@
 # Simulate Paired-End datasets for EpitopeID and evaluate performance
 
+Simulations left todo:
+
+Yeast (across 10M, 1M, 100K, 10K PE reads)
+|      | Reb1 | Rap1 | Sua7 | Taf2 | Spt4 | Spt7 | Gcn5 | Hsf1 | Fzo1 | Lge1 |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| R500 |  |  |  |  |  |  |  |  |  |  |
+| R100 |  |  |  |  |  |  |  |  |  |  |
+| R50  |  |  |  |  |  |  |  |  |  |  |
+| R20  |  |  |  |  |  |  |  |  |  |  |
+
+Human (across 50M, 10M, 20M, 1M, 100K PE reads)
+|      | CTCF | POLR2H | MED12 | YY1 | USF1 | GABPA | ESR1 | FOXA1 | SHH | EP300 |
+| ---- | ---- | ------ | ----- | --- | ---- | ----- | ---- | ----- | --- | ----- |
+| R500 |  |  |  |  |  |  |  |  |  |  |
+| R100 |  |  |  |  |  |  |  |  |  |  |
+| R50  |  |  |  |  |  |  |  |  |  |  |
+| R20  |  |  |  |  |  |  |  |  |  |  |
+
+
 ## Generate Synthetic Genomes
 Create synthetic genomes to simulate from by generating a random 500bp "epitope" sequence
 Insert it into a genome adjacent to the coding sequence of a gene
