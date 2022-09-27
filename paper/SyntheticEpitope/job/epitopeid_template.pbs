@@ -11,7 +11,6 @@ EXPERIMENT=EXPERIMENTID
 
 # FIRST CHANGE PATH TO EXECUTE
 WRK=/path/to/GenoPipe/paper/SyntheticEpitope
-DATABASE=$WRK/../db/hg19_EpiID
 EPITOPEID=$WRK/../../EpitopeID
 cd $WRK
 
@@ -28,6 +27,7 @@ EPITOPE=`awk '{print $4}'  <(echo $INFO)`
 BASE=`awk '{print $5}'  <(echo $INFO)`
 
 GENOME=synthetic_genome/$REF\_$PROTEIN-$LOCUS\_$EPITOPE.fa
+DATABASE=$WRK/../db/$REF\_EpiID
 
 [ -d logs ] || mkdir logs
 
