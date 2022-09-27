@@ -4,7 +4,8 @@
 WRK=/path/to/GenoPipe/paper/SyntheticEpitope
 cd $WRK
 
-TEMPLATE=$WRK/job/depth_template.pbs
+DTEMPLATE=$WRK/job/depth_template.pbs
+ETEMPLATE=$WRK/job/epitopeid_template.pbs
 
 N_EXPERIMENTS=`wc -l depth_simulations.txt |awk '{print $1}'`
 
@@ -19,9 +20,18 @@ do
 	[[ "$REF" =~ "hg19" ]] && TIME="02:00:00"
 
 	EXPERIMENTNAME=$PROTEIN-$EPITOPE
+	# Make run_depth_... templates
 	FILENAME=job/run_depth_$E\_$PROTEIN-$LOCUS\_$EPITOPE.pbs
 	echo $FILENAME
-	sed "s/EXPERIMENTID/${E}/g" $TEMPLATE \
+	sed "s/EXPERIMENTID/${E}/g" $DTEMPLATE \
+		| sed "s/EXPERIMENTNAME/${EXPERIMENTNAME}/g" \
+		| sed "s/TIME/${TIME}/g" \
+		> $FILENAME
+
+	# Make run_EpitopeID_... templates
+	FILENAME=job/run_EpitopeID_$E\_$PROTEIN-$LOCUS\_$EPITOPE.pbs
+	echo $FILENAME
+	sed "s/EXPERIMENTID/${E}/g" $ETEMPLATE \
 		| sed "s/EXPERIMENTNAME/${EXPERIMENTNAME}/g" \
 		| sed "s/TIME/${TIME}/g" \
 		> $FILENAME
