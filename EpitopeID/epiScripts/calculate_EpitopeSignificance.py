@@ -32,20 +32,20 @@ if __name__ == '__main__':
 		print("No Pvalue input!!!")
 		sys.exit(usage)
 	elif COUNT == "":
-                print("No Single-end epitope counts input!!!")
-                sys.exit(usage)
+		print("No Single-end epitope counts input!!!")
+		sys.exit(usage)
 	elif SIZE == "":
-                print("No Genome-size input!!!")
-                sys.exit(usage)
+		print("No Genome-size input!!!")
+		sys.exit(usage)
 	if OUT == "":
-                OUT = os.path.splitext(os.path.basename(BAM))[0] + ".tab"
+		OUT = os.path.splitext(os.path.basename(BAM))[0] + ".tab"
 
 	# Minimum fold enrichment over background
 	MINFOLD = 2;
 
 	# Open output file for writing
 	output = open(OUT, "w")
-       	# open PE_table
+	# open PE_table
 	file = open(TABLE, "r")
 
 	TABLE = []

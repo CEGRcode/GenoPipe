@@ -27,7 +27,7 @@ foreach $key (keys %TAG_MATCH) { push(@ARRAY, {count => $TAG_MATCH{$key}, id => 
 
 open(OUT, ">$output") or die "Can't open $output for writing!\n";
 if($#SORT == -1) {
-        print OUT "EpitopeID\tEpitopeCount\nNo Tag ID'd\n";
+	print OUT "EpitopeID\tEpitopeCount\nNo Tag ID'd\n";
 } else {
 	print OUT "EpitopeID\tEpitopeCount\n";
 	for($x = 0; $x <= $#SORT; $x++) {
