@@ -46,7 +46,7 @@ do
 	[ -d $RESULTS/runtime ] || mkdir $RESULTS/runtime
 
 	# Set-up Temp directory
-	TEMP=$WRK/temp-$EXPERIMENT-$PBS_ARRAYID
+	TEMP=$WRK/temp-$EXPERIMENT-$PBS_ARRAYID-$DEPTH
 	[ -d $TEMP ] || mkdir $TEMP
 
 	cd $TEMP
