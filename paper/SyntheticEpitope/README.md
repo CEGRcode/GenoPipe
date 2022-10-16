@@ -12,9 +12,9 @@ Yeast (across 10M, 1M, 100K, 10K PE reads)
 |      |    Reb1   |    Rap1   |    Sua7   |    Taf2   |    Spt4   |    Spt7   |    Gcn5   |    Hsf1   |    Fzo1   |    Lge1   |
 | ---- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
 | R500 | &#x1F34E; | &#x1F34E; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F3C3; |
-| R100 | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F3C3; |
-| R50  | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F3C3; |
-| R20  | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F3C3; | &#x1F34F; | &#x1F34F; |
+| R100 | &#x1F34E; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F3C3; |
+| R50  | &#x1F34E; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F3C3; |
+| R20  | &#x1F34E; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; | &#x1F34F; |
 
 Human (across 50M, 10M, 20M, 1M, 100K PE reads)
 |      |    CTCF   |   POLR2H  |   MED12   |    YY1    |    USF1   |   GABPA   |    ESR1   |   FOXA1   |    SHH    |   EP300   |
