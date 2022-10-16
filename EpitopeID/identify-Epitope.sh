@@ -1,17 +1,20 @@
 #!/bin/bash
 
 # Required software:
-# BWA v0.7.14+
+# bowtie2 v2.4.5
 # samtools v1.7+
 # bedtools v2.26+
 # perl5
 # python v2.15 with scipy
 # GNU grep (BSD grep on MacOSX is >10X slower)
 
+# Unused Software (no-longer required)
+# BWA v0.7.14+
+
 usage()
 {
-	echo 'identify-Epitope.sh -i /path/to/FASTQ -o /path/to/output -d /path/to/genome/database -t <Threads - Default 1>'
-	echo 'eg: bash identify-Epitope.sh -i /input -o /output -d /sacCer3_EpiID -t 2'
+	echo 'identify-Epitope.sh -i /path/to/FASTQ -o /path/to/output -d /path/to/genome/database [-t <Threads - Default 1>] [-p <Pvalue - Default 0.05>]'
+	echo 'eg: bash identify-Epitope.sh -i /input -o /output -d /sacCer3_EpiID -t 2 -p 0.1'
 	exit
 }
 
@@ -19,9 +22,10 @@ if [ "$#" -ne 6 ] && [ "$#" -ne 8 ]; then
 	usage
 fi
 
+PVALUE=0.05
 THREAD=1
 
-while getopts ":i:o:d:t:" IN; do
+while getopts ":i:o:d:t:p:" IN; do
 	case "${IN}" in
 		i)
 			INPUT=${OPTARG}
@@ -34,6 +38,9 @@ while getopts ":i:o:d:t:" IN; do
 			;;
 		t)
 			THREAD=${OPTARG}
+			;;
+		p)
+			PVALUE=${OPTARG}
 			;;
 		*)
 			usage
@@ -50,6 +57,7 @@ echo "Input folder = ${INPUT}"
 echo "Output folder = ${OUTPUT}"
 echo "Databse folder = ${DATABASE}"
 echo "Threads = ${THREAD}"
+echo "P-value = ${PVALUE}"
 
 # Check if ALL_TAG.fa exists, exit otherwise
 if [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa ]; then
@@ -63,16 +71,20 @@ if [ ! -f $DATABASE/FASTA_genome/genome.fa ]; then
 	exit
 fi
 
-# Check if ALL_TAG.fa bwa index exists, creates if it doesn't
-if [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.amb ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.ann ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.bwt ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.pac ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.sa ]; then
+# Check if ALL_TAG.fa aligner index exists, creates if it doesn't
+#if [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.amb ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.ann ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.bwt ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.pac ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.sa ]; then
+if [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.1.bt2 ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.rev.1.bt2 ]; then
 	echo "Building TAG index..."
-	bwa index $DATABASE/FASTA_tag/ALL_TAG.fa
+	#bwa index $DATABASE/FASTA_tag/ALL_TAG.fa
+	bowtie2-build $DATABASE/FASTA_tag/ALL_TAG.fa $DATABASE/FASTA_tag/ALL_TAG.fa
 fi
 
-# Check if genome.fa bwa index exists, creates if it doesn't
-if [ ! -f $DATABASE/FASTA_genome/genome.fa.amb ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.ann ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.bwt ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.pac ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.sa ]; then
+# Check if genome.fa aligner index exists, creates if it doesn't
+#if [ ! -f $DATABASE/FASTA_genome/genome.fa.amb ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.ann ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.bwt ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.pac ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.sa ]; then
+if [ ! -f $DATABASE/FASTA_genome/genome.fa.1.bt2 ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.rev.1.bt2 ]; then
 	echo "Building ORF index..."
-	bwa index $DATABASE/FASTA_genome/genome.fa
+	#bwa index $DATABASE/FASTA_genome/genome.fa
+	bowtie2-build $DATABASE/FASTA_genome/genome.fa $DATABASE/FASTA_genome/genome.fa
 fi
 
 # Folder containing EpitopeID scripts must be located in the same directory as the identify-Epitope.sh shell script
@@ -96,12 +108,14 @@ do
 	fi
 
 	# Align sequence reads to all tag database
-	bwa mem -t $THREAD $DATABASE/FASTA_tag/ALL_TAG.fa $READ1 | samtools view -h -F 4 -S - > $OUTPUT/$SAMPLE/align1.sam
+	#bwa mem -t $THREAD $DATABASE/FASTA_tag/ALL_TAG.fa $READ1 | samtools view -h -F 4 -S - > $OUTPUT/$SAMPLE/align1.sam
+	bowtie2 --local -p $THREAD -x $DATABASE/FASTA_tag/ALL_TAG.fa -U $READ1 | samtools view -h -F 4 -S - > $OUTPUT/$SAMPLE/align1.sam
 	# Determine which epitope sequences had reads aligned to them
 	grep -v "^@" $OUTPUT/$SAMPLE/align1.sam | cut -f1,3 > $OUTPUT/$SAMPLE/epitope-se.out
 
 	if [ -f $READ2 ]; then
-		bwa mem -t $THREAD $DATABASE/FASTA_tag/ALL_TAG.fa $READ2 | samtools view -h -F 4 -S - > $OUTPUT/$SAMPLE/align2.sam
+		#bwa mem -t $THREAD $DATABASE/FASTA_tag/ALL_TAG.fa $READ2 | samtools view -h -F 4 -S - > $OUTPUT/$SAMPLE/align2.sam
+		bowtie2 --local -p $THREAD -x $DATABASE/FASTA_tag/ALL_TAG.fa -U $READ2 | samtools view -h -F 4 -S - > $OUTPUT/$SAMPLE/align2.sam
 
 		# Determine which epitope sequences had reads aligned to them
 		grep -v "^@" $OUTPUT/$SAMPLE/align2.sam | cut -f1,3 >> $OUTPUT/$SAMPLE/epitope-se.out
@@ -125,7 +139,8 @@ do
 		perl $LOCAL/epiScripts/uniq_PE_FASTQ.pl $OUTPUT/$SAMPLE/read1.fa $OUTPUT/$SAMPLE/read2.fa >> $OUTPUT/$SAMPLE/tag-reads.fa
 
 		# Align TAG-aligned mates to genome, requiring mapping quality score of at least 5
-		bwa mem -t $THREAD $DATABASE/FASTA_genome/genome.fa $OUTPUT/$SAMPLE/tag-reads.fa | samtools view -F 4 -q 5 -Shb - > $OUTPUT/$SAMPLE/orf.bam
+		#bwa mem -t $THREAD $DATABASE/FASTA_genome/genome.fa $OUTPUT/$SAMPLE/tag-reads.fastq | samtools view -F 4 -q 5 -Shb - > $OUTPUT/$SAMPLE/orf.bam
+		bowtie2 --local -f -p $THREAD -x $DATABASE/FASTA_genome/genome.fa -U $OUTPUT/$SAMPLE/tag-reads.fa | samtools view -F 4 -q 5 -Shb - > $OUTPUT/$SAMPLE/orf.bam
 
 		# Blacklist filter out artefactual or unwanted gene alignments
 		bedtools intersect -v -abam $OUTPUT/$SAMPLE/orf.bam -b $DATABASE/blacklist_filter/blacklist.bed > $OUTPUT/$SAMPLE/orf_filter.bam
@@ -133,7 +148,6 @@ do
 		bedtools intersect -wb -abam $OUTPUT/$SAMPLE/orf_filter.bam -b $DATABASE/annotation/genome_annotation.gff.gz -bed > $OUTPUT/$SAMPLE/align-pe.out
 		# Compress BAM file read length to 1 bp to prevent multi-counting across BIN junctures
 		perl $LOCAL/epiScripts/filter_intersect_by_FivePrime.pl $OUTPUT/$SAMPLE/align-pe.out $OUTPUT/$SAMPLE/align-pe_filter.out
-
 	fi
 
 	# Parse single-end epitope alignments to final table
@@ -148,7 +162,6 @@ do
 		samtools view -H $OUTPUT/$SAMPLE/orf.bam > $OUTPUT/$SAMPLE/sam-header.txt
 		GENOMESIZE="$(perl $LOCAL/epiScripts/sum_GenomeSize.pl $OUTPUT/$SAMPLE/sam-header.txt)"
 
-		PVALUE=0.05
 		python $LOCAL/epiScripts/calculate_EpitopeSignificance.py -t $OUTPUT/$SAMPLE/PE_table.out -p $PVALUE -c $EPICOUNT -s $GENOMESIZE -o $OUTPUT/$SAMPLE/PE_sig.out
 		cat $OUTPUT/$SAMPLE/SE_table.out $OUTPUT/$SAMPLE/PE_sig.out > $OUTPUT/$SAMPLE\-ID.tab
 	else
@@ -157,5 +170,4 @@ do
 
 	# Clean up temporary files
 	rm -r $OUTPUT/$SAMPLE
-
 done
