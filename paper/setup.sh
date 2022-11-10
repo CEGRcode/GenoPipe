@@ -50,6 +50,9 @@ if [[ ! -f $YGENOME ]]; then
 	echo "BWA Indexing genome..."
 	bwa index $YGENOME
 	echo "Complete"
+	echo "Bowtie2 Indexing genome..."
+	bowtie2-build $YGENOME $YGENOME
+	echo "Complete"
 	rm S288C_reference_genome_R64-1-1_20110203.tgz
 	rm -r S288C_reference_genome_R64-1-1_20110203/
 fi
@@ -77,6 +80,7 @@ if [[ ! -f $HGENOME ]]; then
 	echo "Complete"
 	echo "BWA Indexing genome..."
 	bwa index $HGENOME
+	bowtie2-build $HGENOME $HGENOME
 	echo "Complete"
 	rm twoBitToFa hg19.2bit $HGENOME.raw
 fi
@@ -89,6 +93,9 @@ if [ ! -f $YEPIDB/FASTA_genome/genome.fa ]; then
 	cp input/sacCer3.fa $YEPIDB/FASTA_genome/genome.fa
 	echo "BWA Indexing genome..."
 	bwa index $YEPIDB/FASTA_genome/genome.fa
+	echo "Complete"
+	echo "Bowtie2 Indexing genome..."
+	bowtie2-build $YEPIDB/FASTA_genome/genome.fa $YEPIDB/FASTA_genome/genome.fa
 	echo "Complete"
 fi
 echo "Setup Random Epitope for Yeast EpiID..."
@@ -113,6 +120,9 @@ if [ ! -f $HEPIDB/FASTA_genome/genome.fa ]; then
 	echo "BWA Indexing genome..."
 	bwa index $HEPIDB/FASTA_genome/genome.fa
 	echo "Complete"
+	echo "Bowtie2 Indexing genome..."
+	bowtie2-build $HEPIDB/FASTA_genome/genome.fa $HEPIDB/FASTA_genome/genome.fa
+	echo "Complete"
 fi
 echo "Setup Random Epitope for Human EpiID..."
 cp input/RAND_500.fa $HEPIDB/FASTA_tag/Tag_DB/
@@ -133,6 +143,9 @@ if [ ! -f $HHIVDB/FASTA_genome/genome.fa ]; then
         echo "BWA Indexing genome..."
         bwa index $HHIVDB/FASTA_genome/genome.fa
         echo "Complete"
+        echo "Bowtie2 Indexing genome..."
+	bowtie2-build $HHIVDB/FASTA_genome/genome.fa $HHIVDB/FASTA_genome/genome.fa
+	echo "Complete"
 fi
 echo "Setup HIV genome for Human EpiID..."
 cp input/AF324493.2_HIV-1_vector_pNL4-3.fa $HHIVDB/FASTA_tag/Tag_DB/
@@ -140,8 +153,10 @@ rm $HHIVDB/FASTA_tag/ALL_TAG.fa*
 cd $HHIVDB/FASTA_tag/Tag_DB
 cat *.fa *.fna *.ffn *.fasta > ALL_TAG.fa
 bwa index ALL_TAG.fa
+bowtie2-build ALL_TAG.fa ALL_TAG.fa
 mv ALL_TAG.fa* ../
 echo "Complete"
+
 cd $WRK
 
 # Add Yeast Deletion DB to paper/db
