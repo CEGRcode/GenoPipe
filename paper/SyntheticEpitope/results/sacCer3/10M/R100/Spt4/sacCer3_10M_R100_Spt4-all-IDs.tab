@@ -1686,16 +1686,11 @@ VHT1-Cterm|chr7:617827-618077		N/A	3	9.87680749640543e-07
 
 ==> results/sacCer3/10M/R100/Spt4/ID/Simulation_201_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	327
-RANDOM_SEQ_100	152
+Extended-Tap	323
+RANDOM_SEQ_100	157
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-SPT4-Cterm|chr7:617266-617516		N/A	60	5.492756841181509e-185
-COX18-Promoter|chr7:617278-617528		N/A	59	1.6728857200262739e-181
-SPT4|chr7:617516-617824		N-term	44	3.225867149145343e-126
-SPT4|chr7:617516-617824		C-term	33	5.736057568835218e-91
-COX18|chr7:616328-617278		N-term	11	9.620125275595535e-21
-COX18|chr7:616328-617278		C-term	6	2.2928337493231602e-10
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R100/Spt4/ID/Simulation_202_R1-ID.tab <==
 EpitopeID	EpitopeCount

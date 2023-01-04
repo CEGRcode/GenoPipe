@@ -2026,12 +2026,11 @@ TAF2|chr3:201174-205397		C-term	1	0.00967918100643841
 
 ==> results/sacCer3/100K/R500/Taf2/ID/Simulation_2_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	9
-Extended-Tap	3
+RANDOM_SEQ_500	12
+Extended-Tap	4
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-TAF2-Promoter|chr3:205397-205647		N/A	3	2.0028601337388778e-11
-TAF2|chr3:201174-205397		N-term	1	0.008302198033982614
+Epitope could not be detected genomically
 
 ==> results/sacCer3/100K/R500/Taf2/ID/Simulation_300_R1-ID.tab <==
 EpitopeID	EpitopeCount

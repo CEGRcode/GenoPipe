@@ -1427,17 +1427,11 @@ SPT4|chr7:617516-617824		C-term	1	0.0020753118351858977
 
 ==> results/sacCer3/1M/R100/Spt4/ID/Simulation_201_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	37
-RANDOM_SEQ_100	15
+Extended-Tap	19
+RANDOM_SEQ_100	12
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-COX18-Promoter|chr7:617278-617528		N/A	6	1.3261656477367167e-19
-SPT4-Cterm|chr7:617266-617516		N/A	6	1.3261656477367167e-19
-SPT4|chr7:617516-617824		N-term	5	1.055465152272358e-15
-SPT4|chr7:617516-617824		C-term	2	3.465093841526979e-06
-SPT4-Promoter|chr7:617824-618074		N/A	1	0.002136381740377824
-VHT1-Cterm|chr7:617827-618077		N/A	1	0.002136381740377824
-COX18|chr7:616328-617278		N-term	1	0.008094000569101893
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Spt4/ID/Simulation_202_R1-ID.tab <==
 EpitopeID	EpitopeCount

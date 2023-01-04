@@ -3953,6 +3953,9 @@ Epitope could not be detected genomically
 EpitopeID	EpitopeCount
 No Tag ID'd
 
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
 ==> results/sacCer3/10K/R50/Rap1/ID/Simulation_608_R1-ID.tab <==
 EpitopeID	EpitopeCount
 No Tag ID'd

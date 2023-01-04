@@ -1584,10 +1584,11 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R500/Taf2/ID/Simulation_2_R1-ID.tab <==
 EpitopeID	EpitopeCount
+Extended-Tap	1
 RANDOM_SEQ_500	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-TAF2-Promoter|chr3:205397-205647		N/A	1	4.112736692552819e-05
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R500/Taf2/ID/Simulation_300_R1-ID.tab <==
 EpitopeID	EpitopeCount

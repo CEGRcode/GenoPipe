@@ -1587,7 +1587,11 @@ RAP1|chr14:241689-244172		C-term	2	0.00018195527042242512
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_233_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	41
+RANDOM_SEQ_100	11
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_234_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -3223,14 +3227,11 @@ RAP1|chr14:241689-244172		N-term	2	0.00014549831067428248
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_371_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	33
-RANDOM_SEQ_100	11
+Extended-Tap	26
+RANDOM_SEQ_100	13
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1|chr14:241689-244172		C-term	4	4.286106354108096e-09
-chr14:241251-241438		N/A	2	9.153060600198145e-07
-RAP1|chr14:241689-244172		N-term	3	9.547392063127617e-07
-RAP1-Promoter|chr14:241439-241689		N/A	2	1.6354268563121198e-06
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_372_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -3389,13 +3390,11 @@ RAP1|chr14:241689-244172		C-term	3	1.3984250503992916e-06
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_386_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	33
-RANDOM_SEQ_100	12
+Extended-Tap	27
+RANDOM_SEQ_100	18
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1|chr14:241689-244172		N-term	6	5.2715018571649566e-14
-RAP1-Promoter|chr14:241439-241689		N/A	4	4.881934583580701e-13
-RAP1|chr14:241689-244172		C-term	2	0.00016688992433695377
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_387_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -3461,14 +3460,11 @@ RAP1|chr14:241689-244172		C-term	4	8.996617603403327e-09
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_392_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	28
-RANDOM_SEQ_100	16
+Extended-Tap	21
+RANDOM_SEQ_100	9
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	6	4.8689651398169085e-20
-RAP1|chr14:241689-244172		N-term	5	1.539786860008152e-11
-chr14:241251-241438		N/A	3	4.1294313038907413e-10
-RAP1|chr14:241689-244172		C-term	2	0.00015959839973946752
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_393_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -3764,36 +3760,27 @@ RAP1|chr14:241689-244172		N-term	1	0.01701005438199536
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_417_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	33
-RANDOM_SEQ_100	15
+Extended-Tap	27
+RANDOM_SEQ_100	16
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	7	2.314086653121692e-23
-chr14:241251-241438		N/A	2	1.089200508566072e-06
-RAP1|chr14:241689-244172		C-term	3	1.2379945471705677e-06
-RAP1|chr14:241689-244172		N-term	3	1.2379945471705677e-06
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_418_R1-ID.tab <==
 EpitopeID	EpitopeCount
 Extended-Tap	39
-RANDOM_SEQ_100	11
+RANDOM_SEQ_100	23
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	5	3.058263285972339e-16
-RAP1|chr14:241689-244172		C-term	3	1.3984250503992916e-06
-RAP1|chr14:241689-244172		N-term	2	0.0002057570445048094
-chr14:241251-241438		N/A	1	0.001537012738365394
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_419_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	34
-RANDOM_SEQ_100	11
+Extended-Tap	32
+RANDOM_SEQ_100	20
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	6	5.5715730258561e-20
-RAP1|chr14:241689-244172		N-term	2	0.00016688992433695377
-RAP1|chr14:241689-244172		C-term	2	0.00016688992433695377
-chr14:241251-241438		N/A	1	0.0013834178328566667
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_41_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -3818,14 +3805,11 @@ RAP1|chr14:241689-244172		N-term	4	5.116817117592254e-09
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_421_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	35
-RANDOM_SEQ_100	18
+Extended-Tap	41
+RANDOM_SEQ_100	22
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	10	6.6595879162047685e-34
-RAP1|chr14:241689-244172		C-term	4	8.996617603403327e-09
-RAP1|chr14:241689-244172		N-term	3	1.6640181337393955e-06
-chr14:241251-241438		N/A	1	0.0016291583418810592
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_422_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -3960,7 +3944,8 @@ chr14:241251-241438		N/A	1	0.001506295647306058
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_434_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	31
+RANDOM_SEQ_100	12
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4237,7 +4222,11 @@ RAP1|chr14:241689-244172		C-term	1	0.014597877276132138
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_458_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	31
+RANDOM_SEQ_100	18
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_459_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -4273,8 +4262,11 @@ chr14:241251-241438		N/A	1	0.0017520059184421356
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_461_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	21
-RANDOM_SEQ_100	11
+Extended-Tap	39
+RANDOM_SEQ_100	17
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_462_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -4289,7 +4281,11 @@ RAP1|chr14:241689-244172		N-term	2	0.00026689352961862894
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_463_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	25
+RANDOM_SEQ_100	17
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_464_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -5038,8 +5034,8 @@ chr14:241251-241438		N/A	2	9.573640301772492e-07
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_527_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	13
-RANDOM_SEQ_100	8
+Extended-Tap	35
+RANDOM_SEQ_100	11
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5327,7 +5323,11 @@ chr14:241251-241438		N/A	1	0.001137616836891699
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_551_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	28
+RANDOM_SEQ_100	18
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_552_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -5342,7 +5342,11 @@ chr14:241251-241438		N/A	1	0.001014693651654053
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_553_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	30
+RANDOM_SEQ_100	17
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_554_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -5433,7 +5437,11 @@ chr14:241251-241438		N/A	2	1.5356594593886276e-06
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_561_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	33
+RANDOM_SEQ_100	16
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_562_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -5715,8 +5723,11 @@ RAP1|chr14:241689-244172		N-term	1	0.015000317463531322
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_586_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	21
-RANDOM_SEQ_100	8
+Extended-Tap	28
+RANDOM_SEQ_100	16
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_587_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -5818,8 +5829,8 @@ chr14:241251-241438		N/A	2	9.153060600198145e-07
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_595_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	13
-RANDOM_SEQ_100	6
+Extended-Tap	43
+RANDOM_SEQ_100	15
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5943,56 +5954,43 @@ RAP1-Promoter|chr14:241439-241689		N/A	2	2.196760865828748e-06
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_605_R1-ID.tab <==
 EpitopeID	EpitopeCount
+Extended-Tap	24
 RANDOM_SEQ_100	19
-Extended-Tap	18
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	6	1.7220905475432502e-20
-RAP1|chr14:241689-244172		N-term	7	3.520898093310668e-17
-chr14:241251-241438		N/A	3	2.4558814156123244e-10
-RAP1|chr14:241689-244172		C-term	3	5.689347933581736e-07
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_606_R1-ID.tab <==
 EpitopeID	EpitopeCount
 Extended-Tap	33
-RANDOM_SEQ_100	17
-
-GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	7	3.0792522163752194e-23
-RAP1|chr14:241689-244172		N-term	5	2.9117959922223125e-11
-RAP1|chr14:241689-244172		C-term	5	2.9117959922223125e-11
-
-==> results/sacCer3/1M/R100/Rap1/ID/Simulation_607_R1-ID.tab <==
-EpitopeID	EpitopeCount
-Extended-Tap	30
-RANDOM_SEQ_100	15
-
-GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	5	1.8062452877466685e-16
-chr14:241251-241438		N/A	3	4.417328499061442e-10
-RAP1|chr14:241689-244172		N-term	4	4.687706915713955e-09
-RAP1|chr14:241689-244172		C-term	3	1.021013155690021e-06
-
-==> results/sacCer3/1M/R100/Rap1/ID/Simulation_608_R1-ID.tab <==
-EpitopeID	EpitopeCount
-Extended-Tap	40
 RANDOM_SEQ_100	19
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	6	2.8285557941150093e-19
-chr14:241251-241438		N/A	4	4.5152423640877924e-13
-RAP1|chr14:241689-244172		N-term	5	6.641122254707255e-11
-RAP1|chr14:241689-244172		C-term	4	1.3789005400893064e-08
+Epitope could not be detected genomically
+
+==> results/sacCer3/1M/R100/Rap1/ID/Simulation_607_R1-ID.tab <==
+EpitopeID	EpitopeCount
+Extended-Tap	37
+RANDOM_SEQ_100	20
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/1M/R100/Rap1/ID/Simulation_608_R1-ID.tab <==
+EpitopeID	EpitopeCount
+Extended-Tap	39
+RANDOM_SEQ_100	16
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_609_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	26
-RANDOM_SEQ_100	11
+Extended-Tap	27
+RANDOM_SEQ_100	21
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	3	5.866482497421694e-10
-RAP1|chr14:241689-244172		C-term	4	2.1480878340440805e-09
-RAP1|chr14:241689-244172		N-term	4	2.1480878340440805e-09
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_60_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -6073,7 +6071,11 @@ chr14:241251-241438		N/A	2	1.2781929689637401e-06
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_616_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	32
+RANDOM_SEQ_100	22
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_617_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -6349,7 +6351,11 @@ RAP1|chr14:241689-244172		C-term	5	1.9217289424285252e-11
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_640_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	32
+RANDOM_SEQ_100	17
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_641_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -8635,14 +8641,11 @@ RAP1|chr14:241689-244172		C-term	1	0.014597877276132138
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_832_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	31
+Extended-Tap	33
 RANDOM_SEQ_100	10
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	5	1.1342398167196626e-16
-chr14:241251-241438		N/A	2	7.947955309622876e-07
-RAP1|chr14:241689-244172		C-term	2	0.00013869001174666494
-RAP1|chr14:241689-244172		N-term	1	0.016608435310497587
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_833_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -8688,14 +8691,11 @@ chr14:241251-241438		N/A	2	4.84247977712018e-07
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_837_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	22
-RANDOM_SEQ_100	16
+Extended-Tap	23
+RANDOM_SEQ_100	9
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1|chr14:241689-244172		N-term	6	1.9128770472147843e-14
-RAP1-Promoter|chr14:241439-241689		N/A	4	2.483121467267541e-13
-RAP1|chr14:241689-244172		C-term	4	2.3891184777137877e-09
-chr14:241251-241438		N/A	2	6.82781294611332e-07
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R100/Rap1/ID/Simulation_838_R1-ID.tab <==
 EpitopeID	EpitopeCount

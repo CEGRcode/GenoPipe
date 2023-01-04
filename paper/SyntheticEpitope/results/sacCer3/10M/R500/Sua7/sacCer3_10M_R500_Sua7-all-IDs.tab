@@ -4265,16 +4265,11 @@ SRP54|chr16:711403-713028		N-term	2	0.03872353377623459
 
 ==> results/sacCer3/10M/R500/Sua7/ID/Simulation_3_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	834
-Extended-Tap	328
+RANDOM_SEQ_500	825
+Extended-Tap	307
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-SUA7-Cterm|chr16:711138-711388		N/A	178	0.0
-SRP54-Cterm|chr16:711153-711403		N/A	166	0.0
-SUA7|chr16:710101-711138		N-term	98	1.15781753648902e-223
-SUA7|chr16:710101-711138		C-term	73	9.079711130141448e-158
-SRP54|chr16:711403-713028		C-term	8	1.6324662110986542e-09
-SRP54|chr16:711403-713028		N-term	4	0.0003030169703229081
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Sua7/ID/Simulation_400_R1-ID.tab <==
 EpitopeID	EpitopeCount

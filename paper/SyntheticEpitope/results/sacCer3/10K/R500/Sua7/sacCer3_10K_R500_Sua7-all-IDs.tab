@@ -2438,7 +2438,7 @@ SUA7|chr16:710101-711138		N-term	1	0.00017058527486929365
 
 ==> results/sacCer3/10K/R500/Sua7/ID/Simulation_3_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+RANDOM_SEQ_500	3
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically

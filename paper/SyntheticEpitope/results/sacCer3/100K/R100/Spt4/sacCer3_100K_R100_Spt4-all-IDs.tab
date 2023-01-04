@@ -999,6 +999,7 @@ Epitope could not be detected genomically
 ==> results/sacCer3/100K/R100/Spt4/ID/Simulation_201_R1-ID.tab <==
 EpitopeID	EpitopeCount
 Extended-Tap	5
+RANDOM_SEQ_100	3
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically

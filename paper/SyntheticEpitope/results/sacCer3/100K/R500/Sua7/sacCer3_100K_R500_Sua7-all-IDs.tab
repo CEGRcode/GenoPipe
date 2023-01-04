@@ -3294,12 +3294,11 @@ SUA7|chr16:710101-711138		N-term	1	0.0027258752558426175
 
 ==> results/sacCer3/100K/R500/Sua7/ID/Simulation_3_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	9
+RANDOM_SEQ_500	11
 Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-SRP54-Cterm|chr16:711153-711403		N/A	1	0.00045230801734159887
-SUA7-Cterm|chr16:711138-711388		N/A	1	0.00045230801734159887
+Epitope could not be detected genomically
 
 ==> results/sacCer3/100K/R500/Sua7/ID/Simulation_400_R1-ID.tab <==
 EpitopeID	EpitopeCount

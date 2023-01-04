@@ -799,7 +799,7 @@ SPT4|chr7:617516-617824		N-term	1	5.0668674319773586e-05
 
 ==> results/sacCer3/10K/R100/Spt4/ID/Simulation_201_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_100	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically

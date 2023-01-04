@@ -5701,22 +5701,23 @@ RAP1|chr14:241689-244172		N-term	1	0.014195272664208555
 
 ==> results/sacCer3/1M/R50/Rap1/ID/Simulation_605_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	18
-RANDOM_SEQ_50	4
+Extended-Tap	26
+RANDOM_SEQ_50	8
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R50/Rap1/ID/Simulation_606_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	38
-RANDOM_SEQ_50	6
+Extended-Tap	33
+RANDOM_SEQ_50	7
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1|chr14:241689-244172		C-term	3	9.547392063127617e-07
-RAP1-Promoter|chr14:241439-241689		N/A	2	1.6354268563121198e-06
-chr14:241251-241438		N/A	1	0.001352696016545848
+Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R50/Rap1/ID/Simulation_607_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	14
+Extended-Tap	34
 RANDOM_SEQ_50	5
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
@@ -5724,8 +5725,8 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/1M/R50/Rap1/ID/Simulation_608_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	16
-RANDOM_SEQ_50	4
+Extended-Tap	35
+RANDOM_SEQ_50	8
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically

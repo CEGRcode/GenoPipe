@@ -6171,47 +6171,35 @@ RAP1|chr14:241689-244172		C-term	11	6.667598667285608e-17
 
 ==> results/sacCer3/10M/R50/Rap1/ID/Simulation_605_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	321
-RANDOM_SEQ_50	71
+Extended-Tap	297
+RANDOM_SEQ_50	62
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	23	2.2454301398368973e-64
-RAP1|chr14:241689-244172		N-term	26	4.373881290022499e-48
-RAP1|chr14:241689-244172		C-term	14	7.120759072743713e-23
-chr14:241251-241438		N/A	8	1.0961301821078689e-20
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R50/Rap1/ID/Simulation_606_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	308
-RANDOM_SEQ_50	58
+Extended-Tap	328
+RANDOM_SEQ_50	61
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	22	7.0852681293398155e-62
-chr14:241251-241438		N/A	10	8.92425947643291e-27
-RAP1|chr14:241689-244172		C-term	15	2.7443241026688773e-25
-RAP1|chr14:241689-244172		N-term	11	1.7994871978729223e-17
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R50/Rap1/ID/Simulation_607_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	324
-RANDOM_SEQ_50	67
+Extended-Tap	323
+RANDOM_SEQ_50	62
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	25	9.126100054596641e-71
-chr14:241251-241438		N/A	11	1.8880800397266372e-29
-RAP1|chr14:241689-244172		C-term	17	6.863934203794997e-29
-RAP1|chr14:241689-244172		N-term	14	6.87342756255405e-23
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R50/Rap1/ID/Simulation_608_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	307
-RANDOM_SEQ_50	66
+Extended-Tap	320
+RANDOM_SEQ_50	69
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-RAP1-Promoter|chr14:241439-241689		N/A	23	7.167414340032218e-65
-RAP1|chr14:241689-244172		N-term	17	3.103213315380074e-29
-RAP1|chr14:241689-244172		C-term	16	3.4623835211451525e-27
-chr14:241251-241438		N/A	10	1.0783410275054857e-26
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R50/Rap1/ID/Simulation_609_R1-ID.tab <==
 EpitopeID	EpitopeCount
