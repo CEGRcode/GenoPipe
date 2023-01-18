@@ -27,6 +27,8 @@ cd $WRK
 module load gcc
 module load bwa
 module load samtools
+module load anaconda3
+source activate my-genopipe-env
 
 [ -d $WRK/input ] || mkdir $WRK/input
 [ -d $WRK/db ] || mkdir $WRK/db
@@ -173,4 +175,3 @@ cd $WRK
 # Setup color-space index for yeast genome
 # (used by BY4742-chipseq)
 bowtie-build -C input/sacCer3.fa input/sacCer3_index
-

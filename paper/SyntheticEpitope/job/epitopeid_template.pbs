@@ -16,8 +16,8 @@ WRK=/path/to/GenoPipe/paper/SyntheticEpitope
 EPITOPEID=$WRK/../../EpitopeID
 cd $WRK
 
-module load gcc/8.3.1
-module load bedtools/2.27.1
+module load bedtools/2.30.0
+module load samtools
 module load anaconda3
 source activate my-genopipe-env
 
