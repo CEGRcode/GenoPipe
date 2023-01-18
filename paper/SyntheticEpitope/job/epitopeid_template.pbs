@@ -13,6 +13,7 @@ EXPERIMENT=EXPERIMENTID
 
 # FIRST CHANGE PATH TO EXECUTE
 WRK=/path/to/GenoPipe/paper/SyntheticEpitope
+THREADS=6
 EPITOPEID=$WRK/../../EpitopeID
 cd $WRK
 
@@ -52,13 +53,14 @@ do
 	[ -d $TEMP ] || mkdir $TEMP
 
 	cd $TEMP
-	ln -s $RESULTS/FASTQ/Simulation_$PBS_ARRAYID\_R1.fastq.gz
-	ln -s $RESULTS/FASTQ/Simulation_$PBS_ARRAYID\_R2.fastq.gz
+	FQ=$RESULTS/FASTQ/Simulation_$PBS_ARRAYID
+	[ -f $FQ\_R1.fastq.gz ] || ln -s $FQ\_R1.fastq.gz
+	[ -f $FQ\_R2.fastq.gz ] || ln -s $FQ\_R2.fastq.gz
 
 	# Execute EpitopeID and record time
 	cd $EPITOPEID
 	start=`date +%s`
-	bash identify-Epitope.sh -i $TEMP -o $RESULTS/ID -d $DATABASE -t 6
+	bash identify-Epitope.sh -i $TEMP -o $RESULTS/ID -d $DATABASE -t $THREADS
 	end=`date +%s`
 	runtime=$((end-start))
 	echo "Experiment $EXPERIMENT.$DEPTH.$PBS_ARRAYID ($RESULTS) finished in ${runtime}" > $RESULTS/runtime/Simulation_$PBS_ARRAYID.runtime
