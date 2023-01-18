@@ -20,7 +20,8 @@
 # seqkit
 
 module load anaconda3
-source activate my-genopipe-env
+#source activate my-genopipe-env
+source activate genopipe
 
 usage()
 {
@@ -108,20 +109,20 @@ CONVERT=../scripts/convert_FASTA_to_GZIP-FASTQ.pl
 
 # Sample read pairs from genome
 perl $RAND $GENOME.fai $DEPTH $SEED $BED
-#bedtools getfasta -name -s -fi $GENOME -bed $BED\_R1.bed.gz -fo $FQ\_R1.fa
-#bedtools getfasta -name -s -fi $GENOME -bed $BED\_R2.bed.gz -fo $FQ\_R2.fa
+bedtools getfasta -name -s -fi $GENOME -bed $BED\_R1.bed.gz -fo $FQ\_R1.fa
+bedtools getfasta -name -s -fi $GENOME -bed $BED\_R2.bed.gz -fo $FQ\_R2.fa
 # Extract FASTA and fix headers
-seqkit subseq -j $THREAD $GENOME --bed $BED\_R1.bed.gz \
-  | seqkit replace -j $THREAD --pattern "^chr[0-9:_\-\+]+ " \
-  | seqkit rename -j $THREAD \
-  > $FQ\_R1_unsorted.fa
-seqkit subseq -j $THREAD $GENOME --bed $BED\_R2.bed.gz \
-  | seqkit replace -j $THREAD --pattern "^chr[0-9:_\-\+]+ " \
-  | seqkit rename -j $THREAD \
-  > $FQ\_R2_unsorted.fa
+#seqkit subseq -j $THREAD $GENOME --bed $BED\_R1.bed.gz \
+#  | seqkit replace -j $THREAD --pattern "^chr[0-9:_\-\+]+ " \
+#  | seqkit rename -j $THREAD \
+#  > $FQ\_R1_unsorted.fa
+#seqkit subseq -j $THREAD $GENOME --bed $BED\_R2.bed.gz \
+#  | seqkit replace -j $THREAD --pattern "^chr[0-9:_\-\+]+ " \
+#  | seqkit rename -j $THREAD \
+#  > $FQ\_R2_unsorted.fa
 # Sort for parallel read orders (aligner requirement)
-seqkit sort -j $THREAD --by-name $FQ\_R1_unsorted.fa > $FQ\_R1.fa
-seqkit sort -j $THREAD --by-name $FQ\_R2_unsorted.fa > $FQ\_R2.fa
+#seqkit sort -j $THREAD --by-name $FQ\_R1_unsorted.fa > $FQ\_R1.fa
+#seqkit sort -j $THREAD --by-name $FQ\_R2_unsorted.fa > $FQ\_R2.fa
 # Convert to FASTQ (adding generic quality scores)
 perl $CONVERT $FQ\_R1.fa $FQ\_R1.fastq.gz
 perl $CONVERT $FQ\_R2.fa $FQ\_R2.fastq.gz
