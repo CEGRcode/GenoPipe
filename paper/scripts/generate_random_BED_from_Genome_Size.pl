@@ -20,10 +20,10 @@ $line = "";
 $currentLength = 0;
 $currentChr = "";
 while($line = <GEN>) {
-       chomp($line);
-       my @array = split("\t", $line);
-       $CHR{$array[0]} = $array[1];
-       $genomeSize += $array[1];
+	chomp($line);
+	my @array = split("\t", $line);
+	$CHR{$array[0]} = $array[1];
+	$genomeSize += $array[1];
 }
 close GEN;
 
@@ -32,33 +32,37 @@ close GEN;
 # R1 and R2 coord info stored in read ID of each read in the output R1 and R2 files.
 print "Genomesize: ",$genomeSize,"\n";
 for($x = 0; $x < $NUM; $x++) {
-	$COORD = int(rand($genomeSize));
+  # Set fragment/R1 starting coordinate
+	$COORD = int(rand($genomeSize));  # sample random coordinate
 	for $key (keys %CHR) {
 		if($COORD - $CHR{$key} > 0) { $COORD -= $CHR{$key}; }
 		else {
-			$READID = $CHR{$key} . ":" . $COORD;       # ASK WILL: is this line necessary? variable overwritten a couple lines down and unclear if this var is used before then
-			if(rand(1) < 0.5) { $DIR = "+"; }
+			# Set strand
+			if(rand(1) < 0.5) { $DIR = "+"; }   # sample random strand
 			else { $DIR = "-"; }
+			# Define Read1 interval
 			$R1_END = ($COORD + $READLENGTH);
 			$READID = $key . ":" . $COORD . "-" . $R1_END . "," . $DIR;
-			
-			$COORD2 = $COORD + int(rand($PEINSERT) + 100);
-			$R2_END = ($COORD2 + $READLENGTH);
+
+			# Set R2 strand
 			$DIR2 = "+";
 			if($DIR eq "+") { $DIR2 = "-"; }
-            
-            $READID2 = $key . ":" . $COORD2 . "-" . $R2_END . "," . $DIR2;        # Removed indentation here
-                        
+			# Define Read2 interval
+			$COORD2 = $COORD + int(rand($PEINSERT) + 100);    # sample random insert size
+			$R2_END = ($COORD2 + $READLENGTH);
+			$READID2 = $key . ":" . $COORD2 . "-" . $R2_END . "," . $DIR2;
+
+			# Unique read id shared between R1 and R2
 			$COMBINED = $READID . "|" . $READID2;					# ASK WILL: possibly add x variable to the unique identifier here? (unlikely both R1 and R2 both match...could be considered duplicates)
-			
+
 			# Write read info to BED format (R1 written to OUT1 and R2 written to OUT2)
 			if($COORD > 0 && $R2_END < $CHR{$key}) {
-	            print OUT1 "$key\t$COORD\t$R1_END\t$COMBINED\t.\t$DIR\n";         # Removed indentation here
+				print OUT1 "$key\t$COORD\t$R1_END\t$COMBINED\t.\t$DIR\n";         # Removed indentation here
 				print OUT2 "$key\t$COORD2\t$R2_END\t$COMBINED\t.\t$DIR2\n";
 			} else { $x--; }   # skip and redo in another simulation if this runs off the end of the chromosome
 			last;
 		}
-	}	
+	}
 #	print $COORD,"\n";
 }
 
