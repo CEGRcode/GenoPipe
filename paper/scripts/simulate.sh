@@ -19,6 +19,7 @@
 # pysam
 # seqkit
 
+module load bedtools/2.30.0
 module load anaconda3
 #source activate my-genopipe-env
 source activate genopipe
@@ -109,8 +110,8 @@ CONVERT=../scripts/convert_FASTA_to_GZIP-FASTQ.pl
 
 # Sample read pairs from genome
 perl $RAND $GENOME.fai $DEPTH $SEED $BED
-bedtools getfasta -name -s -fi $GENOME -bed $BED\_R1.bed.gz -fo $FQ\_R1.fa
-bedtools getfasta -name -s -fi $GENOME -bed $BED\_R2.bed.gz -fo $FQ\_R2.fa
+bedtools getfasta -nameOnly -s -fi $GENOME -bed $BED\_R1.bed.gz -fo $FQ\_R1.fa
+bedtools getfasta -nameOnly -s -fi $GENOME -bed $BED\_R2.bed.gz -fo $FQ\_R2.fa
 # Extract FASTA and fix headers
 #seqkit subseq -j $THREAD $GENOME --bed $BED\_R1.bed.gz \
 #  | seqkit replace -j $THREAD --pattern "^chr[0-9:_\-\+]+ " \
