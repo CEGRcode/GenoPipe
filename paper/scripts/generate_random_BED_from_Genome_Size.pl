@@ -53,7 +53,7 @@ for($x = 0; $x < $NUM; $x++) {
 			$READID2 = $key . ":" . $COORD2 . "-" . $R2_END . "," . $DIR2;
 
 			# Unique read id shared between R1 and R2
-			$COMBINED = $READID . "|" . $READID2;					# ASK WILL: possibly add x variable to the unique identifier here? (unlikely both R1 and R2 both match...could be considered duplicates)
+			$COMBINED = $READID . "." . $READID2;					# ASK WILL: possibly add x variable to the unique identifier here? (unlikely both R1 and R2 both match...could be considered duplicates)
 
 			# Write read info to BED format (R1 written to OUT1 and R2 written to OUT2)
 			if($COORD > 0 && $R2_END < $CHR{$key}) {
