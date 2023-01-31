@@ -7,21 +7,33 @@
 #PBS -e logs/download.data.log.err
 
 # Requires
-# parallel fastq dump v2.8.0
+# sratoolkit (fastq dump v2.8.0)
 
 WRK=/path/to/GenoPipe/paper/HIV_samples
 cd $WRK
 
 module load anaconda3
-source activate ~/work/myconda/genopipe/
+source activate my-genopipe-env
 
 [ -d results/FASTQ ] || mkdir -p results/FASTQ
 [ -d logs ] || mkdir logs
 
-parallel-fastq-dump --gzip --split-files -t 4 -O results/FASTQ -s SRR3812124
-parallel-fastq-dump --gzip --split-files -t 4 -O results/FASTQ -s SRR3812125
-parallel-fastq-dump --gzip --split-files -t 4 -O results/FASTQ -s SRR3812126
-parallel-fastq-dump --gzip --split-files -t 4 -O results/FASTQ -s SRR3812127
-parallel-fastq-dump --gzip --split-files -t 4 -O results/FASTQ -s SRR3812128
-parallel-fastq-dump --gzip --split-files -t 4 -O results/FASTQ -s SRR3812129
-mv *.fastq.gz results/FASTQ/
+for SRR in "SRR3812124" "SRR3812125" "SRR3812126" "SRR3812127" "SRR3812128" "SRR3812129";
+do
+	echo "$SRR sra-toolkit download..."
+	# SRA toolkit download
+	fastq-dump --split-3 --gzip $SRR
+	echo "$SRR reformat FASTQ..."
+	# Reformat quality score header and strip SRA read id to use raw read id to original sequencer-determined id
+	gunzip -dc $SRR\_1.fastq.gz | sed 's/+.*/+/g; s/\@SRR[0-9]\{7\}\.[0-9]\+ /\@/g' > $SRR\_R1.fastq
+	gunzip -dc $SRR\_2.fastq.gz | sed 's/+.*/+/g; s/\@SRR[0-9]\{7\}\.[0-9]\+ /\@/g' > $SRR\_R2.fastq
+	echo "$SRR compress..."
+	# Compress files
+	gzip $SRR\_R1.fastq
+	gzip $SRR\_R2.fastq
+done
+
+mv SRR*_R1.fastq.gz results/FASTQ/
+mv SRR*_R2.fastq.gz results/FASTQ/
+
+rm SRR*_1.fastq.gz SRR*_2.fastq.gz
