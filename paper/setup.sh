@@ -137,7 +137,7 @@ echo "Complete"
 cd $WRK
 
 # Build Human EpiID with HIV genome
-HHIVDB=db/hiv_EpiID
+HHIVDB=db/hg19-HIV_EpiID
 [ -d $HHIVDB ] || cp -r ../EpitopeID/hg19_EpiID/ $HHIVDB
 if [ ! -f $HHIVDB/FASTA_genome/genome.fa ]; then
 	echo "**Setup Human EpiID genome..."

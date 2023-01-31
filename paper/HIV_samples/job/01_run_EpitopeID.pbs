@@ -19,7 +19,7 @@ cd $WRK
 [ -d logs ] || mkdir logs
 [ -d results/ID ] || mkdir -p results/ID
 
-DB=$WRK/../db/hiv_EpiDB
+DB=$WRK/../db/hg19-HIV_EpiID
 
 EPITOPEID=$WRK/../../EpitopeID
 cd $EPITOPEID
