@@ -51,7 +51,7 @@ if __name__ == '__main__':
 	# })
 
 	# Populate dataframe with tab file data
-	filedata = pd.read_table(args.input, sep='\t', names=['Filename','EpitopeCount','LocalizationCount'])
+	filedata = pd.read_table(args.input, sep='\t', names=['Filename','ExperimentID','Runtimes'])
 	experiment_info = filedata['Filename'].str.split('/',n=5,expand=True).loc[:,2:4]
 	experiment_info = experiment_info.rename(columns={2:'Depth', 3:'Epitope', 4:'Target'})
 #       Depth Epitope  Target
@@ -67,7 +67,7 @@ if __name__ == '__main__':
 # 30363   50M     R50     YY1
 # 30364   50M     R50     YY1
 
-	localized = pd.DataFrame(np.where(filedata['LocalizationCount']==0, False, True), columns=['Localized'])
+	# runtimes = pd.DataFrame(filedata, columns=['Runtimes'])
 #        Localized
 # 0           True
 # 1           True
@@ -81,17 +81,10 @@ if __name__ == '__main__':
 # 30363       True
 # 30364       True
 
-	bardata = pd.concat([filedata,experiment_info,localized],axis=1)
-	print(bardata)
-	filedata = experiment_info = localized = None
-
-	# Filter down to localized data counts
-	localized_bardata = bardata[bardata['Localized']]
-	print(localized_bardata)
-	# Reorganize
-	localized_counts = localized_bardata.groupby(['Target','Epitope','Depth']).size().reset_index().rename(columns={0:'count'})
-	print(localized_bardata)
-	# print(localized_counts)
+	violindata = pd.concat([filedata,experiment_info],axis=1)
+	print(violindata)
+	# violindata.dtypes
+	filedata = experiment_info = runtimes = None
 
 	# Hardcode depth order list for yeast or human simulations
 	depth_order = ["100K","1M","10M","20M","50M"]
@@ -99,9 +92,12 @@ if __name__ == '__main__':
 		depth_order = ["10K","100K","1M","10M"]
 
 	# Configure and plot data into grouped bars
-	pal = sns.color_palette("viridis", len(pd.unique(localized_counts['Target'])))
+	pal = sns.color_palette("viridis", len(pd.unique(violindata['Target'])))
 	# pal = sns.color_palette("YlOrBr", len(pd.unique(localized_counts['Target'])))
 	# pal = sns.color_palette("Paired")
+
+	# print(violindata.count())
+	# violin = sns.violinplot(data=violindata, x='Depth', y='Runtimes')#, hue='Target')
 
 	# Super plot
 	fig, axes = plt.subplots(2,2, sharex=True, sharey=True)
@@ -109,9 +105,9 @@ if __name__ == '__main__':
 
 	for i,ename in enumerate(["R500", "R100", "R50", "R20"]):
 		axes[i//2,i%2].set_title(ename)
-		subplotdata = localized_counts[localized_counts['Epitope'] == ename]
+		subplotdata = violindata[violindata['Epitope'] == ename]
 		print(subplotdata)
 		# print(subplotcounts)
-		sns.barplot(ax=axes[i//2,i%2], data=subplotdata, x='Depth', y='count', hue='Target', order=depth_order, palette=pal, ci=None, bottom=0)
+		sns.violinplot(ax=axes[i//2,i%2], data=subplotdata, x='Depth', y='Runtimes', hue='Target')#, order=depth_order, palette=pal)#, ci=None, bottom=0)
 	# fig = plot.get_figure()
 	fig.savefig(args.output)
