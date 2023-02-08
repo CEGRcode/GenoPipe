@@ -608,14 +608,11 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_169_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	794
-Extended-Tap	300
+RANDOM_SEQ_500	772
+Extended-Tap	353
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	145	0.0
-HSF1|chr7:368753-371254		N-term	98	7.187341090911052e-189
-HSF1|chr7:368753-371254		C-term	94	1.5178803444777338e-179
-chr7:368339-368501		N/A	27	3.1486416653205744e-70
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_16_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -627,115 +624,83 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_170_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	836
-Extended-Tap	335
+RANDOM_SEQ_500	853
+Extended-Tap	302
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	176	0.0
-HSF1|chr7:368753-371254		N-term	97	1.111841869527893e-183
-HSF1|chr7:368753-371254		C-term	95	4.460105814518353e-179
-chr7:368339-368501		N/A	16	3.7512375284522914e-38
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_171_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	810
-Extended-Tap	334
+RANDOM_SEQ_500	697
+Extended-Tap	322
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	161	0.0
-HSF1|chr7:368753-371254		N-term	94	9.924785244155062e-178
-HSF1|chr7:368753-371254		C-term	91	7.654223074096401e-171
-chr7:368339-368501		N/A	16	2.584598833574327e-38
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_172_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	767
-Extended-Tap	328
+RANDOM_SEQ_500	850
+Extended-Tap	318
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	169	0.0
-HSF1|chr7:368753-371254		C-term	93	3.449514681507841e-177
-HSF1|chr7:368753-371254		N-term	83	2.9351133712515924e-154
-chr7:368339-368501		N/A	17	2.2052094570839494e-41
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_173_R1-ID.tab <==
 EpitopeID	EpitopeCount
 RANDOM_SEQ_500	846
-Extended-Tap	363
+Extended-Tap	317
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	155	0.0
-HSF1|chr7:368753-371254		N-term	104	1.706516799769899e-198
-HSF1|chr7:368753-371254		C-term	79	7.495024942653412e-142
-chr7:368339-368501		N/A	20	5.790349521577352e-49
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_174_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	848
-Extended-Tap	300
+RANDOM_SEQ_500	791
+Extended-Tap	334
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	175	0.0
-HSF1|chr7:368753-371254		N-term	94	1.3756170213399741e-177
-HSF1|chr7:368753-371254		C-term	86	2.491889278127927e-159
-chr7:368339-368501		N/A	19	1.3461573547751487e-46
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_175_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	845
-Extended-Tap	328
+RANDOM_SEQ_500	794
+Extended-Tap	303
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	169	0.0
-HSF1|chr7:368753-371254		N-term	91	7.380231943362146e-170
-HSF1|chr7:368753-371254		C-term	68	7.612443043681686e-119
-chr7:368339-368501		N/A	14	9.466617306066005e-33
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_176_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	860
-Extended-Tap	305
+RANDOM_SEQ_500	792
+Extended-Tap	350
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	164	0.0
-HSF1|chr7:368753-371254		N-term	100	7.687199668567169e-191
-HSF1|chr7:368753-371254		C-term	86	8.760285015905575e-159
-chr7:368339-368501		N/A	18	1.0887009577849383e-43
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_177_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	793
-Extended-Tap	339
+RANDOM_SEQ_500	784
+Extended-Tap	332
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	170	0.0
-HSF1|chr7:368753-371254		N-term	92	1.4916746881811363e-173
-HSF1|chr7:368753-371254		C-term	89	1.1124128828387686e-166
-chr7:368339-368501		N/A	9	5.535873411775458e-20
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_178_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	897
-Extended-Tap	328
+RANDOM_SEQ_500	852
+Extended-Tap	297
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	187	0.0
-HSF1|chr7:368753-371254		N-term	104	6.653795964352319e-198
-HSF1|chr7:368753-371254		C-term	91	3.7414776205755597e-168
-chr7:368339-368501		N/A	16	7.705780679609654e-38
-chr7:368501-368502		N/A	2	2.030408811169912e-08
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_179_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	784
-Extended-Tap	333
+RANDOM_SEQ_500	836
+Extended-Tap	321
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	167	0.0
-HSF1|chr7:368753-371254		N-term	98	5.4698046763603656e-188
-HSF1|chr7:368753-371254		C-term	93	2.1739965770089992e-176
-chr7:368339-368501		N/A	11	3.9569797646010484e-25
-chr7:368501-368502		N/A	1	0.00018374397125780592
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_17_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -747,116 +712,83 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_180_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	774
-Extended-Tap	332
+RANDOM_SEQ_500	780
+Extended-Tap	318
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	173	0.0
-HSF1|chr7:368753-371254		N-term	99	9.575519101191474e-191
-HSF1|chr7:368753-371254		C-term	88	2.780402012844756e-165
-chr7:368339-368501		N/A	17	2.612881176428168e-41
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_181_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	789
-Extended-Tap	320
+RANDOM_SEQ_500	782
+Extended-Tap	325
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	148	0.0
-HSF1|chr7:368753-371254		N-term	96	1.2387668239155973e-183
-HSF1|chr7:368753-371254		C-term	84	4.550252043641081e-156
-chr7:368339-368501		N/A	18	4.492188239700772e-44
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_182_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	841
-Extended-Tap	340
+RANDOM_SEQ_500	804
+Extended-Tap	355
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	173	0.0
-HSF1|chr7:368753-371254		C-term	93	3.7680628487473944e-174
-HSF1|chr7:368753-371254		N-term	92	7.21170028176735e-172
-chr7:368339-368501		N/A	11	7.290998956775609e-25
-chr7:368501-368502		N/A	1	0.00019427080367827746
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_183_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	840
-Extended-Tap	309
+RANDOM_SEQ_500	806
+Extended-Tap	304
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	170	0.0
-HSF1|chr7:368753-371254		C-term	95	7.426326068996767e-180
-HSF1|chr7:368753-371254		N-term	93	2.967278952390446e-175
-chr7:368339-368501		N/A	8	1.859770866860277e-17
-chr7:368501-368502		N/A	2	1.7863024368250016e-08
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_184_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	773
-Extended-Tap	324
+RANDOM_SEQ_500	795
+Extended-Tap	318
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	181	0.0
-HSF1|chr7:368753-371254		N-term	87	2.65100394175176e-163
-HSF1|chr7:368753-371254		C-term	82	6.2748542850199445e-152
-chr7:368339-368501		N/A	14	3.713599742729398e-33
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_185_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	796
-Extended-Tap	338
+RANDOM_SEQ_500	851
+Extended-Tap	328
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	173	0.0
-HSF1|chr7:368753-371254		C-term	92	1.753260672314293e-173
-HSF1|chr7:368753-371254		N-term	84	2.929644572585992e-155
-chr7:368339-368501		N/A	16	2.2464738613784004e-38
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_186_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	754
-Extended-Tap	311
+RANDOM_SEQ_500	804
+Extended-Tap	303
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	146	0.0
-HSF1|chr7:368753-371254		N-term	104	3.387393921243351e-204
-HSF1|chr7:368753-371254		C-term	80	1.9409693877936825e-148
-chr7:368339-368501		N/A	13	1.2112416121332616e-30
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_187_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	837
-Extended-Tap	290
+RANDOM_SEQ_500	811
+Extended-Tap	338
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	157	0.0
-HSF1|chr7:368753-371254		N-term	100	2.8337231115929363e-192
-HSF1|chr7:368753-371254		C-term	89	7.517198060901549e-167
-chr7:368339-368501		N/A	13	2.5233597780781938e-30
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_188_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	779
-Extended-Tap	311
+RANDOM_SEQ_500	791
+Extended-Tap	343
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	132	0.0
-HSF1|chr7:368753-371254		N-term	102	1.9942774780093818e-198
-HSF1|chr7:368753-371254		C-term	89	3.9119858466337495e-168
-chr7:368339-368501		N/A	13	1.636594149346419e-30
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_189_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	839
-Extended-Tap	337
+RANDOM_SEQ_500	876
+Extended-Tap	306
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	187	0.0
-HSF1|chr7:368753-371254		N-term	103	2.0909612019773817e-197
-HSF1|chr7:368753-371254		C-term	66	1.7602042944284687e-114
-chr7:368339-368501		N/A	10	2.442570425992089e-22
-chr7:368501-368502		N/A	1	0.00019344839888674182
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_18_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -868,117 +800,83 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_190_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	798
-Extended-Tap	316
+RANDOM_SEQ_500	799
+Extended-Tap	286
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	170	0.0
-HSF1|chr7:368753-371254		N-term	89	2.691115927115157e-167
-HSF1|chr7:368753-371254		C-term	73	2.6189522329413446e-131
-chr7:368339-368501		N/A	21	1.5972131885127188e-52
-chr7:368501-368502		N/A	1	0.00018325052326860597
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_191_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	738
-Extended-Tap	306
+RANDOM_SEQ_500	813
+Extended-Tap	292
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	174	0.0
-HSF1|chr7:368753-371254		N-term	104	4.3063648866936105e-205
-HSF1|chr7:368753-371254		C-term	95	8.623449161998914e-184
-chr7:368339-368501		N/A	14	1.859185537829952e-33
-chr7:368501-368502		N/A	1	0.0001717366677171175
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_192_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	790
-Extended-Tap	306
+RANDOM_SEQ_500	791
+Extended-Tap	325
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	160	0.0
-HSF1|chr7:368753-371254		N-term	84	1.6990066643385998e-156
-HSF1|chr7:368753-371254		C-term	82	5.8251124440267e-152
-chr7:368339-368501		N/A	18	3.634381875215315e-44
-chr7:368501-368502		N/A	2	1.625318828145908e-08
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_193_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	811
-Extended-Tap	281
+RANDOM_SEQ_500	779
+Extended-Tap	328
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	185	0.0
-HSF1|chr7:368753-371254		N-term	98	6.0123829995860276e-189
-HSF1|chr7:368753-371254		C-term	85	6.616710680583177e-159
-chr7:368339-368501		N/A	16	1.2295348312847803e-38
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_194_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	816
-Extended-Tap	326
+RANDOM_SEQ_500	741
+Extended-Tap	340
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	157	0.0
-HSF1|chr7:368753-371254		N-term	100	1.0565641326789197e-191
-HSF1|chr7:368753-371254		C-term	77	2.3793160458021086e-139
-chr7:368339-368501		N/A	7	4.656055018140339e-15
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_195_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	823
-Extended-Tap	349
+RANDOM_SEQ_500	865
+Extended-Tap	332
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	169	0.0
-HSF1|chr7:368753-371254		N-term	105	3.139859528452578e-202
-HSF1|chr7:368753-371254		C-term	77	1.7307229863664314e-138
-chr7:368339-368501		N/A	14	9.354504520513944e-33
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_196_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	786
-Extended-Tap	316
+RANDOM_SEQ_500	838
+Extended-Tap	297
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	170	0.0
-HSF1|chr7:368753-371254		N-term	83	4.966775281323219e-154
-HSF1|chr7:368753-371254		C-term	76	2.638080727809784e-138
-chr7:368339-368501		N/A	16	1.422225268664299e-38
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_197_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	752
-Extended-Tap	330
+RANDOM_SEQ_500	883
+Extended-Tap	299
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	161	0.0
-HSF1|chr7:368753-371254		N-term	101	2.1624809814756153e-196
-HSF1|chr7:368753-371254		C-term	88	4.0732766246986085e-166
-chr7:368339-368501		N/A	13	1.4874538715860239e-30
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_198_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	784
-Extended-Tap	330
+RANDOM_SEQ_500	860
+Extended-Tap	310
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	167	0.0
-HSF1|chr7:368753-371254		N-term	103	8.102988263768051e-200
-HSF1|chr7:368753-371254		C-term	77	3.558976489087559e-140
-chr7:368339-368501		N/A	25	4.0875328299661766e-64
-chr7:368501-368502		N/A	3	1.0257091130725741e-12
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_199_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	778
-Extended-Tap	285
+RANDOM_SEQ_500	816
+Extended-Tap	300
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	145	0.0
-HSF1|chr7:368753-371254		N-term	108	7.93245876377183e-214
-HSF1|chr7:368753-371254		C-term	84	1.3206857474498009e-157
-chr7:368339-368501		N/A	16	7.999199217577645e-39
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_19_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -998,15 +896,11 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_200_R1-ID.tab <==
 EpitopeID	EpitopeCount
-RANDOM_SEQ_500	810
-Extended-Tap	293
+RANDOM_SEQ_500	807
+Extended-Tap	312
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-HSF1-Promoter|chr7:368503-368753		N/A	187	0.0
-HSF1|chr7:368753-371254		N-term	111	2.960383483390662e-219
-HSF1|chr7:368753-371254		C-term	84	2.8920164296147047e-156
-chr7:368339-368501		N/A	17	2.495174574903661e-41
-chr7:368501-368502		N/A	1	0.00018144121189138222
+Epitope could not be detected genomically
 
 ==> results/sacCer3/10M/R500/Hsf1/ID/Simulation_201_R1-ID.tab <==
 EpitopeID	EpitopeCount

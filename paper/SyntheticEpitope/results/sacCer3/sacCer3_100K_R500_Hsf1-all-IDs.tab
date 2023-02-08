@@ -618,6 +618,86 @@ Extended-Tap	3
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_170_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	11
+Extended-Tap	2
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_171_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	9
+Extended-Tap	2
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_172_R1-ID.tab <==
+EpitopeID	EpitopeCount
+Extended-Tap	7
+RANDOM_SEQ_500	5
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_173_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	14
+Extended-Tap	6
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_174_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	10
+Extended-Tap	6
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_175_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	6
+Extended-Tap	3
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_176_R1-ID.tab <==
+EpitopeID	EpitopeCount
+Extended-Tap	3
+RANDOM_SEQ_500	2
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_177_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	5
+Extended-Tap	5
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_178_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	8
+Extended-Tap	4
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_179_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	6
+Extended-Tap	4
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
 ==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_17_R1-ID.tab <==
 EpitopeID	EpitopeCount
 Extended-Tap	5
@@ -626,10 +706,168 @@ RANDOM_SEQ_500	3
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_180_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	2
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_181_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	6
+Extended-Tap	3
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_182_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	8
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_183_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	6
+Extended-Tap	6
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_184_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	9
+Extended-Tap	1
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_185_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	11
+Extended-Tap	1
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_186_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	4
+Extended-Tap	4
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_187_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	8
+Extended-Tap	4
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_188_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	9
+Extended-Tap	3
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_189_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	4
+Extended-Tap	2
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
 ==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_18_R1-ID.tab <==
 EpitopeID	EpitopeCount
 RANDOM_SEQ_500	11
 Extended-Tap	5
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_190_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	10
+Extended-Tap	7
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_191_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	5
+Extended-Tap	3
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_192_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	7
+Extended-Tap	1
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_193_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	10
+Extended-Tap	5
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_194_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	10
+Extended-Tap	3
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_195_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	9
+Extended-Tap	6
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_196_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	9
+Extended-Tap	4
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_197_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	9
+Extended-Tap	2
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_198_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	12
+Extended-Tap	2
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_199_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	4
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -646,6 +884,14 @@ Epitope could not be detected genomically
 EpitopeID	EpitopeCount
 RANDOM_SEQ_500	5
 Extended-Tap	2
+
+GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
+Epitope could not be detected genomically
+
+==> results/sacCer3/100K/R500/Hsf1/ID/Simulation_200_R1-ID.tab <==
+EpitopeID	EpitopeCount
+RANDOM_SEQ_500	13
+Extended-Tap	3
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
