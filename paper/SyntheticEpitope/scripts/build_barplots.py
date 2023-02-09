@@ -94,19 +94,23 @@ if __name__ == '__main__':
 	# print(localized_counts)
 
 	# Hardcode depth order list for yeast or human simulations
-	depth_order = ["100K","1M","10M","20M","50M"]
+	depth_order = ["1M","10M","20M","50M"]
 	if (args.yeast):
 		depth_order = ["10K","100K","1M","10M"]
 
 	# Configure and plot data into grouped bars
 	pal = sns.color_palette("viridis", len(pd.unique(localized_counts['Target'])))
-	# pal = sns.color_palette("YlOrBr", len(pd.unique(localized_counts['Target'])))
-	# pal = sns.color_palette("Paired")
+	if (args.yeast):
+		pal = sns.color_palette("YlOrBr", len(pd.unique(localized_counts['Target'])))
 
 	# Super plot
 	fig, axes = plt.subplots(2,2, sharex=True, sharey=True)
-	fig.suptitle('Human')
+	if (args.yeast):
+		fig.suptitle('Yeast')
+	else:
+		fig.suptitle('Human')
 
+	# Plot subplots by Synthetic epitope length
 	for i,ename in enumerate(["R500", "R100", "R50", "R20"]):
 		axes[i//2,i%2].set_title(ename)
 		subplotdata = localized_counts[localized_counts['Epitope'] == ename]

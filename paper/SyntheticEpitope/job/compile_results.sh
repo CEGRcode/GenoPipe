@@ -37,18 +37,21 @@ do
 	done
 done
 
-# python $BAR -i $SUMMARY -o results/$REF\_id-tally.png
-# python $VIOLIN -i $RSUMMARY -o results/$REF\_runtimes.png
+# Build human figures
+python $BAR -i $SUMMARY -o results/ID-tally_$REF.svg
+python $VIOLIN -i $RSUMMARY -o results/Runtimes\_$REF.svg
 
 REF="sacCer3"
-SUMMARY=results/sacCer3/SummaryReport_$REF.txt
-RSUMMARY=results/sacCer3/RuntimeSummaryReport_$REF.txt
+SUMMARY=results/SummaryReport_$REF.txt
+RSUMMARY=results/RuntimeSummaryReport_$REF.txt
 [ -f $SUMMARY ] && rm $SUMMARY
+[ -f $RSUMMARY ] && rm $RSUMMARY
 
 for LENGTH in "500" "100" "50" "20";
 do
 	EPITOPE=R$LENGTH
-	for PROTEIN in "Reb1" "Rap1" "Sua7" "Taf2" "Spt4" "Spt7" "Gcn5" "Hsf1" "Fzo1" "Lge1";
+	#for PROTEIN in "Reb1" "Rap1" "Sua7" "Taf2" "Spt4" "Spt7" "Gcn5" "Hsf1" "Fzo1" "Lge1";
+	for PROTEIN in "Reb1" "Rap1" "Sua7";
 	do
 		for DEPTH in "10K" "100K" "1M" "10M";
 		do
@@ -63,3 +66,7 @@ do
 		done
 	done
 done
+
+# Build yeast figures
+python $BAR -i $SUMMARY -y -o results/ID-tally_$REF.svg
+python $VIOLIN -i $RSUMMARY -y -o results/Runtimes\_$REF.svg

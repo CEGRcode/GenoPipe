@@ -87,27 +87,27 @@ if __name__ == '__main__':
 	filedata = experiment_info = runtimes = None
 
 	# Hardcode depth order list for yeast or human simulations
-	depth_order = ["100K","1M","10M","20M","50M"]
+	depth_order = ["1M","10M","20M","50M"]
 	if (args.yeast):
 		depth_order = ["10K","100K","1M","10M"]
 
 	# Configure and plot data into grouped bars
 	pal = sns.color_palette("viridis", len(pd.unique(violindata['Target'])))
-	# pal = sns.color_palette("YlOrBr", len(pd.unique(localized_counts['Target'])))
-	# pal = sns.color_palette("Paired")
-
-	# print(violindata.count())
-	# violin = sns.violinplot(data=violindata, x='Depth', y='Runtimes')#, hue='Target')
+	if (args.yeast):
+		pal = sns.color_palette("YlOrBr", len(pd.unique(violindata['Target'])))
 
 	# Super plot
 	fig, axes = plt.subplots(2,2, sharex=True, sharey=True)
-	fig.suptitle('Human')
+	if (args.yeast):
+		fig.suptitle('Yeast')
+	else:
+		fig.suptitle('Human')
 
 	for i,ename in enumerate(["R500", "R100", "R50", "R20"]):
 		axes[i//2,i%2].set_title(ename)
 		subplotdata = violindata[violindata['Epitope'] == ename]
 		print(subplotdata)
 		# print(subplotcounts)
-		sns.violinplot(ax=axes[i//2,i%2], data=subplotdata, x='Depth', y='Runtimes', hue='Target')#, order=depth_order, palette=pal)#, ci=None, bottom=0)
+		sns.violinplot(ax=axes[i//2,i%2], data=subplotdata, x='Depth', y='Runtimes', hue='Target', order=depth_order, palette=pal)
 	# fig = plot.get_figure()
 	fig.savefig(args.output)
