@@ -97,6 +97,9 @@ if __name__ == '__main__':
 	depth_order = ["1M","10M","20M","50M"]
 	if (args.yeast):
 		depth_order = ["10K","100K","1M","10M"]
+	target_order = ["CTCF","POLR2H","YY1"]
+	if (args.yeast):
+		target_order = ["Rap1","Reb1","Sua7"]
 
 	# Configure and plot data into grouped bars
 	pal = sns.color_palette("viridis", len(pd.unique(localized_counts['Target'])))
@@ -116,6 +119,6 @@ if __name__ == '__main__':
 		subplotdata = localized_counts[localized_counts['Epitope'] == ename]
 		print(subplotdata)
 		# print(subplotcounts)
-		sns.barplot(ax=axes[i//2,i%2], data=subplotdata, x='Depth', y='count', hue='Target', order=depth_order, palette=pal, ci=None, bottom=0)
+		sns.barplot(ax=axes[i//2,i%2], data=subplotdata, x='Depth', y='count', hue='Target', hue_order=target_order, order=depth_order, palette=pal, ci=None, bottom=0)
 	# fig = plot.get_figure()
 	fig.savefig(args.output)
