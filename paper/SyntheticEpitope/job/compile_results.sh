@@ -28,9 +28,9 @@ do
 			CATRAW=results/$REF/$REF\_$DEPTH\_$EPITOPE\_$PROTEIN-all-IDs.tab
 			head -n 9999 results/$REF/$DEPTH/$EPITOPE/$PROTEIN/ID/*.tab > $CATRAW
 			# perl $CALCULATE $CATRAW $PROTEIN RANDOM_SEQ_$LENGTH >> $SUMMARY/$DEPTH\_$EPITOPE\_$PROTEIN\_summary.txt
-			python $TALLY -i results/$REF/$DEPTH/$EPITOPE/$PROTEIN/ID/ -e $EPITOPE -t $PROTEIN >> $SUMMARY
+			python $TALLY -i results/$REF/$DEPTH/$EPITOPE/$PROTEIN/ID/ -e RANDOM_SEQ_$LENGTH -t $PROTEIN >> $SUMMARY
 
-			RUNTIMES=results/$REF/$DEPTH/$EPITOPE/$PROTEIN/$REF\_$DEPTH\_$EPITOPE\_$PROTEIN-all-runtimes.tab
+			RUNTIMES=results/$REF/$REF\_$DEPTH\_$EPITOPE\_$PROTEIN-all-runtimes.tab
 			grep 'finished in' results/$REF/$DEPTH/$EPITOPE/$PROTEIN/runtime/*.runtime > $RUNTIMES
 			paste <(cut -d":" -f1 $RUNTIMES) <(awk '{FS=" "}{OFS="\t"}{print $2,$6}' $RUNTIMES) >> $RSUMMARY
 		done
@@ -38,8 +38,8 @@ do
 done
 
 # Build human figures
-python $BAR -i $SUMMARY -o results/ID-tally_$REF.svg
-python $VIOLIN -i $RSUMMARY -o results/Runtimes\_$REF.svg
+python $BAR -i $SUMMARY -o results/ID-tally_$REF.png
+python $VIOLIN -i $RSUMMARY -o results/Runtimes_$REF.png
 
 REF="sacCer3"
 SUMMARY=results/SummaryReport_$REF.txt
@@ -58,7 +58,7 @@ do
 			CATRAW=results/$REF/$REF\_$DEPTH\_$EPITOPE\_$PROTEIN-all-IDs.tab
 			head -n 9999 results/$REF/$DEPTH/$EPITOPE/$PROTEIN/ID/*.tab > $CATRAW
 			# perl $CALCULATE $CATRAW $PROTEIN RANDOM_SEQ_$LENGTH >> $SUMMARY/$DEPTH\_$EPITOPE\_$PROTEIN\_summary.txt
-			python $TALLY -i results/$REF/$DEPTH/$EPITOPE/$PROTEIN/ID/ -e $EPITOPE -t $PROTEIN >> $SUMMARY
+			python $TALLY -i results/$REF/$DEPTH/$EPITOPE/$PROTEIN/ID/ -e RANDOM_SEQ_$LENGTH -t $PROTEIN >> $SUMMARY
 
 			RUNTIMES=results/$REF/$REF\_$DEPTH\_$EPITOPE\_$PROTEIN-all-runtimes.tab
 			grep 'finished in' results/$REF/$DEPTH/$EPITOPE/$PROTEIN/runtime/*.runtime > $RUNTIMES
@@ -68,5 +68,5 @@ do
 done
 
 # Build yeast figures
-python $BAR -i $SUMMARY -y -o results/ID-tally_$REF.svg
-python $VIOLIN -i $RSUMMARY -y -o results/Runtimes\_$REF.svg
+python $BAR -i $SUMMARY -y -o results/ID-tally_$REF.png
+python $VIOLIN -i $RSUMMARY -y -o results/Runtimes_$REF.png
