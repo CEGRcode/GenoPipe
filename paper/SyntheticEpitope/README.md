@@ -7,20 +7,20 @@ Simulations left todo:
 &#x1F34E; = 1000 EpitopeID results generated and committed
 
 Yeast (across 10M, 1M, 100K, 10K PE reads)
-|      |    Reb1   |    Rap1   |    Sua7   |    Taf2   |    Spt4   |    Spt7   |    Gcn5   |    Hsf1   |    Fzo1   |    Lge1   |
-| ---- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
-| R500 | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; |
-| R100 | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; |
-| R50  | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; |
-| R20  | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; | &#x1F34E; |
+|      |    Reb1   |    Rap1   |    Sua7   |
+| ---- | --------- | --------- | --------- |
+| R500 | &#x1F34E; | &#x1F34E; | &#x1F34E; |
+| R100 | &#x1F34E; | &#x1F34E; | &#x1F34E; |
+| R50  | &#x1F34E; | &#x1F34E; | &#x1F34E; |
+| R20  | &#x1F34E; | &#x1F34E; | &#x1F34E; |
 
 Human (across 50M, 10M, 20M, 1M, 100K PE reads)
-|      |    CTCF   |   POLR2H  |   MED12   |    YY1    |    USF1   |   GABPA   |    ESR1   |   FOXA1   |    SHH    |   EP300   |
-| ---- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
-| R500 | &#x1F34E; | &#x1F34E; |           | &#x1F34E; |           |           |           |           |           |           |
-| R100 | &#x1F34E; | &#x1F34E; |           | &#x1F34E; |           |           |           |           |           |           |
-| R50  | &#x1F34E; | &#x1F34E; |           | &#x1F34E; |           |           |           |           |           |           |
-| R20  | &#x1F34E; |           |           | &#x1F34E; |           |           |           |           |           |           |
+|      |    CTCF   |   POLR2H  |    YY1    |
+| ---- | --------- | --------- | --------- |
+| R500 | &#x1F34E; | &#x1F34E; | &#x1F34E; |
+| R100 | &#x1F34E; | &#x1F34E; | &#x1F34E; |
+| R50  | &#x1F34E; | &#x1F34E; | &#x1F34E; |
+| R20  | &#x1F34E; |           | &#x1F34E; |
 
 
 ## Generate Synthetic Genomes

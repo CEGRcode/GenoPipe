@@ -1,6 +1,6 @@
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_1000_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -49,28 +49,28 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_106_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_107_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_108_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_109_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -98,7 +98,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_112_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -112,7 +112,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_114_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -133,7 +133,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_117_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -154,14 +154,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_11_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_120_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -210,21 +210,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_127_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_128_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_129_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	5
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -238,7 +238,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_130_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -266,14 +266,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_134_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_135_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -322,7 +322,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_141_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -343,14 +343,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_144_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_145_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -378,7 +378,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_149_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -392,21 +392,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_150_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_151_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_152_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -427,7 +427,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_155_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	3
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -441,14 +441,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_157_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_158_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	3
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -476,7 +476,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_161_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -490,7 +490,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_163_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -546,21 +546,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_170_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_171_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_172_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -602,7 +602,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_178_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -623,7 +623,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_180_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -644,7 +644,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_183_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -672,7 +672,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_187_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -707,7 +707,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_191_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -728,7 +728,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_194_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -742,7 +742,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_196_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -763,7 +763,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_199_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -777,21 +777,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_1_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_200_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_201_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -812,7 +812,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_204_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -833,7 +833,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_207_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -847,7 +847,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_209_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -861,7 +861,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_210_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -875,14 +875,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_212_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_213_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -910,14 +910,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_217_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_218_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -973,7 +973,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_225_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1029,7 +1029,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_232_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1064,7 +1064,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_237_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1092,7 +1092,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_240_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1127,42 +1127,42 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_245_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_246_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_247_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_248_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_249_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_24_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1183,7 +1183,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_252_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1204,14 +1204,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_255_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_256_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1253,7 +1253,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_261_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1267,14 +1267,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_263_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_264_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1295,21 +1295,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_267_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_268_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_269_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	3
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1337,14 +1337,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_272_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_273_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1358,7 +1358,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_275_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1386,7 +1386,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_279_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1428,56 +1428,56 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_284_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_285_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_286_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_287_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_288_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_289_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_28_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_290_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1491,28 +1491,28 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_292_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_293_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_294_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_295_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1533,7 +1533,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_298_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1547,7 +1547,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_29_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1596,14 +1596,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_305_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_306_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1638,7 +1638,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_310_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1666,14 +1666,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_314_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_315_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1708,14 +1708,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_31_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_320_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1750,35 +1750,35 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_325_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_326_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_327_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_328_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_329_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1799,7 +1799,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_331_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1813,7 +1813,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_333_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	3
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1841,35 +1841,35 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_337_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_338_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_339_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_33_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_340_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1897,7 +1897,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_344_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1911,14 +1911,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_346_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_347_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1946,7 +1946,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_350_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1960,14 +1960,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_352_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_353_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -1988,14 +1988,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_356_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+Extended-Tap	3
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_357_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2016,14 +2016,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_35_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_360_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2051,7 +2051,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_364_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2065,7 +2065,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_366_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2079,21 +2079,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_368_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_369_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_36_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2135,7 +2135,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_375_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2156,7 +2156,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_378_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2170,14 +2170,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_37_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_380_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2219,7 +2219,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_386_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2233,7 +2233,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_388_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2254,7 +2254,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_390_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	3
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2275,14 +2275,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_393_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_394_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2296,7 +2296,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_396_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2317,7 +2317,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_399_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2338,21 +2338,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_400_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_401_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_402_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2366,17 +2366,17 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_404_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_405_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+RANDOM_SEQ_20	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-Epitope could not be detected genomically
+SUA7|chr16:710101-711138	RANDOM_SEQ_20	N-term	1	0.00017058527486929365
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_406_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -2401,7 +2401,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_409_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2415,14 +2415,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_410_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	3
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_411_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2443,7 +2443,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_414_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2457,7 +2457,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_416_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2485,7 +2485,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_41_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2513,7 +2513,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_423_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2527,7 +2527,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_425_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2541,7 +2541,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_427_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2562,7 +2562,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_42_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2576,14 +2576,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_431_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_432_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2604,14 +2604,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_435_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_436_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2667,7 +2667,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_443_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2681,14 +2681,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_445_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_446_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2702,42 +2702,42 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_448_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_449_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_44_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_450_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_451_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_452_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2751,14 +2751,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_454_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_455_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2800,14 +2800,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_460_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_461_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2821,7 +2821,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_463_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2870,7 +2870,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_46_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+Extended-Tap	3
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2933,14 +2933,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_478_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_479_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -2975,7 +2975,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_483_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3038,7 +3038,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_491_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3052,7 +3052,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_493_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3066,7 +3066,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_495_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3087,10 +3087,10 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_498_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+RANDOM_SEQ_20	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-Epitope could not be detected genomically
+SUA7|chr16:710101-711138	RANDOM_SEQ_20	N-term	1	0.00017058527486929365
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_499_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -3101,28 +3101,28 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_49_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_4_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_500_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_501_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3136,7 +3136,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_503_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3150,7 +3150,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_505_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3178,14 +3178,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_509_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	3
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_50_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3199,7 +3199,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_511_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3248,7 +3248,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_518_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3276,7 +3276,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_521_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3325,14 +3325,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_528_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_529_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3346,21 +3346,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_530_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_531_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_532_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3374,14 +3374,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_534_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_535_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	3
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3395,7 +3395,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_537_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	3
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3409,38 +3409,38 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_539_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_53_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_540_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_541_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_542_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+RANDOM_SEQ_20	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-Epitope could not be detected genomically
+SRP54|chr16:711403-713028	RANDOM_SEQ_20	C-term	1	0.0002672976520283261
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_543_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -3458,21 +3458,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_545_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_546_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_547_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3493,21 +3493,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_54_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_550_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_551_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3528,14 +3528,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_554_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_555_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3549,35 +3549,35 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_557_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_558_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_559_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_55_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_560_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3598,14 +3598,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_563_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_564_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3626,14 +3626,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_567_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_568_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3668,35 +3668,35 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_572_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_573_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_574_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_575_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_576_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3710,7 +3710,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_578_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3738,21 +3738,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_581_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_582_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_583_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3766,7 +3766,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_585_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3794,7 +3794,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_589_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3836,7 +3836,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_594_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3850,7 +3850,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_596_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3864,7 +3864,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_598_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3885,7 +3885,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_5_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3920,21 +3920,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_604_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_605_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_606_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3955,7 +3955,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_609_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -3976,7 +3976,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_611_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	3
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4004,14 +4004,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_615_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_616_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4025,7 +4025,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_618_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4074,14 +4074,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_624_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_625_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4116,14 +4116,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_62_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_630_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4137,7 +4137,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_632_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4165,7 +4165,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_636_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	3
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4186,28 +4186,28 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_639_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_63_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_640_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_641_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4221,7 +4221,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_643_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4235,14 +4235,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_645_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_646_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4256,14 +4256,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_648_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_649_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4284,7 +4284,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_651_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4298,14 +4298,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_653_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_654_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4319,10 +4319,10 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_656_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+RANDOM_SEQ_20	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-Epitope could not be detected genomically
+SUA7|chr16:710101-711138	RANDOM_SEQ_20	C-term	1	0.00017058527486929365
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_657_R1-ID.tab <==
 EpitopeID	EpitopeCount
@@ -4333,14 +4333,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_658_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_659_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4368,14 +4368,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_662_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_663_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4396,7 +4396,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_666_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4424,7 +4424,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_66_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4438,14 +4438,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_671_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	3
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_672_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4473,7 +4473,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_676_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4501,7 +4501,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_67_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4529,28 +4529,28 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_683_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_684_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_685_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_686_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4564,7 +4564,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_688_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4585,7 +4585,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_690_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4606,7 +4606,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_693_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4627,7 +4627,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_696_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4641,7 +4641,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_698_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4662,21 +4662,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_6_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_700_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_701_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4690,7 +4690,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_703_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4725,7 +4725,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_708_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4760,28 +4760,28 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_712_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_713_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_714_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_715_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4795,14 +4795,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_717_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_718_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4823,7 +4823,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_720_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4837,21 +4837,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_722_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_723_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_724_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4872,14 +4872,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_727_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_728_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4900,7 +4900,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_730_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4935,28 +4935,28 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_735_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_736_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_737_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_738_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4970,14 +4970,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_73_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_740_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -4991,7 +4991,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_742_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	3
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5040,14 +5040,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_749_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_74_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+Extended-Tap	3
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5082,7 +5082,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_754_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5096,7 +5096,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_756_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5124,7 +5124,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_75_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5166,21 +5166,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_765_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_766_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_767_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5222,7 +5222,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_772_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5243,14 +5243,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_775_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_776_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5264,7 +5264,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_778_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5292,21 +5292,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_781_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	3
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_782_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	3
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_783_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5320,7 +5320,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_785_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5362,21 +5362,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_790_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_791_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_792_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5404,7 +5404,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_796_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5418,7 +5418,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_798_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5446,7 +5446,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_800_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5467,14 +5467,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_803_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_804_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5495,14 +5495,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_807_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	3
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_808_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5516,7 +5516,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_80_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5558,7 +5558,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_815_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5572,7 +5572,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_817_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5600,14 +5600,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_820_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_821_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5628,7 +5628,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_824_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5649,7 +5649,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_827_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5691,7 +5691,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_832_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5719,7 +5719,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_836_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5733,14 +5733,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_838_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	3
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_839_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5754,21 +5754,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_840_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_841_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_842_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5789,7 +5789,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_845_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5810,7 +5810,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_848_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5824,14 +5824,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_84_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_850_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5845,7 +5845,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_852_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5866,14 +5866,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_855_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_856_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5901,14 +5901,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_85_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_860_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5943,14 +5943,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_865_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_866_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5964,7 +5964,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_868_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -5992,7 +5992,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_871_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6006,7 +6006,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_873_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6034,28 +6034,28 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_877_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_878_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_879_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_87_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6076,21 +6076,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_882_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_883_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_884_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6104,7 +6104,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_886_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6125,14 +6125,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_889_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_88_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6160,7 +6160,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_893_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6174,7 +6174,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_895_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6230,7 +6230,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_901_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6244,7 +6244,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_903_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6272,7 +6272,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_907_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6286,28 +6286,28 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_909_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_90_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+RANDOM_SEQ_20	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
-Epitope could not be detected genomically
+SUA7|chr16:710101-711138	RANDOM_SEQ_20	N-term	1	0.00017058527486929365
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_910_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_911_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6328,7 +6328,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_914_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6342,14 +6342,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_916_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_917_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6370,7 +6370,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_91_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6405,7 +6405,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_924_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6440,7 +6440,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_929_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6482,7 +6482,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_934_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6503,14 +6503,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_937_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_938_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6531,7 +6531,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_940_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6566,7 +6566,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_945_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6601,7 +6601,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_94_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6622,7 +6622,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_952_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6636,21 +6636,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_954_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_955_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_956_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6664,14 +6664,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_958_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_959_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6685,7 +6685,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_960_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6720,7 +6720,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_965_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	3
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6734,7 +6734,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_967_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6748,21 +6748,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_969_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_96_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_970_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6776,7 +6776,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_972_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6790,7 +6790,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_974_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6839,14 +6839,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_980_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_981_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	2
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6867,21 +6867,21 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_984_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_985_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_986_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6902,7 +6902,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_989_R1-ID.tab <==
 EpitopeID	EpitopeCount
-No Tag ID'd
+Extended-Tap	1
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6916,7 +6916,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_990_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6944,7 +6944,7 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_994_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
@@ -6972,14 +6972,14 @@ Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_998_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	1
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
 
 ==> results/sacCer3/10K/R20/Sua7/ID/Simulation_999_R1-ID.tab <==
 EpitopeID	EpitopeCount
-Extended-Tap	2
+No Tag ID'd
 
 GeneID	EpitopeID	EpitopeLocation	EpitopeCount	pVal
 Epitope could not be detected genomically
