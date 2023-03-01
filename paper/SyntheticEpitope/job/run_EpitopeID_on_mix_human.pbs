@@ -3,8 +3,8 @@
 #PBS -l pmem=16gb
 #PBS -l walltime=01:00:00
 #PBS -A open
-#PBS -o logs/mix.human.50M.eid.log.out
-#PBS -e logs/mix.human.50M.eid.log.err
+#PBS -o logs/mix.human.10M.eid.log.out
+#PBS -e logs/mix.human.10M.eid.log.err
 #PBS -t 1-1000
 
 # Each index of the job array t:[1,16] represents a different set of mixed simulations. This script will execute EpitopeID against all all simulated datasets at various titrations and use the perl script to calculate the detection statistics. Each index corresponds to a different titration mix.
