@@ -22,7 +22,8 @@ AFACTOR=CTCF
 BFACTOR=POLR2H
 
 OUTPUT=results/mix_human/$DEPTH
-[ -d $OUTPUT ] || mkdir -p $OUTPUT
+[ -d results/mix_human ] || mkdir results/mix_human
+[ -d $OUTPUT ] || mkdir $OUTPUT
 
 MIX=../scripts/mix_fastq.sh
 ABASE=results/$REF/$DEPTH/$EPITOPE/$AFACTOR/FASTQ/Simulation_$PBS_ARRAYID

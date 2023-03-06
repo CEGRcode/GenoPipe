@@ -11,10 +11,11 @@ TALLY=scripts/analyze_eid_results.py
 BAR=scripts/build_barplots.py
 LINE=scripts/build_lineplots.py
 
-REF="sacCer3"
-DEPTH="1M"
 LENGTH="500"
 EPITOPE=R$LENGTH
+
+REF="sacCer3"
+DEPTH="1M"
 AFACTOR=Rap1
 BFACTOR=Reb1
 SUMMARY=results/MixSummaryReport_$REF\_$DEPTH.txt
@@ -22,7 +23,6 @@ RSUMMARY=results/MixRuntimeSummaryReport_$REF\_$DEPTH.txt
 [ -f $SUMMARY ] && rm $SUMMARY
 [ -f $RSUMMARY ] && rm $RSUMMARY
 
-EPITOPE=R$LENGTH
 for PER in 90 80 70 60 50 40 30 20 10
 do
 	CATRAW=results/mix_yeast/mix_yeast_$DEPTH\_$PER\_$AFACTOR\_$BFACTOR-all-IDs.tab
@@ -40,10 +40,10 @@ do
 done
 
 # Build yeast figures
-python $LINE -i $SUMMARY -o results/ID-Mix-tally_$REF\_$DEPTH.png
+python $LINE -i $SUMMARY -y -o results/ID-Mix-tally_$REF\_$DEPTH.png
 
 REF="hg19"
-DEPTH="20M"
+DEPTH="50M"
 LENGTH="500"
 EPITOPE=R$LENGTH
 AFACTOR=CTCF
@@ -53,7 +53,6 @@ RSUMMARY=results/MixRuntimeSummaryReport_$REF\_$DEPTH.txt
 [ -f $SUMMARY ] && rm $SUMMARY
 [ -f $RSUMMARY ] && rm $RSUMMARY
 
-EPITOPE=R$LENGTH
 for PER in 90 80 70 60 50 40 30 20 10
 do
 	CATRAW=results/mix_human/mix_human_$DEPTH\_$PER\_$AFACTOR\_$BFACTOR-all-IDs.tab

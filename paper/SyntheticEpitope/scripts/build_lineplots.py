@@ -108,9 +108,11 @@ if __name__ == '__main__':
 		fig.suptitle('Mix-Human')
 
 	# Set axis limits
+	# plt.xlim(10, 90)
+	# plt.xticks(range(10,91,10))
 	plt.xlim(0, 100)
-	plt.ylim(0, 1000)
 	plt.xticks(range(0,101,10))
+	plt.ylim(0, 1000)
 
 	# Save figure by output filename
 	# fig.savefig('results/blah.svg')

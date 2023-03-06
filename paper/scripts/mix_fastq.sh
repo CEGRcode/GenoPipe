@@ -93,4 +93,4 @@ seqtk subseq $BFQ\_R2.fastq.gz $OFQ\_readnames.txt >> $OFQ\_R2.fastq
 gzip -f $OFQ\_R1.fastq
 gzip -f $OFQ\_R2.fastq
 
-#rm $OFQ\_readnames.txt
+rm $OFQ\_readnames.txt

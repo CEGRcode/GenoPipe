@@ -22,6 +22,7 @@ AFACTOR=Rap1
 BFACTOR=Reb1
 
 OUTPUT=results/mix_yeast/$DEPTH
+[ -d results/mix_yeast ] || mkdir results/mix_yeast ]
 [ -d $OUTPUT ] || mkdir -p $OUTPUT
 
 MIX=../scripts/mix_fastq.sh
