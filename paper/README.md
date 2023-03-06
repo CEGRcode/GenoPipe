@@ -21,44 +21,48 @@ paper
 |--CENPK-chipseq
 ```
 
+These scripts were built to run on a linux server with a PBS job scheduler set up and some of the dependencies installed using some environmental modules and a conda environment for remaining dependencies. You may need to modify these scripts to account for different server setup and configurations.
+
+See the [GenoPipe documentation](https://pughlab.mbg.cornell.edu/GenoPipe-docs/) for a list of dependencies needed to run these publication-associated scripts. In addition to these dependencies, you will also need to instal [seqtk](https://github.com/lh3/seqtk).
+
 ## setup.sh
-runs the scripts to download and format the yeast and human genomes and other reference files for aligning the data
-also indexes the genomes for BWA
+Runs the scripts to download and format the yeast and human genomes and other reference files for aligning the data
+also indexes the genomes for BWA. This must be run before all other scripts to reproduce the publication figures.
 
 ## scripts
-contains the general scripts for setting up the simulations like downloading and parsing the reference genomes
-also contains the general scripts that several of the higher directory scripts call
+Contains the general scripts for setting up the simulations like downloading and parsing the reference genomes
+also contains the general scripts that several of the higher directory scripts call.
 
 ## input
-where setup.sh puts the reference genome and the aligner indexes
-also where other reference FASTA files are stored (i.e. R500.fa, 3xFLAG.fa, and the HIV genome sequence)
+Where `setup.sh` puts the reference genome and the aligner indexes. Also where other reference FASTA files are stored
+(i.e. R500.fa, 3xFLAG.fa, and the HIV genome sequence).
 
 ## db
-where the input database directories are built by setup.sh with variation as appropriate for GenoPipe module, species, and epitope set
+Where the input database directories are built by `setup.sh` with variation as appropriate for GenoPipe module, species, and epitope set.
 
 ## SyntheticEpitope
-contains the scripts and houses the results of simulations testing EpitopeID
+Contains the scripts and the results of simulations testing EpitopeID. This also includes the mixed contamination simulation tests.
 
 ## SyntheticStrain
-contains the scripts and houses the results of simulations testing StrainID
+Contains the scripts and the results of simulations testing StrainID.
 
 ## SyntheticDeletion
-contains the scripts and houses the results of simulations testing DeletionID
+Contains the scripts and the results of simulations testing DeletionID.
 
 ## ENCODEdata-eGFP
-contains the scripts and information for downloading ENCODE eGFP data to test EpitopeID
+Contains the scripts and information for downloading ENCODE eGFP data to test EpitopeID.
 
 ## ENCODEdata-CellLines
-contains the scripts and information for downloading ENCODE transcription factor ChIP-seq data to test StrainID
+Contains the scripts and information for downloading ENCODE transcription factor ChIP-seq data to test StrainID.
 
 ## HIV_samples
-contains the scripts and information for downloading, processing, and running EpitopeID on the Bosque et al, 2017 dataset for localizing HIV genome insertions
+Contains the scripts and information for downloading, processing, and running EpitopeID on the Bosque et al, 2017 dataset for localizing HIV genome insertions.
 
 ## YKOC-wgs
-contains the scripts and information for downloading, processing, and running DeletionID on the Puddu et al, 2019 dataset for identifying deletions
+Contains the scripts and information for downloading, processing, and running DeletionID on the Puddu et al, 2019 dataset for identifying deletions.
 
 ## BY4742-chipseq
-contains the scripts and information for downloading, processing, and running StrainID on the BAM files
+Contains the scripts and information for downloading, processing, and running StrainID on the BAM files.
 
 ## CENPK-chipseq
-contains the scripts and information for downloading, processing, and running StrainID on the BAM files
+cContains the scripts and information for downloading, processing, and running StrainID on the BAM files.
