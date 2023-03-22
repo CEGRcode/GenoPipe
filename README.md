@@ -1,15 +1,15 @@
 # GenoPipe
 
-Expanded Documentation at https://pughlab.mbg.cornell.edu/GenoPipe/
+Expanded Documentation at https://pughlab.mbg.cornell.edu/GenoPipe-docs/
 
 ## Toolkit for characterizing the genotype of NGS datasets
 
 There are 3 primary modules for genotype identification:
 
 ### EpitopeID
-  
+
 - Identify and determine the genomic location of epitopes relative to genomic loci
-  
+
 - Some epitope sequences are provided in the default tag database
 
 | sacCer3(yeast) | hg19(human) |
@@ -76,11 +76,9 @@ You will need the following software to run all GenoPipe modules:
 [Python v3.6.8+](https://www.python.org/)
 
 - [scipy v1.5.4+](https://www.scipy.org/)
-  
+
 - [pysam v0.16.0.1+](https://pysam.readthedocs.io/en/latest/api.html)
-  
-- 
-  
+
 [Perl](https://www.perl.org/)
 
 [wget](https://www.gnu.org/software/wget/)
