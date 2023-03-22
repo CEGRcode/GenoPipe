@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Required software:
-# python v2.15 with scipy
+# python3 with scipy
 
 usage()
 {

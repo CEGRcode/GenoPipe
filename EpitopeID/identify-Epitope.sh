@@ -5,7 +5,7 @@
 # samtools v1.7+
 # bedtools v2.26+
 # perl5
-# python v2.15 with scipy
+# python3 with scipy
 # GNU grep (BSD grep on MacOSX is >10X slower)
 
 # Unused Software (no-longer required)
@@ -73,7 +73,7 @@ fi
 
 # Check if ALL_TAG.fa aligner index exists, creates if it doesn't
 #if [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.amb ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.ann ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.bwt ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.pac ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.sa ]; then
-if [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.1.bt2 ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.rev.1.bt2 ]; then
+if [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.1.bt2 ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.2.bt2 ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.3.bt2 ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.4.bt2 ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.rev.1.bt2 ] || [ ! -f $DATABASE/FASTA_tag/ALL_TAG.fa.rev.2.bt2 ]; then
 	echo "Building TAG index..."
 	#bwa index $DATABASE/FASTA_tag/ALL_TAG.fa
 	bowtie2-build $DATABASE/FASTA_tag/ALL_TAG.fa $DATABASE/FASTA_tag/ALL_TAG.fa
@@ -81,7 +81,7 @@ fi
 
 # Check if genome.fa aligner index exists, creates if it doesn't
 #if [ ! -f $DATABASE/FASTA_genome/genome.fa.amb ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.ann ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.bwt ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.pac ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.sa ]; then
-if [ ! -f $DATABASE/FASTA_genome/genome.fa.1.bt2 ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.rev.1.bt2 ]; then
+if [ ! -f $DATABASE/FASTA_genome/genome.fa.1.bt2 ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.2.bt2 ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.3.bt2 ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.4.bt2 ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.rev.1.bt2 ] || [ ! -f $DATABASE/FASTA_genome/genome.fa.rev.2.bt2 ]; then
 	echo "Building ORF index..."
 	#bwa index $DATABASE/FASTA_genome/genome.fa
 	bowtie2-build $DATABASE/FASTA_genome/genome.fa $DATABASE/FASTA_genome/genome.fa

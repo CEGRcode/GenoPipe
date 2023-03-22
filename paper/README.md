@@ -23,7 +23,11 @@ paper
 
 These scripts were built to run on a linux server with a PBS job scheduler set up and some of the dependencies installed using some environmental modules and a conda environment for remaining dependencies. You may need to modify these scripts to account for different server setup and configurations.
 
-See the [GenoPipe documentation](https://pughlab.mbg.cornell.edu/GenoPipe-docs/) for a list of dependencies needed to run these publication-associated scripts. In addition to these dependencies, you will also need to instal [seqtk](https://github.com/lh3/seqtk).
+See the [GenoPipe documentation](https://pughlab.mbg.cornell.edu/GenoPipe-docs/) for a list of dependencies needed to run these publication-associated scripts. In addition to these dependencies, you will also need to install the following:
+
+* [seqtk](https://github.com/lh3/seqtk).
+* sra-toolkit (fastq-dump)
+* wget
 
 ## setup.sh
 Runs the scripts to download and format the yeast and human genomes and other reference files for aligning the data

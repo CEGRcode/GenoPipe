@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Required software:
-# python v2.15 with pysam
+# python3 with pysam
 
 usage()
 {
@@ -55,7 +55,7 @@ cd $INPUT
 for BAM in *.bam
 do
 
-	SAMPLE=`basename $BAM`
+	SAMPLE=`basename $BAM ".bam"`
 	echo $SAMPLE
 
 	if [[ $SEED -eq "" ]]; then
