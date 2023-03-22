@@ -36,7 +36,7 @@ while($line = <PE>) {
 	chomp($line);
 	next if((substr $line, 0, 1) eq "@");
 	@array = split(/\t/, $line);
-	
+
 	# Set predicted terminus of epitope
 	$LOC = "C-term";
 	if($array[5] eq "+" && $array[18] eq "-") { $LOC = "N-term"; }
@@ -56,12 +56,12 @@ foreach $key (keys %READCOUNT) { push(@ARRAY, {count => $READCOUNT{$key}, id => 
 
 open(OUT, ">$output") or die "Can't open $output for writing!\n";
 if($#SORT == -1) {
-        print OUT "Epitope could not be detected genomically\n";
+	print OUT "Epitope could not be detected genomically\n";
 } else {
 	for($x = 0; $x <= $#SORT; $x++) {
 		@temparray = split(/\~/, $SORT[$x]{'id'});
 		for($y = 0; $y <= $#temparray; $y++) { print OUT "$temparray[$y]\t" }
-		print OUT "$SORT[$x]{'count'}\n";; 
+		print OUT "$SORT[$x]{'count'}\n";;
 	}
 }
 close OUT;

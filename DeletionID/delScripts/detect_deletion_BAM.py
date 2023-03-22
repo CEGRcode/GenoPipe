@@ -28,15 +28,15 @@ def calculateDeletion(PASS):
 		if float(PASS[key]) == 0:
 			SCORES.append((key, 'No Data Detected'))
 		elif np.isnan(float(PASS[key])):
-                        SCORES.append((key, 'Region does not meet mappability threshold'))
+			SCORES.append((key, 'Region does not meet mappability threshold'))
 		else:
-                        SCORES.append((key, np.log(float(PASS[key]) / MEDIAN) / np.log(2)))
+			SCORES.append((key, np.log(float(PASS[key]) / MEDIAN) / np.log(2)))
 	return SCORES
 
 def iterateBAM(bam, bed, READLENGTH, MAP, MAPTHRESH):
 	# open BAM file
 	samfile = pysam.AlignmentFile(bam, "rb")
-       	# open BED file
+	# open BED file
 	file = open(bed, "r")
 
 	# Counter of total tags mapping across all intervals
@@ -65,16 +65,16 @@ def iterateBAM(bam, bed, READLENGTH, MAP, MAPTHRESH):
 					intervalCount[index] = intervalCount[index] + 1
 			totalSize = totalSize + intervalSize
 
-        	        # Calculate avg tags per bp across the entire region
+			# Calculate avg tags per bp across the entire region
 			intervalAvg = list(map(lambda x : float(x) / float(intervalSize), intervalCount))
-			
-	                # Normalize avg reads per interval by mappability
+
+			# Normalize avg reads per interval by mappability
 			for index in range(0, len(MAP[intervalID])):
-                	        if float(MAP[intervalID][index]) >= MAPTHRESH:
-                        	        mapAvg[index] = float(intervalAvg[index] * intervalCount[index]) / float(MAP[intervalID][index])
-	                        else:   
-        	                        mapAvg[index] = float('NaN')
-			
+				if float(MAP[intervalID][index]) >= MAPTHRESH:
+					mapAvg[index] = float(intervalAvg[index] * intervalCount[index]) / float(MAP[intervalID][index])
+				else:
+					mapAvg[index] = float('NaN')
+
 			PASS[intervalID] = (mapAvg, intervalCount)
 
 		except (IndexError, ValueError):
@@ -90,7 +90,7 @@ def iterateBAM(bam, bed, READLENGTH, MAP, MAPTHRESH):
 		if all(float(x) < MAPTHRESH for x in MAP[key]):
 			normalizedScore = float('NaN')
 		elif sum(PASS[key][1]) != 0:
-                	normalizedScore = np.nansum(PASS[key][0]) / sum(PASS[key][1])
+			normalizedScore = np.nansum(PASS[key][0]) / sum(PASS[key][1])
 		else:
 			normalizedScore = 0
 		SCORE[key] = normalizedScore
@@ -99,11 +99,11 @@ def iterateBAM(bam, bed, READLENGTH, MAP, MAPTHRESH):
 	if float(totalSize) <= 0:
 		print("ERROR!!!\tTotal size of all intervals surveyed is less than 1")
 		sys.exit(-1)
-	
+
 	# Close files
 	file.close()
 	samfile.close()
-	
+
 	return SCORE,FAIL
 
 def closestLength(READLENGTH, read):
@@ -120,7 +120,7 @@ def loadMap(MAP):
 	file = open(MAP, "r")
 	header = 0;
 	MAP = {}
-        # Iterate BED coord file, getting tag counts across interval
+	# Iterate BED coord file, getting tag counts across interval
 	for line in file:
 		mapline = line.rstrip().split("\t")
 		if header == 0:
@@ -140,8 +140,8 @@ def validateBAM(bam):
 		print("BAM index not detected.\nAttempting to index now...\n")
 		pysam.index(str(bam))
 		if not os.path.isfile(bam + ".bai"):
-        	        raise RuntimeError("BAM indexing failed, please check if BAM file is sorted")     
-                	return False
+			raise RuntimeError("BAM indexing failed, please check if BAM file is sorted")
+			return False
 		print("BAM index successfully generated.\n")
 		return True
 
@@ -150,9 +150,9 @@ if __name__ == '__main__':
 	if len(sys.argv) < 2 or not sys.argv[1].startswith("-"): sys.exit(usage)
 	BAM = BED = MAP = OUT = ""
 
-        # Variable to set the mappability threshold so that we do not consider regions with mappability 
-        # below this number 0-1, Default to 0.25 meaning at least 25% of the region must be uniquely mappable
-        # by at least one actively used readlength
+	# Variable to set the mappability threshold so that we do not consider regions with mappability
+	# below this number 0-1, Default to 0.25 meaning at least 25% of the region must be uniquely mappable
+	# by at least one actively used readlength
 	MAPTHRESH = 0.25
 
 	OUTPUTTHRESH = -3
@@ -173,11 +173,11 @@ if __name__ == '__main__':
 		print("No BAM file detected!!!")
 		sys.exit(usage)
 	elif BED == "":
-                print("No BED Coordinate file detected!!!")
-                sys.exit(usage)
+		print("No BED Coordinate file detected!!!")
+		sys.exit(usage)
 	elif MAP == "":
-                print("No Mappability file detected!!!")
-                sys.exit(usage)
+		print("No Mappability file detected!!!")
+		sys.exit(usage)
 	if OUT == "":
 		OUT = os.path.splitext(os.path.basename(BAM))[0] + "_" + os.path.splitext(os.path.basename(BED))[0] + ".tab"
 
@@ -189,11 +189,11 @@ if __name__ == '__main__':
 	print("Output file: ",OUT)
 	print("Log2 output threshold: ",OUTPUTTHRESH)
 
-        # Validate BAM file
+	# Validate BAM file
 	if(not validateBAM(BAM)):
-                print("ERROR!!!\tNo BAM index detected.\n")
-                sys.exit(-1)
-	
+		print("ERROR!!!\tNo BAM index detected.\n")
+		sys.exit(-1)
+
 	# Load mappability file
 	READLENGTH, REGIONMAP = loadMap(MAP)
 	print("Mappability file loaded")
@@ -203,7 +203,7 @@ if __name__ == '__main__':
 	print("Genomic coordinate coverage calculated")
 
 	# Calculate log2 tag enrichment over median of mappability-normalized tag avg per region
-	SCORE = calculateDeletion(PASS)	
+	SCORE = calculateDeletion(PASS)
 	print("Depletion calculated")
 
 	# Output final data
@@ -215,7 +215,7 @@ if __name__ == '__main__':
 	for id,score in reversed(FINAL):
 		try:
 			if float(score) < OUTPUTTHRESH:
-                        	output.write(id + "\t" + str(score) + "\n")
+				output.write(id + "\t" + str(score) + "\n")
 			else:
 				break
 		except(ValueError):

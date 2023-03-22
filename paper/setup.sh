@@ -27,6 +27,8 @@ cd $WRK
 module load gcc
 module load bwa
 module load samtools
+module load anaconda3
+source activate my-genopipe-env
 
 [ -d $WRK/input ] || mkdir $WRK/input
 [ -d $WRK/db ] || mkdir $WRK/db
@@ -49,6 +51,9 @@ if [[ ! -f $YGENOME ]]; then
 	echo "Complete"
 	echo "BWA Indexing genome..."
 	bwa index $YGENOME
+	echo "Complete"
+	echo "Bowtie2 Indexing genome..."
+	bowtie2-build $YGENOME $YGENOME
 	echo "Complete"
 	rm S288C_reference_genome_R64-1-1_20110203.tgz
 	rm -r S288C_reference_genome_R64-1-1_20110203/
@@ -77,6 +82,7 @@ if [[ ! -f $HGENOME ]]; then
 	echo "Complete"
 	echo "BWA Indexing genome..."
 	bwa index $HGENOME
+	bowtie2-build $HGENOME $HGENOME
 	echo "Complete"
 	rm twoBitToFa hg19.2bit $HGENOME.raw
 fi
@@ -90,9 +96,15 @@ if [ ! -f $YEPIDB/FASTA_genome/genome.fa ]; then
 	echo "BWA Indexing genome..."
 	bwa index $YEPIDB/FASTA_genome/genome.fa
 	echo "Complete"
+	echo "Bowtie2 Indexing genome..."
+	bowtie2-build $YEPIDB/FASTA_genome/genome.fa $YEPIDB/FASTA_genome/genome.fa
+	echo "Complete"
 fi
 echo "Setup Random Epitope for Yeast EpiID..."
 cp input/RAND_500.fa $YEPIDB/FASTA_tag/Tag_DB/
+cp input/RAND_100.fa $YEPIDB/FASTA_tag/Tag_DB/
+cp input/RAND_50.fa $YEPIDB/FASTA_tag/Tag_DB/
+cp input/RAND_20.fa $YEPIDB/FASTA_tag/Tag_DB/
 rm $YEPIDB/FASTA_tag/ALL_TAG.fa*
 cd $YEPIDB/FASTA_tag/Tag_DB
 cat *.fa *.fna *.ffn *.fasta > ALL_TAG.fa
@@ -107,8 +119,11 @@ HEPIDB=db/hg19_EpiID
 if [ ! -f $HEPIDB/FASTA_genome/genome.fa ]; then
 	echo "**Setup Human EpiID genome..."
 	cp input/hg19.fa $HEPIDB/FASTA_genome/genome.fa
-	echo "BWA Indexing genome..."
-	bwa index $HEPIDB/FASTA_genome/genome.fa
+	# echo "BWA Indexing genome..."
+	# bwa index $HEPIDB/FASTA_genome/genome.fa
+	# echo "Complete"
+	echo "Bowtie2 Indexing genome..."
+	bowtie2-build $HEPIDB/FASTA_genome/genome.fa $HEPIDB/FASTA_genome/genome.fa
 	echo "Complete"
 fi
 echo "Setup Random Epitope for Human EpiID..."
@@ -122,23 +137,28 @@ echo "Complete"
 cd $WRK
 
 # Build Human EpiID with HIV genome
-HHIVDB=db/hiv_EpiID
+HHIVDB=db/hg19-HIV_EpiID
 [ -d $HHIVDB ] || cp -r ../EpitopeID/hg19_EpiID/ $HHIVDB
 if [ ! -f $HHIVDB/FASTA_genome/genome.fa ]; then
-        echo "**Setup Human EpiID genome..."
-        cp input/hg19.fa $HHIVDB/FASTA_genome/genome.fa
-        echo "BWA Indexing genome..."
-        bwa index $HHIVDB/FASTA_genome/genome.fa
-        echo "Complete"
+	echo "**Setup Human EpiID genome..."
+	cp input/hg19.fa $HHIVDB/FASTA_genome/genome.fa
+	# echo "BWA Indexing genome..."
+	# bwa index $HHIVDB/FASTA_genome/genome.fa
+	# echo "Complete"
+	echo "Bowtie2 Indexing genome..."
+	bowtie2-build $HHIVDB/FASTA_genome/genome.fa $HHIVDB/FASTA_genome/genome.fa
+	echo "Complete"
 fi
 echo "Setup HIV genome for Human EpiID..."
 cp input/AF324493.2_HIV-1_vector_pNL4-3.fa $HHIVDB/FASTA_tag/Tag_DB/
 rm $HHIVDB/FASTA_tag/ALL_TAG.fa*
 cd $HHIVDB/FASTA_tag/Tag_DB
 cat *.fa *.fna *.ffn *.fasta > ALL_TAG.fa
-bwa index ALL_TAG.fa
+# bwa index ALL_TAG.fa
+bowtie2-build ALL_TAG.fa ALL_TAG.fa
 mv ALL_TAG.fa* ../
 echo "Complete"
+
 cd $WRK
 
 # Add Yeast Deletion DB to paper/db
@@ -155,4 +175,3 @@ cd $WRK
 # Setup color-space index for yeast genome
 # (used by BY4742-chipseq)
 bowtie-build -C input/sacCer3.fa input/sacCer3_index
-

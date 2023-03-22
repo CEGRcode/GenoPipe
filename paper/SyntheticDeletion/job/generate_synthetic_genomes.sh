@@ -10,3 +10,8 @@ perl $DELETE ../input/sacCer3.fa chr2:334386-336818 synthetic_genome/sacCer3_Reb
 
 perl $DELETE ../input/hg19.fa chr3:184079502-184086383 synthetic_genome/hg19_CTCF_del.fa
 perl $DELETE ../input/hg19.fa chr16:67596310-67673088 synthetic_genome/hg19_POLR2H_del.fa
+
+for FASTA in `ls synthetic_genome/*.fa`;
+do
+	samtools faidx $FASTA
+done

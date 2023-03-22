@@ -5,54 +5,58 @@
 #PBS -A open
 #PBS -o logs/mix.human.10M.eid.log.out
 #PBS -e logs/mix.human.10M.eid.log.err
-#PBS -t 90,80,70,60,50,40,30,20,10
+#PBS -t 1-1000
 
 # Each index of the job array t:[1,16] represents a different set of mixed simulations. This script will execute EpitopeID against all all simulated datasets at various titrations and use the perl script to calculate the detection statistics. Each index corresponds to a different titration mix.
 
 # This script will check that 2000 FASTQ files have been generated before executing EpitopeID.
 
 WRK=/path/to/GenoPipe/paper/SyntheticEpitope
+THREADS=6
+EPITOPEID=$WRK/../../EpitopeID
 cd $WRK
 
-module load bedtools/2.27.1
-module load bwa/0.7.15
-module load python/2.7.14-anaconda5.0.1
+module load bedtools
+module load samtools
+module load anaconda3
+source activate genopipe
 
-DEPTH=10M
+REF=hg19
+# DEPTH=20M
+DEPTH=50M
+EPITOPE=R500
 AFACTOR=CTCF
 BFACTOR=POLR2H
 
-RESULT=$WRK/results/mix_human_$DEPTH/$PBS_ARRAYID\_$AFACTOR\_$BFACTOR
-[ -d $RESULT/ID ] || mkdir $RESULT/ID
-echo $RESULT
-#Check that all FASTQ files were genertaed first
-if [ $(ls $RESULT/FASTQ/*.fastq.gz |wc -l ) -lt 2000 ];
-then
-	NFASTQ=`ls $OUTPUT/FASTQ/*.fastq.gz |wc -l`
-	echo "Insufficient simulations for mix_yeast_${DEPTH}. Only have $NFASTQ FASTQ files, make sure you generate all 2000 before running EpitopeID"
-	exit
-fi
+DATABASE=$WRK/../db/$REF\_EpiID
+[ -d logs ] || mkdir logs
 
-GENOPIPE=$WRK/../..
-cd $GENOPIPE/EpitopeID
-## Execute Mass EpitopeID and record time
-echo "**Begin executing EpitopeID for mix_yeast_${DEPTH}..."
-start=`date +%s`
-bash identify-Epitope.sh -i $RESULT/FASTQ -o $RESULT/ID -d $GENOPIPE/paper/db/hg19_EpiID -t 4
-end=`date +%s`
-runtime=$((end-start))
-MESSAGE="...mass EpitopeID for mix_human_${DEPTH} finished in ${runtime}"
-echo $MESSAGE
-cd $WRK
+# Titrate out various ratios
+for PER in 90 80 70 60 50 40 30 20 10
+do
+	# Construct results directory pathname
+	RESULTS=$WRK/results/mix_human/$DEPTH/$PER\_$AFACTOR\_$BFACTOR
+	[ -d $RESULTS/ID ] || mkdir $RESULTS/ID
+	[ -d $RESULTS/runtime ] || mkdir $RESULTS/runtime
+	echo $RESULT
 
-## Calculate detection
-CALCULATE=scripts/calculate_detection_Stats.pl
-echo "**Calculate detection of $GENE..."
-echo $MESSAGE > $RESULT/runtime.txt
-head -n 9999 $RESULT/ID/*-ID.tab | perl $CALCULATE - $AFACTOR $RESULT/$AFACTOR\_$DEPTH\_detectionStats.txt
-head -n 9999 $RESULT/ID/*-ID.tab | perl $CALCULATE - $BFACTOR $RESULT/$BFACTOR\_$DEPTH\_detectionStats.txt
-grep ${AFACTOR^^} $RESULT/ID/*-ID.tab | cut -d':' -f1 | sort | uniq > $RESULT/$AFACTOR\_hits.txt
-grep ${BFACTOR^^} $RESULT/ID/*-ID.tab | cut -d':' -f1 | sort | uniq > $RESULT/$BFACTOR\_hits.txt
-comm -12 $RESULT/$AFACTOR\_hits.txt $RESULT/$BFACTOR\_hits.txt > $RESULT/$AFACTOR\_and_$BFACTOR\_hits.txt
-echo "Calculated"
+	# Set-up Temp directory
+	TEMP=$WRK/temp-$PER-$PBS_ARRAYID-$DEPTH
+	[ -d $TEMP ] || mkdir $TEMP
 
+	cd $TEMP
+	FQ=$RESULTS/FASTQ/Simulation_$PBS_ARRAYID
+	[ -f Simulation_$PBS_ARRAYID\_R1.fastq.gz ] || ln -s $FQ\_R1.fastq.gz
+	[ -f Simulation_$PBS_ARRAYID\_R2.fastq.gz ] || ln -s $FQ\_R2.fastq.gz
+
+	# Execute EpitopeID and record time
+	cd $EPITOPEID
+	start=`date +%s`
+	bash identify-Epitope.sh -i $TEMP -o $RESULTS/ID -d $DATABASE -t $THREADS
+	end=`date +%s`
+	runtime=$((end-start))
+	echo "Experiment $EXPERIMENT.$DEPTH.$PBS_ARRAYID ($RESULTS) finished in ${runtime}" > $RESULTS/runtime/Simulation_$PBS_ARRAYID.runtime
+
+	# Clean-up
+	rm -r $TEMP
+done

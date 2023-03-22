@@ -1,39 +1,39 @@
 #!/bin/bash
 
 # Required software:
-# python v2.15 with scipy
+# python3 with scipy
 
 usage()
 {
-    echo 'identify-Deletion.sh -i /path/to/BAM -o /path/to/output -d /path/to/genome/database'
-    echo 'eg: bash identify-Deletion.sh -i /input -o /output -d /sacCer3_Del'
-    exit
+	echo 'identify-Deletion.sh -i /path/to/BAM -o /path/to/output -d /path/to/genome/database'
+	echo 'eg: bash identify-Deletion.sh -i /input -o /output -d /sacCer3_Del'
+	exit
 }
 
 if [ "$#" -ne 6 ]; then
-    usage
+	usage
 fi
 
 while getopts ":i:o:d:" IN; do
-    case "${IN}" in
-        i)
-            INPUT=${OPTARG}
-            ;;
-        o)
-            OUTPUT=${OPTARG}
-            ;;
-	d)
-	    DATABASE=${OPTARG}
-	    ;;
-        *)
-            usage
-            ;;
-    esac
+	case "${IN}" in
+		i)
+			INPUT=${OPTARG}
+			;;
+		o)
+			OUTPUT=${OPTARG}
+			;;
+		d)
+			DATABASE=${OPTARG}
+			;;
+		*)
+			usage
+			;;
+	esac
 done
 shift $((OPTIND-1))
 
 if [ -z "${INPUT}" ] || [ -z "${OUTPUT}" ] || [ -z "$DATABASE" ]; then
-    usage
+	usage
 fi
 
 echo "Input folder = ${INPUT}"

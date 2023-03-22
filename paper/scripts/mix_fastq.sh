@@ -9,6 +9,9 @@
 # gzip
 # seqtk
 
+module load anaconda3
+source activate genopipe
+
 usage()
 {
 	echo 'bash mix_fastq.sh -p <percentOfA> -A <fastqBaseA> -B <fastqBaseB> -o <outBase>'
@@ -51,13 +54,14 @@ echo "FASTQ_B = ${BFQ} (${B_NUM})"
 echo "OUTPUT = ${OFQ}"
 
 # Check that the files haven't already been generated
-if [[ ! -f $OFQ\_readnames.txt && \
-	-f $OFQ\_R1.fastq.gz && \
-	-f $OFQ\_R2.fastq.gz ]];
-then
-	echo "Both R1 and R2 files have already been generated for ${OFQ}"
-	exit
-fi
+#if [[ ! -f $OFQ\_readnames.txt && \
+#	-f $OFQ\_R1.fastq.gz && \
+#	-f $OFQ\_R2.fastq.gz ]];
+#then
+#	echo "Both R1 and R2 files have already been generated for ${OFQ}"
+#	exit
+#fi
+
 # Cleanup part-generated FQs if indicator file present from a previous run
 [ -f $OFQ\_readnames.txt ] && rm $OFQ\_R1.fastq*
 [ -f $OFQ\_readnames.txt ] && rm $OFQ\_R2.fastq*
@@ -86,6 +90,7 @@ seqtk subseq $AFQ\_R2.fastq.gz $OFQ\_readnames.txt > $OFQ\_R2.fastq
 seqtk subseq $BFQ\_R2.fastq.gz $OFQ\_readnames.txt >> $OFQ\_R2.fastq
 
 # Zip and clean-up files
-gzip $OFQ\_R1.fastq
-gzip $OFQ\_R2.fastq
+gzip -f $OFQ\_R1.fastq
+gzip -f $OFQ\_R2.fastq
+
 rm $OFQ\_readnames.txt

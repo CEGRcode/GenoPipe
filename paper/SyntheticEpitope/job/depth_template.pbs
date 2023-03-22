@@ -1,0 +1,48 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=4
+#PBS -l pmem=16gb
+#PBS -l walltime=TIME
+#PBS -A open
+#PBS -o logs/depth-EXPERIMENTID.EXPERIMENTNAME.log.out
+#PBS -e logs/depth-EXPERIMENTID.EXPERIMENTNAME.log.err
+#PBS -t 1-1000
+
+set -exo
+
+EXPERIMENT=EXPERIMENTID
+
+# FIRST CHANGE PATH TO EXECUTE
+WRK=/path/to/GenoPipe/paper/SyntheticEpitope
+cd $WRK
+
+module load bedtools/2.30.0
+module load anaconda3
+source activate my-genopipe-env
+
+INFO=`sed "${EXPERIMENT}q;d" depth_simulations.txt`
+REF=`awk '{print $1}' <(echo $INFO)`
+PROTEIN=`awk '{print $2}' <(echo $INFO)`
+LOCUS=`awk '{print $3}'  <(echo $INFO)`
+EPITOPE=`awk '{print $4}'  <(echo $INFO)`
+BASE=`awk '{print $5}'  <(echo $INFO)`
+
+GENOME=synthetic_genome/$REF\_$PROTEIN-$LOCUS\_$EPITOPE.fa
+
+# sacCer3 or hg19 depth arrays
+allDepths=("10K" "100K" "1M" "10M")
+[[ "$REF" =~ "hg19" ]] && allDepths=("100K" "1M" "10M" "20M" "50M")
+
+for d in ${!allDepths[@]};
+do
+	SEED=$(($BASE*$d+$PBS_ARRAYID))
+	DEPTH=${allDepths[$d]}
+
+	OUTPUT=results/$REF/$DEPTH/$EPITOPE/$PROTEIN
+	[ -d $OUTPUT ] || mkdir -p $OUTPUT
+
+	start=`date +%s`
+	bash ../scripts/simulate.sh -i $PBS_ARRAYID -d $DEPTH -s $SEED -g $GENOME -o $OUTPUT -t 4
+	end=`date +%s`
+	runtime=$((end-start))
+	echo "${PROTEIN}-${LOCUS} ${DEPTH} simulate in ${runtime}"
+done
