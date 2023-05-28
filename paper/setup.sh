@@ -48,13 +48,10 @@ if [[ ! -f $YGENOME ]]; then
 	echo "Parsing genome..."
 	YPARSER=../EpitopeID/utility_scripts/genome_data/parsers/parse_sacCer3_Genome_FASTA.pl
 	perl $YPARSER S288C_reference_genome_R64-1-1_20110203/S288C_reference_sequence_R64-1-1_20110203.fsa $YGENOME
-	echo "Complete"
 	echo "BWA Indexing genome..."
 	bwa index $YGENOME
-	echo "Complete"
 	echo "Bowtie2 Indexing genome..."
 	bowtie2-build $YGENOME $YGENOME
-	echo "Complete"
 	rm S288C_reference_genome_R64-1-1_20110203.tgz
 	rm -r S288C_reference_genome_R64-1-1_20110203/
 fi
@@ -76,15 +73,37 @@ if [[ ! -f $HGENOME ]]; then
 	chmod 777 twoBitToFa
 	echo "Converting 2bit to fa..."
 	./twoBitToFa hg19.2bit $HGENOME.raw
-	echo "Complete"
 	echo "Strip haplotypes..."
 	python scripts/parse_hg19_Genome_FASTA.py $HGENOME.raw > $HGENOME
-	echo "Complete"
 	echo "BWA Indexing genome..."
 	bwa index $HGENOME
+	echo "Bowtie2 Indexing genome..."
 	bowtie2-build $HGENOME $HGENOME
 	echo "Complete"
 	rm twoBitToFa hg19.2bit $HGENOME.raw
+fi
+
+
+# Download Human Genome (hg38)
+HGENOME=input/hg38.fa
+if [[ ! -f $HGENOME ]]; then
+	echo "**Human genome not found, downloading to $HGENOME..."
+	wget -N http://hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit
+	# Check for the existence of twoBitToFa, download if not present and make globally executable
+	if ! command -v twoBitToFa; then
+		unameOUT="$(uname -s)"
+		if [ $unameOUT == "Darwin" ]; then
+			wget -N http://hgdownload.soe.ucsc.edu/admin/exe/macOSX.x86_64/twoBitToFa
+		else
+			wget -N http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64.v369/twoBitToFa
+		fi
+	fi
+	chmod 777 twoBitToFa
+	echo "Converting 2bit to fa..."
+	./twoBitToFa hg38.2bit $HGENOME
+	echo "BWA Indexing genome..."
+	bwa index $HGENOME
+	rm twoBitToFa hg38.2bit
 fi
 
 # Build Yeast EpiID with R500
@@ -95,10 +114,8 @@ if [ ! -f $YEPIDB/FASTA_genome/genome.fa ]; then
 	cp input/sacCer3.fa $YEPIDB/FASTA_genome/genome.fa
 	echo "BWA Indexing genome..."
 	bwa index $YEPIDB/FASTA_genome/genome.fa
-	echo "Complete"
 	echo "Bowtie2 Indexing genome..."
 	bowtie2-build $YEPIDB/FASTA_genome/genome.fa $YEPIDB/FASTA_genome/genome.fa
-	echo "Complete"
 fi
 echo "Setup Random Epitope for Yeast EpiID..."
 cp input/RAND_500.fa $YEPIDB/FASTA_tag/Tag_DB/
@@ -124,7 +141,6 @@ if [ ! -f $HEPIDB/FASTA_genome/genome.fa ]; then
 	# echo "Complete"
 	echo "Bowtie2 Indexing genome..."
 	bowtie2-build $HEPIDB/FASTA_genome/genome.fa $HEPIDB/FASTA_genome/genome.fa
-	echo "Complete"
 fi
 echo "Setup Random Epitope for Human EpiID..."
 cp input/RAND_500.fa $HEPIDB/FASTA_tag/Tag_DB/
@@ -167,9 +183,18 @@ ln -s ../../DeletionID/sacCer3_Del
 cd $WRK
 
 # Add Yeast & Human StrainID DB to paper/db
+cd $WRK/../StrainID
+tar -xvf hg38_VCF
+tar -xvf hg38_ENCODE
+cd utility_scripts
+bash generate_hg38_VariantDB.#!/bin/sh
+mv hg38_DepMap ../
 cd $WRK/db
 ln -s ../../StrainID/sacCer3_VCF
 ln -s ../../StrainID/hg19_VCF
+ln -s ../../StrainID/hg38_VCF
+ln -s ../../StrainID/hg38_ENCODE
+ln -s ../../StrainID/hg38_DepMap
 cd $WRK
 
 # Setup color-space index for yeast genome
