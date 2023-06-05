@@ -2,6 +2,7 @@
 EpitopeID/ecoli_EpiID/FASTA_genome/genome.fa.*
 EpitopeID/sacCer3_EpiID/FASTA_genome/genome.fa*
 EpitopeID/hg19_EpiID/FASTA_genome/genome.fa*
+EpitopeID/hg19_EpiID_v2/FASTA_genome/genome.fa*
 StrainID/hg38_VCF
 StrainID/hg38_ENCODE
 StrainID/hg38_DepMap
