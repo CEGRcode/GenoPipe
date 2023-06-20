@@ -33,6 +33,7 @@ SyntheticStrain/logs/*.err-*
 SyntheticStrain/logs/*.out-*
 SyntheticStrain/results/sacCer3*
 SyntheticStrain/results/hg19*
+ENCODEdata-CellLines/results/SupplementaryTable10.txt
 ENCODEdata-CellLines/results/BAM
 ENCODEdata-CellLines/results/BAM-nospike
 ENCODEdata-CellLines/results/ID

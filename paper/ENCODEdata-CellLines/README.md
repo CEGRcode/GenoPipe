@@ -38,4 +38,12 @@ qsub job/02_indexed_runSID.pbs
 Evaluate the accuracy of StrainID on real data by merging the metadata with the StrainID results.
 ```
 python scripts/analyze_encode_results.py -i results/ID -m 210512_sample_metadata.txt -o results/SupplementaryTable10.txt
+python scripts/build_violinscatter.py -i results/SupplementaryTable10.txt -o results/Figure6C.png
+```
+
+You can even filter the visualization to show the results for specific assays by using the `-a` option flag
+```
+python scripts/build_violinscatter.py -i results/SupplementaryTable10.txt -o results/Figure6C_ChIP-seq.png -a "ChIP-seq"
+python scripts/build_violinscatter.py -i results/SupplementaryTable10.txt -o results/Figure6C_CAGE.png -a "CAGE"
+python scripts/build_violinscatter.py -i results/SupplementaryTable10.txt -o results/Figure6C_small-RNA-seq.png -a "small RNA-seq"
 ```
