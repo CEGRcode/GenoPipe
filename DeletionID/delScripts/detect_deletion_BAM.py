@@ -15,7 +15,7 @@ Output File (Default based on BAM and BED file names)	-o Output.tab
 Log2 output minimum threshold (Default -3)		-l Log2_Threshold
 Mappability threshold to consider (Default 0.25)	-M Mappability_%
 
-Example: python2 detect_deletion_BAM.py -b NGS.bam -c Interval.bed -m Mappability.tab -o NGS_deletion.tab -l -2 -M 0.25
+Example: python detect_deletion_BAM.py -b NGS.bam -c Interval.bed -m Mappability.tab -o NGS_deletion.tab -l -2 -M 0.25
 """
 
 def calculateDeletion(PASS):
