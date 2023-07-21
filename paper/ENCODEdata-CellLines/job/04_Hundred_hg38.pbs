@@ -1,0 +1,95 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=6
+#PBS -l pmem=24gb
+#PBS -l walltime=05:00:00
+#PBS -A open
+#PBS -o logs/download.data.log.out
+#PBS -e logs/download.data.log.err
+#PBS -t 1-100
+
+module load samtools
+#module load anaconda
+#source activate my-genopipe-env
+
+WRK=/path/to/GenoPipe/paper/ENCODE-CellLines
+
+# Execute from /path/to/GenoPipe/paper/ENCODE-CellLines
+
+[ -d logs ] || mkdir logs
+[ -d results/hg38_BAM ] || mkdir -p results/hg38_BAM
+[ -d results/hg38_BAM-nospike ] || mkdir -p results/hg38_BAM-nospike
+[ -d results/hg38_ID ] || mkdir -p results/hg38_ID
+
+METADATA=230612_hg38_100-TF-ChIP-seq.txt
+INFO=`sed "2d" $METADATA | sed "${PBS_ARRAYID}q;d"`
+ENCFF=`echo $INFO | awk '{FS="/t"}{print $2}'`
+#echo $INFO
+
+# Store directory paths
+DATABASE=$WRK/../db/hg38_DepMap
+GENOME=$WRK/../input/hg38.fa
+SEED=$PBS_ARRAYID
+GENOPIPE=$WRK/../..
+BAM=$WRK/results/hg38_BAM/$ENCFF
+NOSPIKE=$WRK/results/hg38_BAM-nospike/$ENCFF
+ID=$WRK/results/hg38_ID
+
+# ENCODE data download
+HREF=/files/$ENCFF/@@download/$ENCFF.bam
+echo "Fetching from https://www.encodeproject.org$HREF"
+wget -c https://www.encodeproject.org$HREF -O $BAM.bam
+
+# Checksum of resulting BAM
+MD5SUM=`echo $INFO | awk '{FS="/t"}{print $3}'`
+#if [[ `md5sum $BAM` =~ $MD5SUM ]]; then
+#	echo "($PBS_ARRAYID) $BAM passed."
+#else
+#	echo "($PBS_ARRAYID) $BAM md5checksum failed!"
+#	rm $BAM
+#	exit
+#fi
+
+# Index BAM file
+[ -f $BAM.bam.bai ] || samtools index $BAM.bam
+
+# Strip Spike-in
+python scripts/filter_spikein.py -b $BAM.bam -g ../input/hg38.fa -o $NOSPIKE.bam
+samtools index $NOSPIKE.bam
+
+# Count Bases
+[ -f $BAM.bam.bai ] && python scripts/estimate_bp_sequenced.py -b $BAM.bam > $BAM\_bpcount.txt
+[ -f $NOSPIKE.bam.bai ] && python scripts/estimate_bp_sequenced.py -b $NOSPIKE.bam > $NOSPIKE\_bpcount.txt
+
+
+#Check that BAM file was generated first
+if [ ! -f $NOSPIKE.bam ];
+then
+	echo "BAM input for $NOSPIKE/$ENCFF does not exist. Exiting."
+	exit
+fi
+
+#Check that BAM Index file exists
+if [ ! -f $NOSPIKE.bam.bai ];
+then
+	echo "BAI missing for for $ENCFF. Exiting."
+	exit
+fi
+
+# Set-up Temp directory
+TEMP=$WRK/temp-$PBS_ARRAYID
+[ -d $TEMP ] || mkdir $TEMP
+cd $TEMP
+echo $TEMP
+ln -s $NOSPIKE.bam
+ln -s $NOSPIKE.bam.bai
+
+echo $TEMP
+## Execute Single StrainID and record time
+cd $GENOPIPE/StrainID
+echo "**Begin executing StrainID for ${ENCFF}..."
+{ time bash identify-Strain.sh -i $TEMP -g $GENOME -v $DATABASE -s $SEED -o $ID > $ID/$ENCFF.std ; } 2> $ID/$ENCFF.time
+echo "...single StrainID for ($PBS_ARRAYID) ${ENCFF} finished."
+cd $WRK
+
+## Clean-up
+rm -r $TEMP

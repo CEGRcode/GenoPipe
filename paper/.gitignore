@@ -37,6 +37,7 @@ ENCODEdata-CellLines/results/SupplementaryTable10.txt
 ENCODEdata-CellLines/results/BAM
 ENCODEdata-CellLines/results/BAM-nospike
 ENCODEdata-CellLines/results/ID
+ENCODEdata-CellLines/results/hg38_ID
 BY4742-chipseq/logs/*.out
 BY4742-chipseq/logs/*.err
 BY4742-chipseq/results/FASTQ
