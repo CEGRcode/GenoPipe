@@ -6,7 +6,7 @@ Usage:
 This script takes in the paired-end table containing the stats from the EpitopeID pipeine and calculates
 the Poisson p-value threshold given a minimum 2-fold enrichment over the expected tags based on the bin size.
 
-Example: python2 calculate_EpitopeSignificance.py -t PE_table.out -p 0.05 -c 10000 -s 12000000 -o PE_sig.out
+Example: python calculate_EpitopeSignificance.py -t PE_table.out -p 0.05 -c 10000 -s 12000000 -o PE_sig.out
 """
 
 # Main program which takes in input parameters

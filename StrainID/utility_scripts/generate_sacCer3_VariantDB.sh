@@ -18,7 +18,7 @@
 usage()
 {
     echo 'generate_sacCer3_VariantDB.sh'
-    echo 'eg: bash generate_sacCer3_GenomeAnnotation.sh'
+    echo 'eg: bash generate_sacCer3_VariantDB.sh'
     exit
 }
 
