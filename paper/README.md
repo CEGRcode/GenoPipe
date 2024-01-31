@@ -1,4 +1,4 @@
-# Lang et al, 202X
+# Lang et al (2023) *Nucleic Acids Res*
 
 This contains all the scripts used to generate the figures validating and benchmarking performance for GenoPipe as a tool, specifically the code for downloading data, preprocessing, and simulations.
 
