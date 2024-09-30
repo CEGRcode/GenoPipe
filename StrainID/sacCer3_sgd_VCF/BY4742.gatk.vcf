@@ -1,0 +1,77 @@
+##fileformat=VCFv4.1
+##FILTER=<ID=LowQual,Description="Low quality">
+##FILTER=<ID=SnpCluster,Description="SNPs found in clusters">
+##FILTER=<ID=filter,Description="(AB ?: 0) > 0.75 || QUAL < 50.0 || DP > 360 || SB > -0.1 || MQ0>=4">
+##FORMAT=<ID=AD,Number=.,Type=Integer,Description="Allelic depths for the ref and alt alleles in the order listed">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth (reads with MQ=255 or with bad mates are filtered)">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+##GATKCommandLine=<ID=VariantFiltration,CommandLineOptions="analysis_type=VariantFiltration input_file=[] read_buffer_size=null phone_home=AWS gatk_key=null tag=NA read_filter=[] intervals=null excludeIntervals=null interval_set_rule=UNION interval_merging=ALL interval_padding=0 reference_sequence=/srv/gs1/projects/cherry/sacCer3/sacCer3.fa nonDeterministicRandomSeed=false disableDithering=false maxRuntime=-1 maxRuntimeUnits=MINUTES downsampling_type=BY_SAMPLE downsample_to_fraction=null downsample_to_coverage=1000 baq=OFF baqGapOpenPenalty=40.0 fix_misencoded_quality_scores=false allow_potentially_misencoded_quality_scores=false useOriginalQualities=false defaultBaseQualities=-1 performanceLog=null BQSR=null quantize_quals=0 disable_indel_quals=false emit_original_quals=false preserve_qscores_less_than=6 globalQScorePrior=-1.0 allow_bqsr_on_reduced_bams_despite_repeated_warnings=false validation_strictness=SILENT remove_program_records=false keep_program_records=false sample_rename_mapping_file=null unsafe=null disable_auto_index_creation_and_locking_when_reading_rods=false num_threads=1 num_cpu_threads_per_data_thread=1 num_io_threads=0 monitorThreadEfficiency=false num_bam_file_handles=null read_group_black_list=null pedigree=[] pedigreeString=[] pedigreeValidationType=STRICT allow_intervals_with_unindexed_bam=false generateShadowBCF=false variant_index_type=DYNAMIC_SEEK variant_index_parameter=-1 logging_level=INFO log_to_file=null help=false version=false variant=(RodBinding name=variant source=/srv/gs1/projects/cherry/giltae/strains/hugeseq/BY4742/chrI.snp.gatk.vcf) mask=(RodBinding name= source=UNBOUND) out=org.broadinstitute.sting.gatk.io.stubs.VariantContextWriterStub no_cmdline_in_header=org.broadinstitute.sting.gatk.io.stubs.VariantContextWriterStub sites_only=org.broadinstitute.sting.gatk.io.stubs.VariantContextWriterStub bcf=org.broadinstitute.sting.gatk.io.stubs.VariantContextWriterStub filterExpression=[(AB ?: 0) > 0.75 || QUAL < 50.0 || DP > 360 || SB > -0.1 || MQ0>=4] filterName=[filter] genotypeFilterExpression=[] genotypeFilterName=[] clusterSize=3 clusterWindowSize=10 maskExtension=0 maskName=Mask filterNotInMask=false missingValuesInExpressionsShouldEvaluateAsFailing=false invalidatePreviousFilters=false filter_reads_with_N_cigar=false filter_mismatching_base_and_quals=false filter_bases_not_stored=false",Date="Tue Jan 14 21:35:27 PST 2014",Epoch=1389764127375,Version=2.8-1-g932cd3a>
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=BaseQRankSum,Number=1,Type=Float,Description="Z-score from Wilcoxon rank sum test of Alt Vs. Ref base qualities">
+##INFO=<ID=DB,Number=0,Type=Flag,Description="dbSNP Membership">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth; some reads may have been filtered">
+##INFO=<ID=DS,Number=0,Type=Flag,Description="Were any of the samples downsampled?">
+##INFO=<ID=Dels,Number=1,Type=Float,Description="Fraction of Reads Containing Spanning Deletions">
+##INFO=<ID=FS,Number=1,Type=Float,Description="Phred-scaled p-value using Fisher's exact test to detect strand bias">
+##INFO=<ID=HaplotypeScore,Number=1,Type=Float,Description="Consistency of the site with at most two segregating haplotypes">
+##INFO=<ID=InbreedingCoeff,Number=1,Type=Float,Description="Inbreeding coefficient as estimated from the genotype likelihoods per-sample when compared against the Hardy-Weinberg expectation">
+##INFO=<ID=MLEAC,Number=A,Type=Integer,Description="Maximum likelihood expectation (MLE) for the allele counts (not necessarily the same as the AC), for each ALT allele, in the same order as listed">
+##INFO=<ID=MLEAF,Number=A,Type=Float,Description="Maximum likelihood expectation (MLE) for the allele frequency (not necessarily the same as the AF), for each ALT allele, in the same order as listed">
+##INFO=<ID=MQ,Number=1,Type=Float,Description="RMS Mapping Quality">
+##INFO=<ID=MQ0,Number=1,Type=Integer,Description="Total Mapping Quality Zero Reads">
+##INFO=<ID=MQRankSum,Number=1,Type=Float,Description="Z-score From Wilcoxon rank sum test of Alt vs. Ref read mapping qualities">
+##INFO=<ID=QD,Number=1,Type=Float,Description="Variant Confidence/Quality by Depth">
+##INFO=<ID=RPA,Number=.,Type=Integer,Description="Number of times tandem repeat unit is repeated, for each allele (including reference)">
+##INFO=<ID=RU,Number=1,Type=String,Description="Tandem repeat unit (bases)">
+##INFO=<ID=ReadPosRankSum,Number=1,Type=Float,Description="Z-score from Wilcoxon rank sum test of Alt vs. Ref read position bias">
+##INFO=<ID=SB,Number=1,Type=Float,Description="Strand Bias">
+##INFO=<ID=STR,Number=0,Type=Flag,Description="Variant is a short tandem repeat">
+##UnifiedGenotyper="analysis_type=UnifiedGenotyper input_file=[/srv/gs1/projects/cherry/giltae/strains/hugeseq/BY4742/chrI.recal.bam] read_buffer_size=null phone_home=STANDARD gatk_key=null read_filter=[] intervals=null excludeIntervals=null interval_set_rule=UNION interval_merging=ALL interval_padding=0 reference_sequence=/srv/gs1/projects/cherry/sacCer3/sacCer3.fa nonDeterministicRandomSeed=false downsampling_type=BY_SAMPLE downsample_to_fraction=null downsample_to_coverage=1000 baq=CALCULATE_AS_NECESSARY baqGapOpenPenalty=40.0 performanceLog=null useOriginalQualities=false BQSR=null quantize_quals=0 disable_indel_quals=false emit_original_quals=false preserve_qscores_less_than=6 defaultBaseQualities=-1 validation_strictness=LENIENT remove_program_records=false keep_program_records=false unsafe=null num_threads=1 num_cpu_threads=null num_io_threads=null num_bam_file_handles=null read_group_black_list=null pedigree=[] pedigreeString=[] pedigreeValidationType=STRICT allow_intervals_with_unindexed_bam=false generateShadowBCF=false logging_level=INFO log_to_file=null help=false genotype_likelihoods_model=SNP p_nonref_model=EXACT pcr_error_rate=1.0E-4 noSLOD=false annotateNDA=false min_base_quality_score=17 max_deletion_fraction=0.05 cap_max_alternate_alleles_for_indels=false min_indel_count_for_genotyping=5 min_indel_fraction_per_sample=0.25 indel_heterozygosity=1.25E-4 indelGapContinuationPenalty=10 indelGapOpenPenalty=45 indelHaplotypeSize=80 noBandedIndel=false indelDebug=false ignoreSNPAlleles=false allReadsSP=false ignoreLaneInfo=false reference_sample_calls=(RodBinding name= source=UNBOUND) reference_sample_name=null sample_ploidy=2 min_quality_score=1 max_quality_score=40 site_quality_prior=20 min_power_threshold_for_calling=0.95 min_reference_depth=100 exclude_filtered_reference_sites=false heterozygosity=0.001 genotyping_mode=DISCOVERY output_mode=EMIT_VARIANTS_ONLY standard_min_confidence_threshold_for_calling=30.0 standard_min_confidence_threshold_for_emitting=10.0 alleles=(RodBinding name= source=UNBOUND) max_alternate_alleles=3 dbsnp=(RodBinding name=dbsnp source=/srv/gs1/projects/cherry/giltae/hugeseq_data/snp.d/chrI_SNPs.vcf) comp=[] out=org.broadinstitute.sting.gatk.io.stubs.VariantContextWriterStub no_cmdline_in_header=org.broadinstitute.sting.gatk.io.stubs.VariantContextWriterStub sites_only=org.broadinstitute.sting.gatk.io.stubs.VariantContextWriterStub bcf=org.broadinstitute.sting.gatk.io.stubs.VariantContextWriterStub debug_file=null metrics_file=null annotation=[DepthOfCoverage, MappingQualityZero] excludeAnnotation=[] filter_mismatching_base_and_quals=false"
+##contig=<ID=chrI,length=230218>
+##contig=<ID=chrII,length=813184>
+##contig=<ID=chrIII,length=316620>
+##contig=<ID=chrIV,length=1531933>
+##contig=<ID=chrV,length=576874>
+##contig=<ID=chrVI,length=270161>
+##contig=<ID=chrVII,length=1090940>
+##contig=<ID=chrVIII,length=562643>
+##contig=<ID=chrIX,length=439888>
+##contig=<ID=chrX,length=745751>
+##contig=<ID=chrXI,length=666816>
+##contig=<ID=chrXII,length=1078177>
+##contig=<ID=chrXIII,length=924431>
+##contig=<ID=chrXIV,length=784333>
+##contig=<ID=chrXV,length=1091291>
+##contig=<ID=chrXVI,length=948066>
+##contig=<ID=chrM,length=85779>
+##reference=file:///srv/gs1/projects/cherry/sacCer3/sacCer3.fa
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	BY4742
+chrI	41475	.	G	T	3976.01	PASS	AC=2;AF=1.00;AN=2;DP=122;Dels=0.00;FS=0.000;HaplotypeScore=2.6638;MLEAC=2;MLEAF=1.00;MQ=59.62;MQ0=0;QD=32.59;SB=-1.570e+03	GT:AD:DP:GQ:PL	1/1:0,122:122:99:3976,322,0
+chrII	5983	.	C	G	2024	PASS	AC=2;AF=1.00;AN=2;DP=60;Dels=0.00;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=56.16;MQ0=0;QD=33.73;SB=-5.610e+02	GT:AD:DP:GQ:PL	1/1:0,60:60:99:2057,153,0
+chrII	474219	.	T	C	80.51	PASS	AC=2;AF=1.00;AN=2;DP=41;Dels=0.00;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=30.09;MQ0=0;QD=1.96;SB=-1.895e+02	GT:AD:DP:GQ:PL	1/1:0,41:41:12:113,12,0
+chrII	474225	.	C	A	488	PASS	AC=2;AF=1.00;AN=2;DP=51;Dels=0.00;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=31.56;MQ0=0;QD=9.57;SB=-5.610e+02	GT:AD:DP:GQ:PL	1/1:0,51:51:45:521,45,0
+chrII	474544	.	A	G	3850.01	PASS	AC=2;AF=1.00;AN=2;DP=109;Dels=0.00;FS=0.000;HaplotypeScore=1.6385;MLEAC=2;MLEAF=1.00;MQ=53.49;MQ0=0;QD=35.32;SB=-2.018e+03	GT:AD:DP:GQ:PL	1/1:0,109:109:99:3850,307,0
+chrII	474920	.	T	C	3695.01	PASS	AC=2;AF=1.00;AN=2;DP=106;Dels=0.00;FS=0.000;HaplotypeScore=1.7860;MLEAC=2;MLEAF=1.00;MQ=59.25;MQ0=0;QD=34.86;SB=-1.345e+03	GT:AD:DP:GQ:PL	1/1:0,106:106:99:3695,286,0
+chrII	813161	.	T	G	38.97	filter	AC=2;AF=1.00;AN=2;DP=5;Dels=0.00;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=28.66;MQ0=2;QD=7.79;SB=-6.519e-03	GT:AD:DP:GQ:PL	1/1:1,4:5:9:71,9,0
+chrIII	44573	.	T	A	26.02	LowQual;filter	AC=1;AF=0.500;AN=2;BaseQRankSum=-4.364;DP=71;Dels=0.00;FS=85.296;HaplotypeScore=7.6514;MLEAC=1;MLEAF=0.500;MQ=57.89;MQ0=0;MQRankSum=0.510;QD=0.37;ReadPosRankSum=-2.981;SB=-6.519e-03	GT:AD:DP:GQ:PL	0/1:62,9:71:56:56,0,404
+chrIV	769328	.	G	A	1568	PASS	AC=2;AF=1.00;AN=2;DP=54;Dels=0.00;FS=0.000;HaplotypeScore=0.7340;MLEAC=2;MLEAF=1.00;MQ=59.57;MQ0=0;QD=29.04;SB=-8.690e+02	GT:AD:DP:GQ:PL	1/1:0,54:54:99:1601,132,0
+chrIX	76038	.	T	G	10.42	LowQual;filter	AC=1;AF=0.500;AN=2;BaseQRankSum=-4.120;DP=85;Dels=0.00;FS=73.019;HaplotypeScore=8.1218;MLEAC=1;MLEAF=0.500;MQ=59.73;MQ0=0;MQRankSum=-0.664;QD=0.12;ReadPosRankSum=-4.013;SB=-6.519e-03	GT:AD:DP:GQ:PL	0/1:74,11:85:40:40,0,995
+chrM	79562	.	A	C	18177.01	filter	AC=2;AF=1.00;AN=2;DP=554;Dels=0.00;FS=0.000;HaplotypeScore=4.8131;MLEAC=2;MLEAF=1.00;MQ=59.76;MQ0=0;QD=32.81;SB=-7.261e+03	GT:AD:DP:GQ:PL	1/1:0,553:553:99:18177,1609,0
+chrVII	720983	.	T	G	3003	PASS	AC=2;AF=1.00;AN=2;DP=80;Dels=0.00;FS=0.000;HaplotypeScore=1.8650;MLEAC=2;MLEAF=1.00;MQ=59.42;MQ0=0;QD=37.54;SB=-1.243e+03	GT:AD:DP:GQ:PL	1/1:0,80:80:99:3036,235,0
+chrVII	919979	.	T	A	13.22	LowQual;filter	AC=1;AF=0.500;AN=2;BaseQRankSum=-4.599;DP=75;Dels=0.00;FS=39.854;HaplotypeScore=44.4320;MLEAC=1;MLEAF=0.500;MQ=48.85;MQ0=0;MQRankSum=-5.427;QD=0.18;ReadPosRankSum=-4.039;SB=-6.519e-03	GT:AD:DP:GQ:PL	0/1:45,30:75:43:43,0,1121
+chrVIII	505075	.	C	G	2780	PASS	AC=2;AF=1.00;AN=2;DP=80;Dels=0.00;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=56.03;MQ0=0;QD=34.75;SB=-1.245e+03	GT:AD:DP:GQ:PL	1/1:0,79:79:99:2813,220,0
+chrX	280786	.	C	T	68.01	filter	AC=1;AF=0.500;AN=2;BaseQRankSum=-1.322;DP=79;Dels=0.04;FS=18.665;HaplotypeScore=6.4428;MLEAC=1;MLEAF=0.500;MQ=60.00;MQ0=0;MQRankSum=0.048;QD=0.86;ReadPosRankSum=-1.451;SB=-6.519e-03	GT:AD:DP:GQ:PL	0/1:53,23:76:98:98,0,814
+chrXII	645252	.	G	A	15.14	LowQual;filter	AC=1;AF=0.500;AN=2;BaseQRankSum=-6.257;DP=83;Dels=0.00;FS=126.305;HaplotypeScore=13.9738;MLEAC=1;MLEAF=0.500;MQ=58.53;MQ0=0;MQRankSum=0.627;QD=0.18;ReadPosRankSum=-4.621;SB=-6.517e-03	GT:AD:DP:GQ:PL	0/1:62,21:83:45:45,0,616
+chrXII	646385	.	G	A	50.01	filter	AC=1;AF=0.500;AN=2;BaseQRankSum=-1.256;DP=76;Dels=0.01;FS=25.320;HaplotypeScore=20.4225;MLEAC=1;MLEAF=0.500;MQ=58.59;MQ0=0;MQRankSum=-0.088;QD=0.66;ReadPosRankSum=-2.611;SB=-6.519e-03	GT:AD:DP:GQ:PL	0/1:38,37:75:80:80,0,599
+chrXII	944060	.	G	A	151.13	filter	AC=2;AF=1.00;AN=2;DP=59;Dels=0.00;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=11.84;MQ0=36;QD=2.56;SB=-6.519e-03	GT:AD:DP:GQ:PL	1/1:33,26:59:18:184,18,0
+chrXII	944099	.	A	C	28.77	LowQual;filter	AC=2;AF=1.00;AN=2;DP=40;Dels=0.00;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=8.93;MQ0=29;QD=0.72;SB=-6.519e-03	GT:AD:DP:GQ:PL	1/1:29,11:40:6:60,6,0
+chrXIII	411474	.	G	T	87.01	filter	AC=1;AF=0.500;AN=2;BaseQRankSum=-4.430;DP=71;Dels=0.00;FS=66.381;HaplotypeScore=3.2272;MLEAC=1;MLEAF=0.500;MQ=59.74;MQ0=0;MQRankSum=0.849;QD=1.23;ReadPosRankSum=1.066;SB=-6.519e-03	GT:AD:DP:GQ:PL	0/1:60,11:71:99:117,0,735
+chrXIII	870442	.	G	T	45.01	filter	AC=1;AF=0.500;AN=2;BaseQRankSum=-3.245;DP=59;Dels=0.00;FS=34.357;HaplotypeScore=5.8036;MLEAC=1;MLEAF=0.500;MQ=59.61;MQ0=0;MQRankSum=0.455;QD=0.76;ReadPosRankSum=-2.194;SB=-6.519e-03	GT:AD:DP:GQ:PL	0/1:46,12:59:75:75,0,1181
+chrXIII	921441	.	A	T	27.02	LowQual;filter	AC=1;AF=0.500;AN=2;BaseQRankSum=-3.637;DP=36;Dels=0.00;FS=46.932;HaplotypeScore=5.8319;MLEAC=1;MLEAF=0.500;MQ=37.30;MQ0=2;MQRankSum=0.451;QD=0.75;ReadPosRankSum=-1.195;SB=1.45	GT:AD:DP:GQ:PL	0/1:21,14:36:57:57,0,167
+chrXIV	189585	.	C	T	2664	PASS	AC=2;AF=1.00;AN=2;DP=80;Dels=0.00;FS=0.000;HaplotypeScore=0.0000;MLEAC=2;MLEAF=1.00;MQ=59.16;MQ0=0;QD=33.30;SB=-1.490e+03	GT:AD:DP:GQ:PL	1/1:0,80:80:99:2697,208,0
+chrXIV	392468	.	T	G	188.01	PASS	AC=1;AF=0.500;AN=2;BaseQRankSum=-5.418;DP=75;Dels=0.03;FS=166.181;HaplotypeScore=4.5029;MLEAC=1;MLEAF=0.500;MQ=59.69;MQ0=0;MQRankSum=0.591;QD=2.51;ReadPosRankSum=-0.111;SB=-3.017e+00	GT:AD:DP:GQ:PL	0/1:38,35:73:99:218,0,662
+chrXV	412141	.	G	A	2638	PASS	AC=2;AF=1.00;AN=2;BaseQRankSum=1.557;DP=79;Dels=0.00;FS=0.000;HaplotypeScore=4.9973;MLEAC=2;MLEAF=1.00;MQ=59.47;MQ0=0;MQRankSum=1.644;QD=33.39;ReadPosRankSum=1.688;SB=-1.489e+03	GT:AD:DP:GQ:PL	1/1:1,78:79:99:2671,202,0
